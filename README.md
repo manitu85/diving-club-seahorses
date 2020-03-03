@@ -1,3 +1,3 @@
-# pSCUBA-DIVING LANDING PAGE
+# Scuba-diving landing page
 
 ~ in progress ~
