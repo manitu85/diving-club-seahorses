@@ -1,0 +1,48 @@
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  // align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  height: 100vh;
+
+  &::before {
+    content: '';
+    background: url('/assets/images/hero-1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .55;
+  }
+
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    
+  }
+}
+
+.main-menu {
+    margin-left: auto;
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 1rem;
+    color: #fff;
+  }
+
+  &__link {
+
+  }
+}
