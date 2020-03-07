@@ -228,7 +228,7 @@ pre > code {
   opacity: .55;
 }
 
-.main-header__upper {
+.main-menu {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -236,10 +236,6 @@ pre > code {
   -webkit-box-align: center;
           align-items: center;
   height: 6rem;
-}
-
-.main-menu {
-  margin-left: auto;
 }
 
 .main-menu__items {

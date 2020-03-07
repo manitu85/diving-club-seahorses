@@ -21,17 +21,13 @@
     opacity: .55;
   }
 
-  &__upper {
+}
+
+.main-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 6rem;
-    
-  }
-}
-
-.main-menu {
-    margin-left: auto;
 
   &__items {
     display: flex;
