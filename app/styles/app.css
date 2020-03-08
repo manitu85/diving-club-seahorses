@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  background-color: #fff;
+  background-color: #FAFAFA;
   color: #202020;
 }
 
@@ -207,6 +207,67 @@ pre > code {
   display: grid;
   grid-template-rows: 5vh 75vh 20vh repeat(2, -webkit-min-content) 40vh repeat(7, -webkit-min-content);
   grid-template-rows: 5vh 75vh 20vh repeat(2, min-content) 40vh repeat(7, min-content);
+}
+
+.header {
+  background-color: #FF9F43;
+}
+
+.showcase {
+  background-color: #00316E;
+}
+
+.info {
+  background-color: #001C57;
+}
+
+.features {
+  height: 20rem;
+  background-color: #01A3A4;
+}
+
+.team__cta {
+  background-color: #707070;
+}
+
+.team__members {
+  background-color: #171717;
+}
+
+.team__content {
+  background-color: #00316E;
+}
+
+.tours__activites {
+  background-color: #001C57;
+}
+
+.tours__cta {
+  background-color: #FF9F43;
+}
+
+.testimonals__video {
+  background-color: #287899;
+}
+
+.testimonals__content {
+  background-color: #FFBF2E;
+}
+
+.testimonals__counter {
+  background-color: #A7C9D3;
+}
+
+.testimonals__slider {
+  background-color: #01A3A4;
+}
+
+.gallery {
+  background-color: #171717;
+}
+
+.footer {
+  background-color: #FFBF2E;
 }
 
 .bg--light {
