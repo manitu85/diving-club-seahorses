@@ -1,1 +1,1 @@
-alert('working now')
+console.log('working now');

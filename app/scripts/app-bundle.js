@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-alert('working now');
+console.log('working now');
 
 /***/ })
 

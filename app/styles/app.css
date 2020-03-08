@@ -18,10 +18,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   background-color: #fff;
-  color: #fff;
+  color: #202020;
 }
 
 a {
+  color: #000;
   text-decoration: none;
   word-wrap: break-word;
 }
@@ -202,50 +203,10 @@ pre > code {
   max-width: 100%;
 }
 
-.main-header {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  justify-items: center;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  text-align: left;
-  height: 100vh;
-}
-
-.main-header::before {
-  content: '';
-  background: url("/assets/images/hero-1.jpg") no-repeat center center/cover;
-  background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: .55;
-}
-
-.main-menu {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-          align-items: center;
-  height: 6rem;
-}
-
-.main-menu__items {
-  display: -webkit-box;
-  display: flex;
-}
-
-.main-menu__item {
-  margin-left: 1rem;
-  color: #fff;
+.site-container {
+  display: grid;
+  grid-template-rows: 5vh 75vh 20vh repeat(2, -webkit-min-content) 40vh repeat(7, -webkit-min-content);
+  grid-template-rows: 5vh 75vh 20vh repeat(2, min-content) 40vh repeat(7, min-content);
 }
 
 .bg--light {
