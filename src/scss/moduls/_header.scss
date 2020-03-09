@@ -1,5 +1,19 @@
 .header {
   background-color: $orange-brand;
+  grid-column: center-start / center-end;
+
+    &::before {
+    content: '';
+    background: url('/assets/images/hero-2.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(75vh + 6rem) ;
+    z-index: -1;
+    opacity: .95;
+  }
 }
 
 

@@ -2,14 +2,18 @@
 
   &__cta {
     background-color: $grey--light;
+    grid-column: full-start / full-end;
+    height: 30vh;
   }
 
   &__members {
     background-color: $grey--dark;
+    grid-column: full-start / col-end 2;
   }
 
   &__content {
     background-color: $blue-brand;
+    grid-column: 4 / full-end;
   }
 
 }

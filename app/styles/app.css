@@ -18,7 +18,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   background-color: #FAFAFA;
-  color: #202020;
+  color: #fff;
 }
 
 a {
@@ -205,69 +205,105 @@ pre > code {
 
 .site-container {
   display: grid;
-  grid-template-rows: 5vh 75vh 20vh repeat(2, -webkit-min-content) 40vh repeat(7, -webkit-min-content);
-  grid-template-rows: 5vh 75vh 20vh repeat(2, min-content) 40vh repeat(7, min-content);
+  grid-template-rows: 6rem 75vh 20vh repeat(2, -webkit-min-content) 40vw repeat(7, -webkit-min-content);
+  grid-template-rows: 6rem 75vh 20vh repeat(2, min-content) 40vw repeat(7, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.site-container > * {
+  padding: 2rem;
+  font-size: 3rem;
 }
 
 .header {
   background-color: #FF9F43;
+  grid-column: center-start / center-end;
+}
+
+.header::before {
+  content: '';
+  background: url("/assets/images/hero-2.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(75vh + 6rem);
+  z-index: -1;
+  opacity: .95;
 }
 
 .showcase {
   background-color: #00316E;
+  grid-column: center-start / center-end;
 }
 
 .info {
   background-color: #001C57;
+  grid-column: full-start / full-end;
 }
 
 .features {
-  height: 20rem;
+  grid-column: center-start / center-end;
   background-color: #01A3A4;
 }
 
 .team__cta {
   background-color: #707070;
+  grid-column: full-start / full-end;
+  height: 30vh;
 }
 
 .team__members {
   background-color: #171717;
+  grid-column: full-start / col-end 2;
 }
 
 .team__content {
   background-color: #00316E;
+  grid-column: 4 / full-end;
 }
 
 .tours__activites {
   background-color: #001C57;
+  grid-column: center-start / center-end;
 }
 
 .tours__cta {
   background-color: #FF9F43;
+  grid-column: full-start / full-end;
+  height: 30vh;
 }
 
 .testimonals__video {
   background-color: #287899;
+  grid-column: center-start / col-end 4;
 }
 
 .testimonals__content {
   background-color: #FFBF2E;
+  grid-column: col-start 5 / center-end;
 }
 
 .testimonals__counter {
   background-color: #A7C9D3;
+  grid-column: center-start / center-end;
 }
 
 .testimonals__slider {
   background-color: #01A3A4;
+  grid-column: center-start / center-end;
 }
 
 .gallery {
   background-color: #171717;
+  grid-column: full-start / full-end;
 }
 
 .footer {
   background-color: #FFBF2E;
+  grid-column: full-start / full-end;
 }
 
 .bg--light {

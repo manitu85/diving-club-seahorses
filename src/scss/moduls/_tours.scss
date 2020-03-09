@@ -2,10 +2,12 @@
 
   &__activites {
     background-color: $blue--darker;
+    grid-column: center-start / center-end;
   }
 
   &__cta {
     background-color: $orange-brand;
-
+    grid-column: full-start / full-end;
+     height: 30vh;
   }
 }
