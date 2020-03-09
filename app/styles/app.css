@@ -18,7 +18,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   background-color: #FAFAFA;
-  color: #fff;
+  color: #202020;
 }
 
 a {
@@ -196,6 +196,23 @@ pre > code {
 }
 
 /* typography */
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: serif;
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.heading-4--light {
+  color: #707070;
+}
+
+.heading-4--dark {
+  color: #171717;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -209,11 +226,6 @@ pre > code {
   grid-template-rows: 6rem 75vh 20vh repeat(2, min-content) 40vw repeat(7, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-}
-
-.site-container > * {
-  padding: 2rem;
-  font-size: 3rem;
 }
 
 .header {
@@ -245,8 +257,20 @@ pre > code {
 }
 
 .features {
+  background-color: #FAFAFA;
   grid-column: center-start / center-end;
-  background-color: #01A3A4;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+}
+
+.feature__icon {
+  fill: #FF9F43;
+}
+
+.feature__text {
+  font-size: 1.7rem;
 }
 
 .team__cta {
@@ -294,6 +318,7 @@ pre > code {
 .testimonals__slider {
   background-color: #01A3A4;
   grid-column: center-start / center-end;
+  height: 30vh;
 }
 
 .gallery {

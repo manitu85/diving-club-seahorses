@@ -1,4 +1,24 @@
 .features {
+  background-color: $grey--lighter;
   grid-column: center-start / center-end;
-  background-color: $cyan-brand;
+
+  margin: 15rem 0;
+
+  // Implicit grid
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+}
+
+.feature {
+
+  &__icon {
+    fill: $orange-brand;
+    // width: 3.5rem;
+    // height: 3.5rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
 }
