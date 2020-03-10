@@ -1,0 +1,65 @@
+/* Basic Reset */
+
+
+:root {
+  --orange-brand: #{$orange-brand};
+  --yellow-brand: #{$yellow-brand};
+  --cyan-brand: #{$cyan-brand};
+  --blue-brand: #{$blue-brand};
+
+  --background-color: #{$grey--lighter};
+
+  --heading-color: #{$black};
+  --text-color: #{$grey--light};
+  --text-line-height: 1.6;
+
+  --font-primary: #{$font-primary};
+  --font-display: #{$font-display};
+
+  --font-size-small: 1.4rem;
+  --font-size-medium: 1.9rem;
+  --font-size-large: 2.6rem;   
+  --font-size-extra-large: 3.6rem;   
+}
+
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+    font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px  
+    // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    // font-size: calc(var(--font-size-small) + (var(--font-size-large) - var(--font-size-small)) * ((100vw - 320px) / (1200px - 320px)));
+    //  height: 100vh;
+}
+
+body {
+  font-size: var(--font-size-small); // Mobile first
+  line-height: var(--text-line-height);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-primary);
+  font-weight: 300;
+}
+
+// Overall site layout
+.site-container {
+  display: grid;
+  grid-template-rows:  6rem 75vh 20vh repeat(2, min-content) 40vw repeat(7, min-content);
+  grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];   
+
+  // & > * { 
+  //   padding: 2rem;
+  //   font-size: 3rem;
+  // }
+}
+
+
+
+

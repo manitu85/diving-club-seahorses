@@ -29,6 +29,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "gulp-svgmin": "^2.2.0",
     "lazysizes": "^5.1.1",
     "picturefill": "^3.0.3",
     "waypoints": "^4.0.1"

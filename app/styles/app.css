@@ -1,4 +1,23 @@
+/* typography vars */
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700|Open+Sans:300,400,600,700&display=swap");
 /* Basic Reset */
+:root {
+  --orange-brand: #FF9F43;
+  --yellow-brand: #FFBF2E;
+  --cyan-brand: #01A3A4;
+  --blue-brand: #00316E;
+  --background-color: #FAFAFA;
+  --heading-color: #202020;
+  --text-color: #707070;
+  --text-line-height: 1.6;
+  --font-primary: Open Sans, sans-serif;
+  --font-display: Nunito Sans, sans-serif;
+  --font-size-small: 1.4rem;
+  --font-size-medium: 1.9rem;
+  --font-size-large: 2.6rem;
+  --font-size-extra-large: 3.6rem;
+}
+
 *,
 *:before,
 *:after {
@@ -13,12 +32,20 @@ html {
 }
 
 body {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-size-small);
+  line-height: var(--text-line-height);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-primary);
   font-weight: 300;
-  background-color: #FAFAFA;
-  color: #202020;
+}
+
+.site-container {
+  display: grid;
+  grid-template-rows: 6rem 75vh 20vh repeat(2, -webkit-min-content) 40vw repeat(7, -webkit-min-content);
+  grid-template-rows: 6rem 75vh 20vh repeat(2, min-content) 40vw repeat(7, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 a {
@@ -27,8 +54,9 @@ a {
   word-wrap: break-word;
 }
 
-a:hover, a:focus, a:active {
+a:hover, a:focus, a:active, a:visited, a:link {
   text-decoration: none;
+  outline: 0;
 }
 
 hr {
@@ -43,18 +71,17 @@ p {
 }
 
 ul {
-  list-style: circle inside;
+  padding: 0;
+  list-style: none;
 }
 
 ol {
-  list-style: decimal inside;
   padding-left: 0;
   margin-top: 0;
 }
 
 li {
   margin-bottom: 1rem;
-  list-style: none;
 }
 
 img,
@@ -195,24 +222,6 @@ pre > code {
   white-space: pre;
 }
 
-/* typography */
-.heading-1, .heading-2, .heading-3, .heading-4 {
-  font-family: serif;
-  font-weight: 400;
-}
-
-.heading-4 {
-  font-size: 1.9rem;
-}
-
-.heading-4--light {
-  color: #707070;
-}
-
-.heading-4--dark {
-  color: #171717;
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -220,12 +229,23 @@ pre > code {
   max-width: 100%;
 }
 
-.site-container {
-  display: grid;
-  grid-template-rows: 6rem 75vh 20vh repeat(2, -webkit-min-content) 40vw repeat(7, -webkit-min-content);
-  grid-template-rows: 6rem 75vh 20vh repeat(2, min-content) 40vw repeat(7, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+/* typography */
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  color: var(--heading-color);
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-size: var(--font-size-medium);
+}
+
+.heading-4--light {
+  --heading-color: #707070;
+}
+
+.heading-4--dark {
+  --heading-color: #171717;
 }
 
 .header {
@@ -266,11 +286,25 @@ pre > code {
 }
 
 .feature__icon {
-  fill: #FF9F43;
+  fill: var(--orange-brand);
+  width: 6rem;
+  height: 6rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+}
+
+.feature__icon:hover {
+  fill: var(--yellow-brand);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .feature__text {
-  font-size: 1.7rem;
+  font-size: var(--font-size-small);
 }
 
 .team__cta {

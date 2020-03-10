@@ -13,12 +13,23 @@
 .feature {
 
   &__icon {
-    fill: $orange-brand;
-    // width: 3.5rem;
-    // height: 3.5rem;
+    fill: var(--orange-brand);
+    width: 6rem;
+    height: 6rem;
+
+    display: flex;
+    justify-content: center;
+
+    transition: .3s all ease-out;
+
+    &:hover {
+      fill: var(--yellow-brand);
+      transform: scale(1.2);
+    }
   }
 
   &__text {
-    font-size: 1.7rem;
+    font-size: var(--font-size-small);
+    // font-size: 2vmin;
   }
 }
