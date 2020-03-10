@@ -1,6 +1,6 @@
 /* typography vars */
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700|Open+Sans:300,400,600,700&display=swap");
-/* Basic Reset */
+/* Basic config */
 :root {
   --orange-brand: #FF9F43;
   --yellow-brand: #FFBF2E;
@@ -238,6 +238,7 @@ pre > code {
 
 .heading-4 {
   font-size: var(--font-size-medium);
+  font-variant: small-caps;
 }
 
 .heading-4--light {

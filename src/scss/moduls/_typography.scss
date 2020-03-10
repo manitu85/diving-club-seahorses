@@ -21,6 +21,7 @@
 .heading-4 {
   @extend %heading;
   font-size: var(--font-size-medium);
+  font-variant: small-caps;
 
   &--light {
     --heading-color: #{$grey--light};
