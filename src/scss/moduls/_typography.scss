@@ -3,6 +3,7 @@
 %heading {
   color: var(--heading-color);
   font-family: var(--font-display);
+  font-size: var(--font-size-medium);
   font-weight: 400;
 }
 
@@ -20,8 +21,8 @@
 
 .heading-4 {
   @extend %heading;
-  font-size: var(--font-size-medium);
   font-variant: small-caps;
+  --font-size-medium: 1.8rem;
 
   &--light {
     --heading-color: #{$grey--light};
