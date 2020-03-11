@@ -7,14 +7,17 @@
   --cyan-brand: #01A3A4;
   --blue-brand: #00316E;
   --background-color: #FAFAFA;
-  --heading-color: #202020;
   --text-color: #707070;
+  --heading-color: #202020;
   --text-line-height: 1.6;
   --font-primary: Open Sans, sans-serif;
   --font-display: Nunito Sans, sans-serif;
   --font-size-small: 1.4rem;
-  --font-size-medium: 1.9rem;
-  --font-size-large: 2.6rem;
+  --font-size-medium: 1.7rem;
+  --font-size-large: 2rem;
+  --font-size-heading: 3rem;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0, .4);
+  --shadow-light: 0 2rem 6rem rgb(255, 255, 255, .3);
 }
 
 *,
@@ -231,23 +234,54 @@ pre > code {
 /* typography */
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: var(--font-display);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-heading);
   font-weight: 400;
   color: var(--heading-color);
 }
 
+.heading-2 {
+  --font-size-heading: 4rem;
+}
+
+.heading-2--light {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1;
+  width: 100rem;
+  margin-bottom: 2rem;
+  --heading-color: #FAFAFA;
+}
+
 .heading-4 {
   font-variant: small-caps;
-  --font-size-medium: 1.6rem;
+  --font-size-heading: 1.6rem;
 }
 
 .heading-4--light {
-  --heading-color: #707070;
   letter-spacing: 1px;
+  --heading-color: #707070;
 }
 
 .heading-4--dark {
   --heading-color: #171717;
+}
+
+.btn {
+  background-color: var(--orange-brand);
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.btn:hover {
+  background-color: var(--yellow-brand);
 }
 
 .header {
@@ -337,9 +371,19 @@ pre > code {
 }
 
 .team__cta {
-  background-color: #707070;
   grid-column: full-start / full-end;
-  height: 30vh;
+  height: 40vh;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 53, 8, 0.7)), color-stop(rgba(2, 2, 2, 0.7)), to(rgba(0, 0, 0, 0.5))), url("/assets/images/cta-1.jpg") left 10% bottom 50%/cover no-repeat border-box, #ff1b68;
+  background: linear-gradient(to right, rgba(39, 53, 8, 0.7), rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.5)), url("/assets/images/cta-1.jpg") left 10% bottom 50%/cover no-repeat border-box, #ff1b68;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .team__members {
@@ -350,6 +394,14 @@ pre > code {
 .team__content {
   background-color: #00316E;
   grid-column: 4 / full-end;
+}
+
+.generic-text {
+  width: 60rem;
+  color: #FAFAFA;
+  font-size: var(--font-size-small);
+  text-align: center;
+  margin: 1rem 0 4rem 0;
 }
 
 .tours__activites {

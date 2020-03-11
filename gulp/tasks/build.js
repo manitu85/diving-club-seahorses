@@ -31,7 +31,7 @@ gulp.task('copyGeneralFiles', ['deleteBuildFolder'], () => {
     .pipe(gulp.dest('./build'))
 });
 
-// Optimize and compress images  ['./src/assets/**']
+// Optimize and compress -- images go in app/assets, no src ['./src/assets/**'] 
 gulp.task('optimizeImages', ['deleteBuildFolder', 'icons'], () => {
   // gulp.src('app/assets/**/*.+(png|jpg|gif|svg)')
   return gulp.src('./app/assets/**')
@@ -55,8 +55,14 @@ gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {
   return gulp.src("./app/index.html")
     .pipe(usemin({
       html: [ htmlmin({ collapseWhitespace: true }) ],
-      css: [ () => rev(), () => cssnano() ],
-      js: [ () => rev(), () => uglify() ]
+      css: [ 
+        () => rev(),      // add revision
+        () => cssnano()   // minify css 
+      ],
+      js: [ 
+        () => rev(),      // add revision
+        () => uglify()    // minify js 
+      ]
     }))
     // .pipe(gzip())
     .pipe(gulp.dest("./build"));

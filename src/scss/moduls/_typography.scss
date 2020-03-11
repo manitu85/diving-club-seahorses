@@ -2,31 +2,42 @@
 
 %heading {
   font-family: var(--font-display);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-heading);
   font-weight: 400;
   color: var(--heading-color);
 }
 
 .heading-1 {
-  @extend %heading
+  @extend %heading;
 }
 
 .heading-2 {
-  @extend %heading
+  @extend %heading;
+  --font-size-heading: 4rem;
+
+  &--light {
+    text-align: center;
+    font-weight: 600;
+    line-height: 1;
+    width: 100rem;
+    margin-bottom: 2rem;
+    // --heading-color: #{$white};
+    --heading-color: #{$grey--lighter};
+  }
 }
 
 .heading-3 {
-  @extend %heading
+  @extend %heading;
 }
 
 .heading-4 {
   @extend %heading;
   font-variant: small-caps;
-  --font-size-medium: 1.6rem;
+  --font-size-heading: 1.6rem;
 
   &--light {
-    --heading-color: #{$grey--light};
     letter-spacing: 1px;
+    --heading-color: #{$grey--light};
   }
 
   &--dark {

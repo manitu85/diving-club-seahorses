@@ -7,16 +7,21 @@
 
   --background-color: #{$grey--lighter};
 
-  --heading-color: #{$black};
   --text-color: #{$grey--light};
+  --heading-color: #{$black};
   --text-line-height: 1.6;
 
   --font-primary: #{$font-primary};
   --font-display: #{$font-display};
 
   --font-size-small: 1.4rem;
-  --font-size-medium: 1.9rem;
-  --font-size-large: 2.6rem;    
+  --font-size-medium: 1.7rem;
+  --font-size-large: 2rem;  
+  --font-size-heading: 3rem;
+
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0, .4);
+  --shadow-light: 0 2rem 6rem rgb(255, 255, 255, .3);  
+
 }
 
 
