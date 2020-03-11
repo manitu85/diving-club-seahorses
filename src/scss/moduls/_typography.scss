@@ -1,10 +1,10 @@
 /* typography */
 
 %heading {
-  color: var(--heading-color);
   font-family: var(--font-display);
   font-size: var(--font-size-medium);
   font-weight: 400;
+  color: var(--heading-color);
 }
 
 .heading-1 {
@@ -22,14 +22,14 @@
 .heading-4 {
   @extend %heading;
   font-variant: small-caps;
-  --font-size-medium: 1.8rem;
+  --font-size-medium: 1.6rem;
 
   &--light {
     --heading-color: #{$grey--light};
+    letter-spacing: 1px;
   }
 
   &--dark {
     --heading-color: #{$grey--dark};
   }
 }
-
