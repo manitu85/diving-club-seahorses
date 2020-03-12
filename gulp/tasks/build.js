@@ -37,24 +37,29 @@ gulp.task('optimizeImages', ['deleteBuildFolder', 'icons'], () => {
   return gulp.src('./app/assets/**')
   .pipe(cache(imagemin([
     imagemin.gifsicle({interlaced: true}),
-    imagemin.jpegtran({progressive: true}),
+    imagemin.mozjpeg({ quality: 75, progressive: true }),
     imagemin.optipng({optimizationLevel: 5}),
     imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
-      })
+      plugins: [
+        { removeViewBox: true },
+        { cleanupIDs: false }
+      ]
+    }),
+    { verbose: true }
    ])))
-    .pipe(gulp.dest('./build/assets/'))
+  .pipe(gulp.dest('./build/assets/'))
  }
 )
 
+
 // Compress, revision and optimize all files in one
 gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {
-  return gulp.src("./app/index.html")
+  return gulp.src("./app/*.html")
     .pipe(usemin({
-      html: [ htmlmin({ collapseWhitespace: true }) ],
+      html: [htmlmin({ 
+        removeComments: true,
+        collapseWhitespace: true
+      })],
       css: [ 
         () => rev(),      // add revision
         () => cssnano()   // minify css 
@@ -67,6 +72,7 @@ gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {
     // .pipe(gzip())
     .pipe(gulp.dest("./build"));
 });
+
 
 
 // Build finial touch

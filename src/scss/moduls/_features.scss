@@ -4,8 +4,6 @@
   grid-column: center-start / center-end;
   align-items: start;
 
-  margin: 15rem 0;  // section margin
-
   display: grid;
   grid-template-columns: repeat(1, minamax(min-content, 1fr));
   // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); // responsive without @media

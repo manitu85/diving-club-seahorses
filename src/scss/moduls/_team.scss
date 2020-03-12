@@ -8,20 +8,31 @@
       to right,
       rgba(#273508, .7),
       rgba(#020202, .7),
-      rgba(#000, .5)),  // gradient
-    url("/assets/images/cta-1.jpg") left 10% bottom 50%/cover no-repeat border-box,  // image
-    #ff1b68; 
+      rgba(#000, .5)),  
+    url("/assets/images/cta-5.jpg") left 30% bottom 60%/cover no-repeat,  
+    #020202; 
+    // background-attachment: fixed;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    p {
+      width: 60rem;
+      color: $grey--lighter;
+      font-size: var(--font-size-small);
+      text-align: center;
+      margin: 1rem 0 4rem 0;
+    }
   }
+
 
   &__members {
     background-color: $grey--dark;
     grid-column: full-start / col-end 2;
+
+    
   }
 
   &__content {
@@ -31,10 +42,3 @@
 
 }
 
-.generic-text {
-  width: 60rem;
-  color: $grey--lighter;
-  font-size: var(--font-size-small);
-  text-align: center;
-  margin: 1rem 0 4rem 0;
-}

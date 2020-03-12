@@ -19,10 +19,19 @@
     text-align: center;
     font-weight: 600;
     line-height: 1;
-    width: 100rem;
+    width: 60%;
     margin-bottom: 2rem;
     // --heading-color: #{$white};
     --heading-color: #{$grey--lighter};
+  }
+
+  &--dark {
+    text-align: left;
+    font-weight: 600;
+    line-height: 1;
+    width: 60%;
+    margin-bottom: 2rem;
+    --heading-color: #{$yellow-brand};
   }
 }
 

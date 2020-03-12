@@ -6,8 +6,28 @@
   }
 
   &__cta {
-    background-color: $orange-brand;
     grid-column: full-start / full-end;
-    height: 30vh;
+    height: 50vh;
+
+    background: linear-gradient(
+      to right,
+      rgba(#273508, .7),
+      rgba(#020202, .7),
+      rgba(#000, .5)),  
+    url("/assets/images/cta-7.jpg") left 30% bottom 30%/cover no-repeat,  
+    #020202; 
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 60%;
+      color: $grey--lighter;
+      font-size: var(--font-size-medium);
+      text-align: left;
+      margin: 1rem 0 4rem 0;
+    }
   }
 }

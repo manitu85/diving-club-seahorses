@@ -7,7 +7,7 @@ gulp.task('previewProd', () => {
     notify: false,
     server: {
       baseDir: './build',
-      port: 3005
+      port: 5000
     }
   })
 })

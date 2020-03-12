@@ -1,1 +1,3 @@
-console.log('working now');
+import Modal from './moduls/Modal'
+
+const modal = new Modal();

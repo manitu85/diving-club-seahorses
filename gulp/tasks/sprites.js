@@ -8,8 +8,8 @@ import del from 'del'
 gulp.task('beginClean', () => {
   const paths = [
     './app/temp/sprite',  
-    './app/assets/sprite', 
-    './src/scss/moduls/_sprite.scss'
+    // './app/assets/sprite', 
+    // './src/scss/moduls/_sprite.scss'
   ]
 
   return del(paths)
@@ -58,7 +58,7 @@ gulp.task('copySpriteSvg', ['createSprite'], () => {
 )
 
 // Transform css to scss 
-gulp.task('copySpriteSCSS', ['createSprite'], () => {
+gulp.task('copySpriteSCSS', ['createSprite', 'copySpriteSvg'], () => {
     return gulp.src('./app/temp/sprite/scss/*.scss')
       .pipe(rename('_sprite.scss'))
       .pipe(gulp.dest('./src/scss/moduls'))
@@ -66,7 +66,7 @@ gulp.task('copySpriteSCSS', ['createSprite'], () => {
 )
 
 // End clean depend on these 2 tasks, can't run until finish
-gulp.task('endClean', ['copySpriteSvg','copySpriteSCSS'], () => {
+gulp.task('endClean', ['copySpriteSvg', 'copySpriteSCSS'], () => {
   return del(['./app/temp/sprite'])
   }
 )
