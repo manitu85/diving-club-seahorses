@@ -25,6 +25,7 @@ gulp.task('styles', () => {
     .on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(maps.write('./'))
+    // .pipe(maps.write('.'))
     .on('error', handleError)
     .pipe(gulp.dest('./app/styles'))
     .pipe(browserSync.stream())

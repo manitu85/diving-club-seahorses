@@ -40,3 +40,4 @@ gulp.task('scriptsRefresh', ['scripts'], () => {
   }
 )
 
+// exports.watchDev = watchDev

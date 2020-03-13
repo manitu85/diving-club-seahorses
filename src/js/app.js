@@ -1,3 +1,3 @@
-// import Modal from './moduls/Modal'
+import Modal from './moduls/Modal'
 
-// const modal = new Modal();
+const modal = new Modal();

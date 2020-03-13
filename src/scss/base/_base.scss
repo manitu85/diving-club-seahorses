@@ -19,8 +19,8 @@
   --font-size-large: 2rem;  
   --font-size-heading: 3rem;
 
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0, .4);
-  --shadow-light: 0 2rem 6rem rgb(255, 255, 255, .3);  
+  --shadow-dark: 0 2rem 6rem rgba(#{$black}, .4);
+  --shadow-light: 0 2rem 6rem rgb(#{$white}, .3);  
 
 }
 
@@ -58,7 +58,6 @@ body {
 
   // & > * { 
   //   padding: 2rem;
-  //   font-size: 3rem;
   // }
 }
 

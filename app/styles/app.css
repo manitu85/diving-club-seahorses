@@ -16,8 +16,8 @@
   --font-size-medium: 1.7rem;
   --font-size-large: 2rem;
   --font-size-heading: 3rem;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0, .4);
-  --shadow-light: 0 2rem 6rem rgb(255, 255, 255, .3);
+  --shadow-dark: 0 2rem 6rem rgba(#202020, .4);
+  --shadow-light: 0 2rem 6rem rgb(#fff, .3);
 }
 
 *,
@@ -240,11 +240,10 @@ pre > code {
 }
 
 .heading-2 {
-  --font-size-heading: 4rem;
+  --font-size-heading: 3rem;
 }
 
 .heading-2--light {
-  text-align: center;
   font-weight: 600;
   line-height: 1;
   width: 60%;
@@ -258,6 +257,11 @@ pre > code {
   line-height: 1;
   width: 60%;
   margin-bottom: 2rem;
+  --heading-color: #FFBF2E;
+}
+
+.heading-3--light {
+  --font-size-heading: 1.6rem;
   --heading-color: #FFBF2E;
 }
 
@@ -289,8 +293,9 @@ pre > code {
   padding: 1.8rem 3rem;
   font-weight: 600;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-size: 1.2rem;
 }
 
 .btn--orange {
@@ -304,7 +309,6 @@ pre > code {
 .btn--inverse {
   border: 2px solid var(--orange-brand);
   padding: 1.5rem 4rem;
-  border-radius: 50px;
 }
 
 .btn--inverse:hover {
@@ -312,7 +316,7 @@ pre > code {
 }
 
 .header {
-  background-color: #2B6EB1;
+  background-color: #0065b7;
   grid-column: full-start / full-end;
   position: -webkit-sticky;
   position: sticky;
@@ -347,7 +351,6 @@ pre > code {
 }
 
 .nav-menu__item {
-  font-size: 1.2rem;
   margin-bottom: 0px;
   text-transform: uppercase;
 }
@@ -356,10 +359,14 @@ pre > code {
   margin-right: 2rem;
 }
 
+.nav-menu__item > * {
+  font-size: 1.2rem;
+  padding: 2.25rem 1rem;
+}
+
 .nav-menu__link {
   color: #fff;
   font-weight: 400;
-  padding: 2.25rem 1rem;
 }
 
 .nav-menu__link:hover {
@@ -481,11 +488,11 @@ pre > code {
   font-size: var(--font-size-small);
 }
 
-.team__cta {
+.cta-equipment {
   grid-column: full-start / full-end;
-  height: 40vh;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 53, 8, 0.7)), color-stop(rgba(2, 2, 2, 0.7)), to(rgba(0, 0, 0, 0.5))), url("/assets/images/cta-5.jpg") left 30% bottom 60%/cover no-repeat, #020202;
-  background: linear-gradient(to right, rgba(39, 53, 8, 0.7), rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.5)), url("/assets/images/cta-5.jpg") left 30% bottom 60%/cover no-repeat, #020202;
+  height: 45vh;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(93, 117, 163, 0.7)), color-stop(rgba(2, 2, 2, 0.7)), to(rgba(0, 0, 0, 0.5))), url("/assets/images/cta-5.jpg") left 30% bottom 60%/cover no-repeat, #020202;
+  background: linear-gradient(to right, rgba(93, 117, 163, 0.7), rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.5)), url("/assets/images/cta-5.jpg") left 30% bottom 60%/cover no-repeat, #020202;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -495,9 +502,10 @@ pre > code {
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
+  text-align: center;
 }
 
-.team__cta p {
+.cta-equipment p {
   width: 60rem;
   color: #FAFAFA;
   font-size: var(--font-size-small);
@@ -506,13 +514,41 @@ pre > code {
 }
 
 .team__members {
-  background-color: #171717;
   grid-column: full-start / col-end 2;
+  background: url(/assets/images/team-5.jpg) no-repeat center center/cover;
+  background-color: #171717;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.team__members-box {
+  width: 20vw;
+  height: 60vh;
+  background-color: rgba(32, 32, 32, 0.85);
 }
 
 .team__content {
-  background-color: #00316E;
-  grid-column: 4 / full-end;
+  grid-column: col-start 3 / full-end;
+  background-color: #004962;
+  color: #fff;
+  padding: 3rem 8vw;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+          align-items: start;
+}
+
+.team__text {
+  margin-bottom: 3rem;
 }
 
 .tours__activites {

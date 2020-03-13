@@ -31,29 +31,32 @@ gulp.task('copyGeneralFiles', ['deleteBuildFolder'], () => {
     .pipe(gulp.dest('./build'))
 });
 
+
 // Optimize and compress -- images go in app/assets, no src ['./src/assets/**'] 
 gulp.task('optimizeImages', ['deleteBuildFolder', 'icons'], () => {
-  // gulp.src('app/assets/**/*.+(png|jpg|gif|svg)')
-  return gulp.src('./app/assets/**')
-  .pipe(cache(imagemin([
-    imagemin.gifsicle({interlaced: true}),
+  const config = [
+    { verbose: true },
+    imagemin.gifsicle({ interlaced: true }),
     imagemin.mozjpeg({ quality: 75, progressive: true }),
-    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.optipng({ optimizationLevel: 5 }),
     imagemin.svgo({
       plugins: [
         { removeViewBox: true },
         { cleanupIDs: false }
       ]
-    }),
-    { verbose: true }
-   ])))
-  .pipe(gulp.dest('./build/assets/'))
- }
+    })
+  ]
+
+  // return gulp.src('./app/assets/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('./app/assets/**')
+    .pipe(cache(imagemin(config)))
+    .pipe(gulp.dest('./build/assets/'))
+  }
 )
 
 
 // Compress, revision and optimize all files in one
-gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {
+gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {  // add optimizeImages
   return gulp.src("./app/*.html")
     .pipe(usemin({
       html: [htmlmin({ 

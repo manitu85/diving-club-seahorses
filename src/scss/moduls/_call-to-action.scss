@@ -1,0 +1,27 @@
+.cta-equipment {
+    grid-column: full-start / full-end;
+    height: 45vh;
+
+    background: linear-gradient(
+      to right,
+      rgba(#5d75a3, .7),
+      rgba(#020202, .7),
+      rgba(#000, .5)),  
+    url("/assets/images/cta-5.jpg") left 30% bottom 60%/cover no-repeat,  
+    #020202; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    p {
+      width: 60rem;
+      color: $grey--lighter;
+      font-size: var(--font-size-small);
+      text-align: center;
+      margin: 1rem 0 4rem 0;
+    }
+}

@@ -1,44 +1,41 @@
+
+
 .team {
 
-  &__cta {
-    grid-column: full-start / full-end;
-    height: 40vh;
+  &__members {
+    grid-column: full-start / col-end 2;
 
-    background: linear-gradient(
-      to right,
-      rgba(#273508, .7),
-      rgba(#020202, .7),
-      rgba(#000, .5)),  
-    url("/assets/images/cta-5.jpg") left 30% bottom 60%/cover no-repeat,  
-    #020202; 
-    // background-attachment: fixed;
+    background: url(/assets/images/team-5.jpg) no-repeat center center/cover ;
+    background-color: $grey--dark;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__members-box {
+    width: 20vw;
+    height: 60vh;
+    background-color: rgba(#202020, .85);
+  }
+
+  &__content {
+    grid-column: col-start 3 / full-end;
+    
+    // background-color: $blue-brand;
+    background-color: #004962;
+    color: $white;
+
+    padding: 3rem 8vw;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    p {
-      width: 60rem;
-      color: $grey--lighter;
-      font-size: var(--font-size-small);
-      text-align: center;
-      margin: 1rem 0 4rem 0;
-    }
+    align-items: start;  
   }
 
-
-  &__members {
-    background-color: $grey--dark;
-    grid-column: full-start / col-end 2;
-
-    
-  }
-
-  &__content {
-    background-color: $blue-brand;
-    grid-column: 4 / full-end;
+  &__text {
+    margin-bottom: 3rem;
   }
 
 }
-

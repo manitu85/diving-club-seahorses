@@ -13,10 +13,10 @@
 
 .heading-2 {
   @extend %heading;
-  --font-size-heading: 4rem;
+  --font-size-heading: 3rem;
 
   &--light {
-    text-align: center;
+    // text-align: center;
     font-weight: 600;
     line-height: 1;
     width: 60%;
@@ -37,6 +37,11 @@
 
 .heading-3 {
   @extend %heading;
+
+  &--light {
+    --font-size-heading: 1.6rem;
+    --heading-color: #{$yellow-brand};
+  }
 }
 
 .heading-4 {
