@@ -53,9 +53,9 @@ body {
 // Overall site layout
 .site-container {
   display: grid;
-  grid-template-rows:  6rem 75vh 20vh repeat(2, min-content) 40vw repeat(7, min-content);
+  grid-template-rows:  6rem 80vh 15vh repeat(2, min-content) 40vw repeat(7, min-content);
   grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];   
- 
+
   // & > * { 
   //   padding: 2rem;
   //   font-size: 3rem;

@@ -1,0 +1,45 @@
+.large-hero {
+  grid-column: full-start / full-end;
+  
+  background: url('/assets/images/hero-3.jpg') no-repeat bottom 90% center/cover;
+  background-attachment: fixed;
+  color: white;
+
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  align-items: center;
+
+  &__content {
+    grid-column: col-start 1 / col-end 5;
+  }
+
+  &__title {
+    color: lighten($orange-brand, 5);
+    line-height: 1;
+    margin: .5rem 0 4rem;
+    font-size: 7vw;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      font-size: 5vw;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 4vw;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 2.5vw;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-display;
+    color: $grey--lighter;
+    font-style: italic;
+  }
+
+  &__description {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+}

@@ -44,8 +44,8 @@ body {
 
 .site-container {
   display: grid;
-  grid-template-rows: 6rem 75vh 20vh repeat(2, -webkit-min-content) 40vw repeat(7, -webkit-min-content);
-  grid-template-rows: 6rem 75vh 20vh repeat(2, min-content) 40vw repeat(7, min-content);
+  grid-template-rows: 6rem 80vh 15vh repeat(2, -webkit-min-content) 40vw repeat(7, -webkit-min-content);
+  grid-template-rows: 6rem 80vh 15vh repeat(2, min-content) 40vw repeat(7, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
@@ -280,7 +280,7 @@ pre > code {
 }
 
 .btn {
-  background-color: var(--orange-brand);
+  background-color: transparent;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -293,39 +293,130 @@ pre > code {
   transition: all .2s;
 }
 
-.btn:hover {
-  background-color: #ffc748;
+.btn--orange {
+  background-color: var(--orange-brand);
+}
+
+.btn--orange:hover {
+  background-color: #ffac5d;
+}
+
+.btn--inverse {
+  border: 2px solid var(--orange-brand);
+  padding: 1.5rem 4rem;
+  border-radius: 50px;
+}
+
+.btn--inverse:hover {
+  background-color: #ffac5d;
 }
 
 .header {
+  background-color: #2B6EB1;
   grid-column: full-start / full-end;
-}
-
-.header::before {
-  content: '';
-  background: url("/assets/images/hero-3.jpg") no-repeat bottom 90% center/cover;
-  background-attachment: fixed;
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1020;
   top: 0;
   left: 0;
-  width: 100%;
-  height: calc(75vh + 6rem);
-  z-index: -1;
-  opacity: .95;
+  right: 0;
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-.showcase {
-  grid-column: center-start / center-end;
-  color: white;
+.logo {
+  grid-column: col-start 1 / col-end 1;
+  z-index: 990;
+  width: 10rem;
+  height: 10rem;
+}
+
+.nav-menu {
+  grid-column: col-start 5 / col-end 8;
+}
+
+.nav-menu__items {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 6rem;
+}
+
+.nav-menu__item {
+  font-size: 1.2rem;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+
+.nav-menu__item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.nav-menu__link {
+  color: #fff;
+  font-weight: 400;
+  padding: 2.25rem 1rem;
+}
+
+.nav-menu__link:hover {
+  background-color: #00316E;
+  color: #FAFAFA;
+}
+
+.large-hero {
+  grid-column: full-start / full-end;
+  background: url("/assets/images/hero-3.jpg") no-repeat bottom 90% center/cover;
+  background-attachment: fixed;
+  color: white;
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.large-hero__content {
+  grid-column: col-start 1 / col-end 5;
+}
+
+.large-hero__title {
+  color: #ffac5d;
+  line-height: 1;
+  margin: .5rem 0 4rem;
+  font-size: 7vw;
+}
+
+@media screen and (min-width: 37.5em) {
+  .large-hero__title {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .large-hero__title {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 65em) {
+  .large-hero__title {
+    font-size: 2.5vw;
+  }
+}
+
+.large-hero__subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  color: #FAFAFA;
+  font-style: italic;
+}
+
+.large-hero__description {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .info {

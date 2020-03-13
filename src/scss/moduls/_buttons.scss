@@ -1,8 +1,7 @@
 .btn {
-  background-color: var(--orange-brand);
+  background-color: transparent;
   color: #{$white};
   border: none;
-  // border-radius: 50px;
   border-radius: 0;
   font-family: var(--font-display);
   text-transform: uppercase;
@@ -11,7 +10,20 @@
   cursor: pointer;
   transition: all .2s;
 
-  &:hover {
-    background-color: lighten($yellow-brand, 5) ;
+  &--orange {
+    background-color: var(--orange-brand);
+    &:hover {
+      background-color: lighten($orange-brand, 5) ;
+    }
   }
+
+  &--inverse {
+    border: 2px solid  var(--orange-brand);
+    padding: 1.5rem 4rem;
+    border-radius: 50px;
+      &:hover {
+      background-color: lighten($orange-brand, 5) ;
+    }
+  }
+
 }

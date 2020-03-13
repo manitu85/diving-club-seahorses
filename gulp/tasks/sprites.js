@@ -58,7 +58,7 @@ gulp.task('copySpriteSvg', ['createSprite'], () => {
 )
 
 // Transform css to scss 
-gulp.task('copySpriteSCSS', ['createSprite', 'copySpriteSvg'], () => {
+gulp.task('copySpriteSCSS', ['createSprite'], () => {
     return gulp.src('./app/temp/sprite/scss/*.scss')
       .pipe(rename('_sprite.scss'))
       .pipe(gulp.dest('./src/scss/moduls'))
