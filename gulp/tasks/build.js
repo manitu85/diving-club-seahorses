@@ -12,7 +12,7 @@ import del from 'del'
 
 // Delete build repo when upgrade to newer version
 gulp.task('deleteBuildFolder', () => {
-  return del("./build")
+  return del('./build')
 })
 
 gulp.task('copyGeneralFiles', ['deleteBuildFolder'], () => {
@@ -35,7 +35,6 @@ gulp.task('copyGeneralFiles', ['deleteBuildFolder'], () => {
 // Optimize and compress -- images go in app/assets, no src ['./src/assets/**'] 
 gulp.task('optimizeImages', ['deleteBuildFolder', 'icons'], () => {
   const config = [
-    { verbose: true },
     imagemin.gifsicle({ interlaced: true }),
     imagemin.mozjpeg({ quality: 75, progressive: true }),
     imagemin.optipng({ optimizationLevel: 5 }),
@@ -57,7 +56,7 @@ gulp.task('optimizeImages', ['deleteBuildFolder', 'icons'], () => {
 
 // Compress, revision and optimize all files in one
 gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {  // add optimizeImages
-  return gulp.src("./app/*.html")
+  return gulp.src('./app/*.html')
     .pipe(usemin({
       html: [htmlmin({ 
         removeComments: true,
@@ -73,7 +72,7 @@ gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {  // ad
       ]
     }))
     // .pipe(gzip())
-    .pipe(gulp.dest("./build"));
+    .pipe(gulp.dest('./build'));
 });
 
 

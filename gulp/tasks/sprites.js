@@ -32,7 +32,7 @@ gulp.task('createSprite', ['beginClean'], () => {
     mode: {
       // SVG Symbol Sprite 
       symbol: {
-        dest: "./",
+        dest: './',
         prefix: '.icon--%s', // BEM-style prefix 
         sprite: 'sprite.svg',
         render: {

@@ -235,8 +235,8 @@ pre > code {
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: var(--font-display);
   font-size: var(--font-size-heading);
-  font-weight: 400;
   color: var(--heading-color);
+  font-weight: 400;
 }
 
 .heading-2 {
