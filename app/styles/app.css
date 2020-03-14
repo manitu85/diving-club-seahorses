@@ -557,7 +557,7 @@ pre > code {
   -webkit-box-pack: center;
           justify-content: center;
   -webkit-box-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 .team__text {
