@@ -42,6 +42,11 @@
     --font-size-heading: 1.6rem;
     --heading-color: #{$yellow-brand};
   }
+
+  &--large {
+    text-align: center;
+    --font-size-heading: 2rem;
+  }
 }
 
 .heading-4 {
@@ -52,6 +57,11 @@
   &--light {
     letter-spacing: 1px;
     --heading-color: #{$grey--light};
+  }
+
+  &--white {
+    --heading-color: #{$grey--lighter};
+    --font-size-heading: 1.4rem;
   }
 
   &--dark {
