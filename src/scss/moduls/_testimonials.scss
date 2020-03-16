@@ -1,78 +1,46 @@
+// Testimonial slider
 .testimonals {
+  // background-color: $cyan-brand;
   grid-column: full-start / full-end;
-  background: linear-gradient(
-     to right,
-      rgba(#1c3450, .7),
-      rgba(#020202, .7),
-      rgba(#000, .5)),  
-  url(/assets/images/hero-2.jpg) no-repeat center center/cover;
+  padding: 10rem 2vw;
 
-  display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 3rem;
-
-  padding-top: 12rem;
-
-  &__video {
-    // background-color: $blue--light;
-    grid-column: center-start / col-end 4;
-   
-    background: url(/assets/images/cta-1.jpg) no-repeat center center/cover;
-    // width: 40rem;
-    height: 40rem;
-
-    padding: 6rem;
-    text-align: center;
-  }
-
-  &__content {
-    // background-color: $yellow-brand;
-    grid-column: col-start 5 / center-end;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  &__counter {
-    grid-column: center-start / center-end;
-
-    display: flex;
-    justify-content: space-evenly;
-    // justify-content: space-between;
-    // justify-content: space-around;
-    align-items: center ;
-    text-align: center;
-  }
-
+  // background: linear-gradient(
+  //    to right,
+  //     rgba(#1c3450, .7),
+  //     rgba(#020202, .7),
+  //     rgba(#000, .5)),  
+  // url(/assets/images/testimonial-bg.jpg) no-repeat center bottom/cover;
 }
 
-.counter {
-  
-  &__item {
+.testimonial {
+
+    margin: 0 auto;
+    max-width: 50rem;
+
+  &__user {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+
   }
 
-  &__number {
-    font-size: 6rem;
+  &__img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 5px solid $grey--lighter;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 2rem rgba($black, .5);
+  }
+
+  &__name {
+    font-size: 2rem;
     color: $orange-brand;
     font-weight: 600;
   }
 
-  &__icon {
-    fill: $yellow-brand;
-    width: 8rem;
-    height: 8rem;
+  &__text {
+    text-align: center;
   }
-}
-
-// Testimonial slider
-.slider {
-  background-color: $cyan-brand;
-  grid-column: center-start / center-end;
-  height: 30vh;
 }

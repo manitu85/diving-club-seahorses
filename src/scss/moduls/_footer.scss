@@ -20,10 +20,11 @@
   }
 
   &__link {
-    color: #9C96A8;
+    color: #a8a8a8;
 
     &:hover {
-      color: $blue;
+      // color: $blue;
+      color: #87cefa;
     }
   }
 }
