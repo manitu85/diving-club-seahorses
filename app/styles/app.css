@@ -445,13 +445,9 @@ pre > code {
 .info {
   background-color: #00244e;
   grid-column: full-start / full-end;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-          align-items: center;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  align-content: center;
   padding-bottom: 3rem;
 }
 
