@@ -14,13 +14,18 @@
   --font-primary: #{$font-primary};
   --font-display: #{$font-display};
 
-  --font-size-small: 1.4rem;
-  --font-size-medium: 1.7rem;
-  --font-size-large: 2rem;  
-  --font-size-heading: 3rem;
+  --font-size--small: 1.4rem;
+  --font-size--medium: 1.7rem;
+  --font-size--large: 2rem;  
+  --font-size--heading: 5vmin;
 
-  --shadow-dark: 0 2rem 6rem rgba(#{$black}, .4);
-  --shadow-light: 0 2rem 6rem rgb(#{$white}, .3);  
+  --shadow--dark: 0 2rem 6rem rgba(#{$black}, .4);
+  --shadow--light: 0 2rem 6rem rgb(#{$white}, .3);  
+
+  --font-weight--light: 300;
+  --font-weight--noramal: 400;
+  --font-weight--semi-bold: 600;
+
 
 }
 
@@ -38,11 +43,10 @@ html {
     font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px  
     // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
     // font-size: calc(var(--font-size-small) + (var(--font-size-large) - var(--font-size-small)) * ((100vw - 320px) / (1200px - 320px)));
-    //  height: 100vh;
 }
 
 body {
-  font-size: var(--font-size-small); // Mobile first
+  font-size: var(--font-size--small); // Mobile first
   line-height: var(--text-line-height);
   background-color: var(--background-color);
   color: var(--text-color);
@@ -53,12 +57,18 @@ body {
 // Overall site layout
 .site-container {
   display: grid;
-  grid-template-rows:  6rem 80vh 15vh repeat(2, min-content) 30vw repeat(7, min-content);
-  grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];   
+  grid-template-rows:  6rem 80vh min-content repeat(2, min-content) 30vw repeat(7, min-content);
+  grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];   
 
   // Background dots
   background: linear-gradient(90deg,#fff 20px,transparent 1%) center,linear-gradient(#fff 20px,transparent 1%) center,#c7c4c4;
   background-size: 22px 22px;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    display: grid;
+    grid-template-rows:  6rem 80vh 15vh repeat(2, min-content) 30vw repeat(7, min-content);
+    grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];   
+  }
   
   // & > * { 
   //   padding: 2rem;

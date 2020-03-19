@@ -21,7 +21,7 @@
   height: 10rem;
 }
 
-.nav-menu {
+.menu {
   grid-column: col-start 5 / col-end 8;
 
   &__items {
@@ -36,11 +36,12 @@
   }
 
   &__item {
+    display: inline-block;
     margin-bottom: 0px;
     text-transform: uppercase;
 
     &:not(:last-child) {
-      margin-right: 2rem;
+      margin-right: 1.2rem;
     }
     
     & > * {
@@ -53,7 +54,8 @@
     color: $white;
     font-weight: 300;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $orange-brand;
       color: $grey--lighter;
     };

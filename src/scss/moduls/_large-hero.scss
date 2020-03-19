@@ -6,29 +6,28 @@
   color: white;
 
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
+  justify-content: center;
   align-items: center;
 
   &__content {
-    grid-column: col-start 1 / col-end 5;
+    // Mobile view
+    grid-column: 1 / -1;
+    padding: 0 2rem;
+
+    @media screen and (min-width: $breakpoint-sm) {
+     grid-column: col-start 1 / col-end 5;
+    }
   }
 
   &__title {
     color: lighten($orange-brand, 5);
     line-height: 1;
     margin: .5rem 0 4rem;
-    font-size: 7vw;
+    font-size: 3rem;
 
     @media screen and (min-width: $breakpoint-sm) {
-      font-size: 5vw;
-    }
-
-    @media screen and (min-width: $breakpoint-md) {
-      font-size: 4vw;
-    }
-
-    @media screen and (min-width: $breakpoint-lg) {
-      font-size: 2.5vw;
+      font-size: 5vmin;
     }
   }
 

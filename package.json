@@ -39,6 +39,6 @@
     "dev": "gulp watchDev",
     "build": "gulp build",
     "preview": "gulp previewProd",
-    "deploy": "netlify deploy --prod --open"
+    "deploy": "build netlify deploy --prod --open"
   }
 }

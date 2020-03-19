@@ -2,7 +2,7 @@
 
 %heading {
   font-family: var(--font-display);
-  font-size: var(--font-size-heading);
+  font-size: var(--font-size--heading);
   color: var(--heading-color);
   font-weight: 400;
 }
@@ -13,7 +13,7 @@
 
 .heading-2 {
   @extend %heading;
-  --font-size-heading: 3rem;
+  --font-size--heading: 3rem;
 
   &--light {
     // text-align: center;
@@ -39,20 +39,20 @@
   @extend %heading;
 
   &--light {
-    --font-size-heading: 1.6rem;
+    --font-size--heading: 1.6rem;
     --heading-color: #{$yellow-brand};
   }
 
   &--large {
     text-align: center;
-    --font-size-heading: 2rem;
+    --font-size--heading: 2rem;
   }
 }
 
 .heading-4 {
   @extend %heading;
   font-variant: small-caps;
-  --font-size-heading: 1.6rem;
+  --font-size--heading: 1.6rem;
 
   &--light {
     letter-spacing: 1px;
@@ -61,7 +61,7 @@
 
   &--white {
     --heading-color: #{$grey--lighter};
-    --font-size-heading: 1.4rem;
+    --font-size--heading: 1.4rem;
   }
 
   &--dark {
