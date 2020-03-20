@@ -633,8 +633,17 @@ pre > code {
 
 .cta-ship {
   grid-column: full-start / full-end;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 75em) {
+  .cta-ship {
+    height: 60vh;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(152, 163, 93, 0.7)), color-stop(rgba(2, 2, 2, 0.7)), to(rgba(226, 26, 26, 0.5))), url("/assets/images/cta/cta-ship--large.jpg") center center/cover no-repeat, #020202;
+    background: linear-gradient(to right, rgba(152, 163, 93, 0.7), rgba(2, 2, 2, 0.7), rgba(226, 26, 26, 0.5)), url("/assets/images/cta/cta-ship--large.jpg") center center/cover no-repeat, #020202;
+    background-attachment: fixed;
+  }
 }
 
 .cta-ship__backdrop {
@@ -647,8 +656,8 @@ pre > code {
 }
 
 .cta-ship__img {
-  height: auto;
   width: 100%;
+  height: auto;
 }
 
 .cta-ship__text-content {
@@ -746,15 +755,17 @@ pre > code {
   background: -webkit-gradient(linear, left top, right top, from(rgba(28, 52, 80, 0.7)), color-stop(rgba(2, 2, 2, 0.7)), to(rgba(0, 0, 0, 0.5))), url(/assets/images/hero-2.jpg) no-repeat center center/cover;
   background: linear-gradient(to right, rgba(28, 52, 80, 0.7), rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.5)), url(/assets/images/hero-2.jpg) no-repeat center center/cover;
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]);
+  grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
   grid-template-rows: repeat(2, 1fr);
+  -webkit-box-pack: center;
+          justify-content: center;
   grid-column-gap: 6rem;
   padding-top: 12rem;
 }
 
 .show__video {
-  grid-column: center-start / col-end 4;
+  grid-column: col-start 2 / col-end 4;
   background: url(/assets/images/cta-1.jpg) no-repeat center center/cover;
   height: 40rem;
   padding: 6rem;
@@ -762,7 +773,8 @@ pre > code {
 }
 
 .show__content {
-  grid-column: col-start 5 / center-end;
+  grid-column: col-start 5 / col-end 8;
+  padding: 0 2vw;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -773,7 +785,7 @@ pre > code {
 }
 
 .show__counter {
-  grid-column: center-start / center-end;
+  grid-column: col-start 1 / col-end 8;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: space-evenly;

@@ -65,7 +65,7 @@
     <section class="info">
       <div class="info__item">
         <svg class="info__icon">
-          <use xlink:href="assets/sprite/sprite.svg#smartphone"></use>
+          <use href="assets/sprite/sprite.svg#smartphone"></use>
         </svg>
         <h4 class="heading-4 heading-4--white">Give us a call</h4>
         <p class="info__text">+357 79 325659</p>
@@ -73,7 +73,7 @@
 
       <div class="info__item">
         <svg class="info__icon">
-          <use xlink:href="assets/sprite/sprite.svg#mail"></use>
+          <use href="assets/sprite/sprite.svg#mail"></use>
         </svg>
         <h4 class="heading-4 heading-4--white">Send us a message</h4>
         <p class="info__text">scubadiving@yahoo.com</p>
@@ -81,7 +81,7 @@
 
       <div class="info__item">
         <svg class="info__icon">
-          <use xlink:href="assets/sprite/sprite.svg#world"></use>
+          <use href="assets/sprite/sprite.svg#world"></use>
         </svg>
         <h4 class="heading-4 heading-4--white">Visit our location</h4>
         <p class="info__text">Buggiba, Malta</p>
@@ -89,7 +89,7 @@
 
       <div class="info__item">
         <svg class="info__icon">
-          <use xlink:href="assets/sprite/sprite.svg#user-add-outline"></use>
+          <use href="assets/sprite/sprite.svg#user-add-outline"></use>
         </svg>
         <h4 class="heading-4 heading-4--white">Follow us on</h4>
         <p class="info__text">Social Icons</p>
@@ -112,7 +112,7 @@
 
       <div class="feature">
         <svg class="feature__icon">
-          <use xlink:href="assets/sprite/sprite.svg#compass"></use>
+          <use href="assets/sprite/sprite.svg#compass"></use>
         </svg>
         <h4 class="heading-4 heading-4--light">Travel Guide</h4>
         <p class="feature__text">
@@ -124,7 +124,7 @@
 
       <div class="feature">
         <svg class="feature__icon">
-          <use xlink:href="assets/sprite/sprite.svg#settings"></use>
+          <use href="assets/sprite/sprite.svg#settings"></use>
         </svg>
         <h4 class="heading-4 heading-4--light">Gear Rent</h4>
         <p class="feature__text">
@@ -135,7 +135,7 @@
 
       <div class="feature">
         <svg class="feature__icon">
-          <use xlink:href="assets/sprite/sprite.svg#hotel"></use>
+          <use href="assets/sprite/sprite.svg#hotel"></use>
         </svg>
         <h4 class="heading-4 heading-4--light">Hotel Accomodation</h4>
         <p class="feature__text">
@@ -146,7 +146,7 @@
 
       <div class="feature">
         <svg class="feature__icon">
-          <use xlink:href="assets/sprite/sprite.svg#sailing-boat-water"></use>
+          <use href="assets/sprite/sprite.svg#sailing-boat-water"></use>
         </svg>
         <h4 class="heading-4 heading-4--light">Transportation</h4>
         <p class="feature__text">
@@ -158,7 +158,7 @@
 
       <div class="feature">
         <svg class="feature__icon">
-          <use xlink:href="assets/sprite/sprite.svg#lifebuoy"></use>
+          <use href="assets/sprite/sprite.svg#lifebuoy"></use>
         </svg>
         <h4 class="heading-4 heading-4--light">Adventurer Care</h4>
         <p class="feature__text">
@@ -294,28 +294,28 @@
           <p class="counter__number">3124</p>
           <h4 class="heading-4 heading-4--white">Happy Clients</h4>
           <svg class="counter__icon">
-            <use xlink:href="assets/sprite/sprite.svg#diving-goggles"></use>
+            <use href="assets/sprite/sprite.svg#diving-goggles"></use>
           </svg>
         </div>
         <div class="counter__item">
           <p class="counter__number">56</p>
           <h4 class="heading-4 heading-4--white">Tours and Activites</h4>
           <svg class="counter__icon">
-            <use xlink:href="assets/sprite/sprite.svg#oxygen-tube"></use>
+            <use href="assets/sprite/sprite.svg#oxygen-tube"></use>
           </svg>
         </div>
         <div class="counter__item">
           <p class="counter__number">27</p>
           <h4 class="heading-4 heading-4--white">Instructors</h4>
           <svg class="counter__icon">
-            <use xlink:href="assets/sprite/sprite.svg#settings"></use>
+            <use href="assets/sprite/sprite.svg#settings"></use>
           </svg>
         </div>
         <div class="counter__item">
           <p class="counter__number">854</p>
           <h4 class="heading-4 heading-4--white">Average Time Underwater</h4>
           <svg class="counter__icon">
-            <use xlink:href="assets/sprite/sprite.svg#anchor-4"></use>
+            <use href="assets/sprite/sprite.svg#anchor-4"></use>
           </svg>
         </div>
       </div>
@@ -347,16 +347,18 @@
      <div class="cta-ship">
       <div class="cta-ship__backdrop"></div>
        <!-- responsive images -->
+       <picture>
+         <!-- <source 
+          srcset="assets/images/cta/cta-ship--large.jpg 1920w"
+          media="(min-width: 1200px)"> -->
          <source 
-          sizes="(min-width: 1200px) 40vw"
-          srcset="assets/images/cta/cta-ship--large.jpg 1380w">
-         <source 
-          sizes="(min-width: 990px)" 
-          srcset="assets/images/cta/cta-ship--medium.jpg 990w">
+          srcset="assets/images/cta/cta-ship--medium.jpg 990w"
+          media="(min-width: 990px)" >
          <img 
           srcset="assets/images/cta/cta-ship--small.jpg 640w" 
           alt="shipwreck"
           class="cta-ship__img">
+       </picture>
 
        <div class="cta-ship__text-content">
           <h2 class="heading-2 heading-2--dark heading-2--small">
