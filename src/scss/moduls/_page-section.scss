@@ -1,4 +1,7 @@
 .page-section {
-  margin: 15rem 0;
+  margin: 6rem 0;
 
+   @media screen and (min-width: $breakpoint-md) {
+    margin: 15rem 0;
+   }
 }

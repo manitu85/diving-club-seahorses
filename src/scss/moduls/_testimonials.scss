@@ -1,6 +1,7 @@
 // Testimonial slider
 .testimonals {
-  // background-color: $cyan-brand;
+  // background-color: $grey--dark;
+  background-color: #191d32;
   grid-column: full-start / full-end;
   padding: 10rem 2vw;
 
@@ -27,9 +28,9 @@
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    border: 5px solid $grey--lighter;
+    // border: 5px solid $grey--lighter;
     margin-bottom: 3rem;
-    box-shadow: 0 0 2rem rgba($black, .5);
+    box-shadow: 5px 5px 1.5rem rgba($white, .3);
   }
 
   &__name {

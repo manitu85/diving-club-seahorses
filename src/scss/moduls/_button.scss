@@ -1,4 +1,5 @@
 .btn {
+  display: block;
   background-color: transparent;
   color: #{$white};
   border: none;
@@ -24,6 +25,20 @@
     padding: 1.5rem 4rem;
       &:hover {
       background-color: lighten($orange-brand, 5) ;
+    }
+  }
+
+  &--large {
+
+  }
+
+  &--small {
+    
+  }
+
+  &--sm-none {
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
     }
   }
 

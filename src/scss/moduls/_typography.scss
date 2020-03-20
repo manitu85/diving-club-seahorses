@@ -33,6 +33,12 @@
     margin-bottom: 2rem;
     --heading-color: #{$yellow-brand};
   }
+
+  &--small {
+    @media screen and (max-width: $breakpoint-sm) {
+      --font-size--heading: 2.5rem;
+    }
+  }
 }
 
 .heading-3 {
