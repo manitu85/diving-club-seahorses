@@ -1,73 +1,81 @@
 .show {
   grid-column: full-start / full-end;
   background: linear-gradient(
-     to right,
-      rgba(#1c3450, .7),
-      rgba(#020202, .7),
-      rgba(#000, .5)),  
-  url(/assets/images/hero-2.jpg) no-repeat center center/cover;
+      to right,
+      rgba(#1c3450, 0.3),
+      rgba(#020202, 0.5),
+      rgba(rgb(92, 14, 14), 0.5)
+    ),
+    url(/assets/images/hero-2.jpg) no-repeat center center/cover;
 
   display: grid;
-  grid-template-columns:  repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
+  grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end] );
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   grid-column-gap: 6rem;
+  grid-row-gap: 3rem;
 
   padding-top: 12rem;
 
-  &__video {
-    // background-color: $blue--light;
-    grid-column: col-start 2 / col-end 4;
-   
-    background: url(/assets/images/cta-1.jpg) no-repeat center center/cover;
-    // width: 40rem;
-    height: 40rem;
+  @media screen and (max-width: $breakpoint-sm) {
+    padding-top: 0;
+  }
 
-    padding: 6rem;
-    text-align: center;
+  &__video {
+    grid-column: 1 / -1;
+
+    background: url(/assets/images/cta-1.jpg) no-repeat center center/cover;
+
+    height: 32rem;
+    padding-top: -12rem;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      grid-column: col-start 2 / col-end 4;
+      height: 52rem;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      grid-column: col-start 1 / col-end 4;
+      height: 42rem;
+    }
   }
 
   &__content {
-    // background-color: $yellow-brand;
-    grid-column: col-start 5 / col-end 8;
-    padding: 0 2vw;
+    grid-column: col-start 1 / col-end 8;
+    padding: 0 7vmax;
+    // padding: 4rem 8vmax 0;
+    // order: -1;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      grid-column: col-start 5 / col-end 8;
+      padding: 0 2vw;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      grid-column: col-start 5 / col-end 8;
+    }
   }
 
   &__counter {
     grid-column: col-start 1 / col-end 8;
 
     display: flex;
-    justify-content: space-evenly;
-    // justify-content: space-between;
-    // justify-content: space-around;
-    align-items: center ;
-    text-align: center;
-  }
-
-}
-
-.counter {
-  
-  &__item {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+    margin-bottom: 3rem;
 
-  &__number {
-    font-size: 6rem;
-    color: $orange-brand;
-    font-weight: 600;
-  }
+    @media screen and (min-width: $breakpoint-sm) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 4rem;
+    }
 
-  &__icon {
-    fill: $yellow-brand;
-    width: 8rem;
-    height: 8rem;
+    @media screen and (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: space-between;
+    }
   }
 }

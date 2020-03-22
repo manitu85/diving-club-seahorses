@@ -752,8 +752,8 @@ pre > code {
 
 .show {
   grid-column: full-start / full-end;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(28, 52, 80, 0.7)), color-stop(rgba(2, 2, 2, 0.7)), to(rgba(0, 0, 0, 0.5))), url(/assets/images/hero-2.jpg) no-repeat center center/cover;
-  background: linear-gradient(to right, rgba(28, 52, 80, 0.7), rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.5)), url(/assets/images/hero-2.jpg) no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(28, 52, 80, 0.3)), color-stop(rgba(2, 2, 2, 0.5)), to(rgba(92, 14, 14, 0.5))), url(/assets/images/hero-2.jpg) no-repeat center center/cover;
+  background: linear-gradient(to right, rgba(28, 52, 80, 0.3), rgba(2, 2, 2, 0.5), rgba(92, 14, 14, 0.5)), url(/assets/images/hero-2.jpg) no-repeat center center/cover;
   display: grid;
   grid-template-columns: repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]);
   grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
@@ -761,20 +761,40 @@ pre > code {
   -webkit-box-pack: center;
           justify-content: center;
   grid-column-gap: 6rem;
+  grid-row-gap: 3rem;
   padding-top: 12rem;
 }
 
+@media screen and (max-width: 37.5em) {
+  .show {
+    padding-top: 0;
+  }
+}
+
 .show__video {
-  grid-column: col-start 2 / col-end 4;
+  grid-column: 1 / -1;
   background: url(/assets/images/cta-1.jpg) no-repeat center center/cover;
-  height: 40rem;
-  padding: 6rem;
-  text-align: center;
+  height: 32rem;
+  padding-top: -12rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  .show__video {
+    grid-column: col-start 2 / col-end 4;
+    height: 52rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .show__video {
+    grid-column: col-start 1 / col-end 4;
+    height: 42rem;
+  }
 }
 
 .show__content {
-  grid-column: col-start 5 / col-end 8;
-  padding: 0 2vw;
+  grid-column: col-start 1 / col-end 8;
+  padding: 0 7vmax;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -784,15 +804,42 @@ pre > code {
           justify-content: center;
 }
 
+@media screen and (min-width: 37.5em) {
+  .show__content {
+    grid-column: col-start 5 / col-end 8;
+    padding: 0 2vw;
+  }
+}
+
+@media screen and (min-width: 65em) {
+  .show__content {
+    grid-column: col-start 5 / col-end 8;
+  }
+}
+
 .show__counter {
   grid-column: col-start 1 / col-end 8;
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-          align-items: center;
-  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  .show__counter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 65em) {
+  .show__counter {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: space-between;
+  }
 }
 
 .counter__item {
@@ -863,7 +910,7 @@ pre > code {
   grid-column: full-start / end-end;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(9, 6vw);
+  grid-template-rows: repeat(10, 6vw);
   grid-gap: 1rem;
   padding: 1rem;
 }
@@ -941,18 +988,43 @@ pre > code {
 }
 
 .gallery__item--14 {
-  grid-row: 6 / span 2;
+  grid-row: 6 / span 3;
   grid-column: 8 / span 1;
 }
 
 .gallery__item--15 {
-  grid-row: 8 / span 2;
-  grid-column: 1 / span 4;
+  grid-row: 9 / span 2;
+  grid-column: 7 / span 2;
 }
 
 .gallery__item--16 {
+  grid-row: 8 / span 3;
+  grid-column: 1 / span 1;
+}
+
+.gallery__item--17 {
   grid-row: 8 / span 2;
-  grid-column: 5 / span 4;
+  grid-column: 2 / span 2;
+}
+
+.gallery__item--18 {
+  grid-row: 8 / span 1;
+  grid-column: 6 / span 2;
+}
+
+.gallery__item--19 {
+  grid-row: 8 / span 3;
+  grid-column: 4 / span 2;
+}
+
+.gallery__item--20 {
+  grid-row: 9 / span 2;
+  grid-column: 6 / span 1;
+}
+
+.gallery__item--21 {
+  grid-row: 10 / span 1;
+  grid-column: 2 / span 2;
 }
 
 .footer {
