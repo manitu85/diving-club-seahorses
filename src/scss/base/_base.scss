@@ -42,9 +42,9 @@ html {
     box-sizing: border-box; 
     font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px  
     // font-size: calc(var(--font-size-small) + (var(--font-size-large) - var(--font-size-small)) * ((100vw - 360px) / (1200px - 360px)));
-    @media screen and (min-width: $breakpoint-lg) {
-       font-size: 67.5%; 
-    }
+    // @media screen and (min-width: $breakpoint-lg) {
+    //    font-size: 67.5%; 
+    // }
 }
 
 body {
@@ -58,8 +58,9 @@ body {
 
 // Overall site layout
 .site-container {
+  position: relative;
   display: grid;
-  grid-template-rows:  6rem calc(100vh - 6rem) repeat(3, min-content) 30vw repeat(9, min-content);
+  grid-template-rows:  6rem calc(100vh - 6rem) repeat(13, min-content);
   grid-template-columns:  [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];   
 
   // Background dots
@@ -74,7 +75,7 @@ body {
 
   @media screen and (min-width: $breakpoint-lg) {
     display: grid;
-    grid-template-rows:  6rem calc(85vh - 6rem) 15vh repeat(2, min-content) 30vw repeat(9, min-content);
+    grid-template-rows:  6rem calc(85vh - 6rem) 15vh repeat(3, min-content) repeat(9, min-content);
     grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];   
   }
   

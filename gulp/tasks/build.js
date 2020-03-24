@@ -63,11 +63,11 @@ gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {  // ad
         collapseWhitespace: true
       })],
       css: [ 
-        () => rev(),      // add revision
+        () => rev(),      // add revision *-ab3455l.css
         () => cssnano()   // minify css 
       ],
       js: [ 
-        () => rev(),      // add revision
+        () => rev(),      // add revision *-ab311hs.js
         () => uglify()    // minify js 
       ]
     }))
@@ -76,6 +76,5 @@ gulp.task('compress', ['deleteBuildFolder', 'styles', 'scripts'], () => {  // ad
 });
 
 
-
-// Build finial touch
+// Production build - finial touch
 gulp.task('build', ['deleteBuildFolder', 'copyGeneralFiles', 'optimizeImages', 'compress'])

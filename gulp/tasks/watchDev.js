@@ -20,7 +20,7 @@ gulp.task('watchDev', () => {
     gulp.start('cssInject');
   })
   
-    // Watch for scripts src fils for changes
+    // Watch for scripts src/js fils for changes
   gulp.watch('./src/js/**/*.js', () => {
     gulp.start('scriptsRefresh')
     }

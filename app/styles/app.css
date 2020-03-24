@@ -36,12 +36,6 @@ html {
   font-size: 62.5%;
 }
 
-@media screen and (min-width: 75em) {
-  html {
-    font-size: 67.5%;
-  }
-}
-
 body {
   font-size: var(--font-size--small);
   line-height: var(--text-line-height);
@@ -52,9 +46,10 @@ body {
 }
 
 .site-container {
+  position: relative;
   display: grid;
-  grid-template-rows: 6rem calc(100vh - 6rem) repeat(3, -webkit-min-content) 30vw repeat(9, -webkit-min-content);
-  grid-template-rows: 6rem calc(100vh - 6rem) repeat(3, min-content) 30vw repeat(9, min-content);
+  grid-template-rows: 6rem calc(100vh - 6rem) repeat(13, -webkit-min-content);
+  grid-template-rows: 6rem calc(100vh - 6rem) repeat(13, min-content);
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, -webkit-max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #c7c4c4;
@@ -74,8 +69,8 @@ body {
 @media screen and (min-width: 75em) {
   .site-container {
     display: grid;
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(2, -webkit-min-content) 30vw repeat(9, -webkit-min-content);
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(2, min-content) 30vw repeat(9, min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, -webkit-min-content) repeat(9, -webkit-min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, min-content) repeat(9, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
@@ -414,7 +409,8 @@ pre > code {
 }
 
 .menu__item {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: inline-flex;
   margin-bottom: 0px;
   text-transform: uppercase;
 }
@@ -425,7 +421,7 @@ pre > code {
 
 .menu__item > * {
   font-size: 1.2rem;
-  padding: 2.25rem 1rem;
+  padding: 2.15rem 1rem;
 }
 
 .menu__link {
@@ -678,15 +674,59 @@ pre > code {
   margin: 1rem 0 4rem 0;
 }
 
-.team__pictures {
-  grid-column: full-start / col-end 2;
-  grid-row: 6 / 8;
-  background: url(/assets/images/team-5.jpg) no-repeat center center/cover;
+.team__instructors {
+  grid-column: full-start / col-end 4;
   background-color: #171717;
 }
 
+.team__instructor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  background-color: #202020;
+}
+
+.team__instructor-img {
+  width: 100%;
+  height: 100%;
+}
+
+.team__instructor-list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 5rem 2vw;
+}
+
+.team__instructor-avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.team__instructor-details {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.team__instructor-details:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.team__instructor-hours {
+  margin: 0;
+}
+
 .team__content {
-  grid-column: col-start 3 / full-end;
+  grid-column: col-start 5 / full-end;
   background-color: #004962;
   color: #fff;
   padding: 6rem 8vw;
@@ -703,45 +743,6 @@ pre > code {
 
 .team__content p {
   margin-bottom: 3rem;
-}
-
-.team__instructors {
-  grid-column: col-start 3 / full-end;
-  background-color: #202020;
-  padding: 3rem 0;
-}
-
-.instructor__list {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 5rem 5vw;
-}
-
-.instructor__img {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  margin-right: 1rem;
-}
-
-.instructor__details {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-pack: center;
-          justify-content: center;
-}
-
-.instructor__details:not(:last-child) {
-  margin-right: 2rem;
-}
-
-.instructor__hours {
-  margin: 0;
 }
 
 .tours__activites {

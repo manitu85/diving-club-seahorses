@@ -1,37 +1,54 @@
 .team {
+  &__instructors {
+    grid-column: full-start / col-end 4;
 
-  &__pictures {
-    grid-column: full-start / col-end 2;
-    grid-row:  6 / 8;
-
-    background: url(/assets/images/team-5.jpg) no-repeat center center/cover ;
+    // background: url(/assets/images/team-5.jpg) no-repeat center center/cover ;
     background-color: $grey--dark;
-
-    // display: grid;
-    // grid-template-columns: repeat(6, 1fr);
-    // grid-template-rows: repeat(6, 1fr);
-    // align-items: center;
-
   }
-  
-  // &__img--1 {
-  //   grid-row: 2 / 4;
-  //   grid-column: 2 / 4;
-  //   box-shadow: 0 2rem 5rem rgba(#000, 0.2);
-  //   align-self: stretch;
-  // }
-    
-  // &__img--2 {
-  //   width: 120%;
-  //   z-index: 20;
-  //   grid-row: 1 / 3;
-  //   grid-column: 4 / 7;
-  //   // align-self: stretch;
-  // }
+
+  &__instructor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // grid-gap: 20px;
+    background-color: $black;
+  }
+
+  &__instructor-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__instructor-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5rem 2vw;
+  }
+
+  &__instructor-avatar {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__instructor-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__instructor-hours {
+    margin: 0;
+  }
 
   &__content {
-    grid-column: col-start 3 / full-end;
-    
+    grid-column: col-start 5 / full-end;
+
     // background-color: $blue-brand;
     background-color: #004962;
     color: $white;
@@ -45,45 +62,6 @@
 
     p {
       margin-bottom: 3rem;
-    }  
-  }
-
-  &__instructors {
-    grid-column: col-start 3 / full-end;
-    background-color: $black;
-    padding: 3rem 0;
-  }
-
-}
-
-
-.instructor {
-
-  &__list {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5rem 5vw;
-  }
-
-  &__img {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    margin-right: 1rem;
-  }
-
-  &__details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    &:not(:last-child) {
-      margin-right: 2rem;
     }
   }
-
-  &__hours {
-    margin: 0;
-  }
-
 }
