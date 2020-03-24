@@ -1,15 +1,13 @@
 .team {
+
   &__instructors {
     grid-column: full-start / col-end 4;
-
-    // background: url(/assets/images/team-5.jpg) no-repeat center center/cover ;
     background-color: $grey--dark;
   }
 
   &__instructor {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    // grid-gap: 20px;
     background-color: $black;
   }
 
@@ -20,7 +18,7 @@
 
   &__instructor-list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding: 5rem 2vw;
   }
@@ -28,8 +26,9 @@
   &__instructor-avatar {
     width: 8rem;
     height: 8rem;
-    border-radius: 50%;
-    margin-right: 1rem;
+    margin-right: 3rem;
+    border-radius: 50%; // fallback
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 
   &__instructor-details {
@@ -40,6 +39,12 @@
     &:not(:last-child) {
       margin-right: 2rem;
     }
+  }
+
+   &__instructor-details--order {
+    order: -1;
+    text-align: right;
+    margin-right: 3rem;
   }
 
   &__instructor-hours {
