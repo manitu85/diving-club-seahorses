@@ -1,19 +1,34 @@
 .team {
 
   &__instructors {
-    grid-column: full-start / col-end 4;
     background-color: $grey--dark;
+    grid-column: 1 / -1;
+
+    @media screen and(min-width: $breakpoint-md) {
+      // grid-column: full-start / col-end 4;
+      grid-column: col-start 5 / full-end;
+    }
   }
 
   &__instructor {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     background-color: $black;
+
+    @media screen and(max-width: 500px) {
+      grid-auto-rows: auto;
+    }
   }
 
   &__instructor-img {
     width: 100%;
     height: 100%;
+  }
+
+  &__instructor-img--order-sm {
+     @media screen and(max-width: 500px) {
+      order: -1;
+    }
   }
 
   &__instructor-list {
@@ -41,10 +56,14 @@
     }
   }
 
-   &__instructor-details--order {
-    order: -1;
+  &__instructor-details--order {
     text-align: right;
     margin-right: 3rem;
+    order: 0;
+
+    @media screen and(max-width: 500px) {
+      order: -1;
+    }
   }
 
   &__instructor-hours {
@@ -52,13 +71,21 @@
   }
 
   &__content {
-    grid-column: col-start 5 / full-end;
+    grid-column: 1 / -1;
 
-    // background-color: $blue-brand;
-    background-color: #004962;
+    order: 0;
+
+    @media screen and(min-width: $breakpoint-md) {
+      // grid-column: col-start 5 / full-end;
+      grid-column: full-start / col-end 4 ;
+      padding: 6rem 8vw;
+      
+    }
+
+    background-color: #004962; // $blue-brand
     color: $white;
 
-    padding: 6rem 8vw;
+    padding: 10vmin 5vmin;
 
     display: flex;
     flex-direction: column;

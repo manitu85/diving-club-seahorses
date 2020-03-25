@@ -52,25 +52,25 @@ body {
   grid-template-rows: 6rem calc(100vh - 6rem) repeat(13, min-content);
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, -webkit-max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
-  background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #c7c4c4;
-  background-size: 22px 22px;
 }
 
 @media screen and (min-width: 37.5em) {
   .site-container {
     display: grid;
-    grid-template-rows: 6rem 80vh repeat(3, -webkit-min-content) 30vw repeat(9, -webkit-min-content);
-    grid-template-rows: 6rem 80vh repeat(3, min-content) 30vw repeat(9, min-content);
+    grid-template-rows: 6rem 80vh repeat(13, -webkit-min-content);
+    grid-template-rows: 6rem 80vh repeat(13, min-content);
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+    background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #c7c4c4;
+    background-size: 22px 22px;
   }
 }
 
 @media screen and (min-width: 75em) {
   .site-container {
     display: grid;
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, -webkit-min-content) repeat(9, -webkit-min-content);
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, min-content) repeat(9, min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, -webkit-min-content) 30vw repeat(9, -webkit-min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, min-content) 30vw repeat(9, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
@@ -675,8 +675,14 @@ pre > code {
 }
 
 .team__instructors {
-  grid-column: full-start / col-end 4;
   background-color: #171717;
+  grid-column: 1 / -1;
+}
+
+@media screen and (min-width: 65em) {
+  .team__instructors {
+    grid-column: col-start 5 / full-end;
+  }
 }
 
 .team__instructor {
@@ -685,9 +691,22 @@ pre > code {
   background-color: #202020;
 }
 
+@media screen and (max-width: 500px) {
+  .team__instructor {
+    grid-auto-rows: auto;
+  }
+}
+
 .team__instructor-img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .team__instructor-img--order-sm {
+    -webkit-box-ordinal-group: 0;
+            order: -1;
+  }
 }
 
 .team__instructor-list {
@@ -724,10 +743,17 @@ pre > code {
 }
 
 .team__instructor-details--order {
-  -webkit-box-ordinal-group: 0;
-          order: -1;
   text-align: right;
   margin-right: 3rem;
+  -webkit-box-ordinal-group: 1;
+          order: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .team__instructor-details--order {
+    -webkit-box-ordinal-group: 0;
+            order: -1;
+  }
 }
 
 .team__instructor-hours {
@@ -735,10 +761,12 @@ pre > code {
 }
 
 .team__content {
-  grid-column: col-start 5 / full-end;
+  grid-column: 1 / -1;
+  -webkit-box-ordinal-group: 1;
+          order: 0;
   background-color: #004962;
   color: #fff;
-  padding: 6rem 8vw;
+  padding: 10vmin 5vmin;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -748,6 +776,13 @@ pre > code {
           justify-content: center;
   -webkit-box-align: start;
           align-items: flex-start;
+}
+
+@media screen and (min-width: 65em) {
+  .team__content {
+    grid-column: full-start / col-end 4;
+    padding: 6rem 8vw;
+  }
 }
 
 .team__content p {
@@ -921,8 +956,15 @@ pre > code {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, 6vw);
-  grid-gap: 1rem;
-  padding: 1rem;
+  grid-gap: 2px;
+  padding: 2px;
+}
+
+@media screen and (min-width: 37.5em) {
+  .gallery {
+    grid-gap: 1rem;
+    padding: 1rem;
+  }
 }
 
 .gallery__img {
