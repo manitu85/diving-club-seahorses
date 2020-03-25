@@ -36,6 +36,15 @@
     justify-content: center;
     align-items: center;
     padding: 5rem 2vw;
+
+     &--blue {
+      // background-color: $blue--darker;
+      background-color: $blue-brand;
+    }
+
+     &--black {
+      background-color: #000;
+    }
   }
 
   &__instructor-avatar {
@@ -82,10 +91,10 @@
       
     }
 
-    background-color: #004962; // $blue-brand
+    background-color: #004962; // bluebrand
     color: $white;
 
-    padding: 10vmin 5vmin;
+    padding: 8vmax 5vmin;
 
     display: flex;
     flex-direction: column;
