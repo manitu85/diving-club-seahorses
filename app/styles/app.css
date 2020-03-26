@@ -69,8 +69,8 @@ body {
 @media screen and (min-width: 75em) {
   .site-container {
     display: grid;
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, -webkit-min-content) 30vw repeat(9, -webkit-min-content);
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(3, min-content) 30vw repeat(9, min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(13, -webkit-min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(13, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
@@ -719,11 +719,11 @@ pre > code {
   padding: 5rem 2vw;
 }
 
-.team__instructor-list--blue {
+.team__instructor-list--blue-bg {
   background-color: #003270;
 }
 
-.team__instructor-list--black {
+.team__instructor-list--black-bg {
   background-color: #000;
 }
 
@@ -753,15 +753,8 @@ pre > code {
 .team__instructor-details--order {
   text-align: right;
   margin-right: 3rem;
-  -webkit-box-ordinal-group: 1;
-          order: 0;
-}
-
-@media screen and (max-width: 500px) {
-  .team__instructor-details--order {
-    -webkit-box-ordinal-group: 0;
-            order: -1;
-  }
+  -webkit-box-ordinal-group: 0;
+          order: -1;
 }
 
 .team__instructor-hours {
@@ -797,10 +790,10 @@ pre > code {
   margin-bottom: 3rem;
 }
 
-.tours__activites {
+.tours {
   background-color: #fff;
   height: 30rem;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
 }
 
 .show {
@@ -926,8 +919,9 @@ pre > code {
 }
 
 .testimonial {
-  margin: 0 auto;
-  max-width: 50rem;
+  display: grid;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .testimonial__user {
@@ -956,6 +950,7 @@ pre > code {
 
 .testimonial__text {
   text-align: center;
+  max-width: 50rem;
 }
 
 .gallery {

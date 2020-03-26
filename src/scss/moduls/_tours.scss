@@ -1,8 +1,9 @@
 .tours {
-
-  &__activites {
     background-color: $white;
     height: 30rem;
-    grid-column: center-start / center-end;
+    grid-column: full-start / full-end;
+
+  &__activites {
+    
   }   
 }
