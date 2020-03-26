@@ -1,9 +1,51 @@
 .tours {
-    background-color: $white;
-    height: 30rem;
-    grid-column: full-start / full-end;
+  background-color: $white;
+  grid-column: full-start / full-end;
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: grid;
+    grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
+  }
 
   &__activites {
-    
-  }   
+    background-color: $orange-brand;
+    grid-column: col-start / col-end 5;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 5rem;
+    padding: 10rem 0;
+  }
+
+  &__item {
+    width: 20rem;
+    height: 20rem;
+    background-color: $white;
+    border: 5px solid black;
+    display: grid;
+    place-items: center;
+  }
+
+  &__content {
+    background-color: $blue--dark;
+    padding: 10rem 8vmin;
+
+    grid-column: col-start 6 / col-end 8;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+
+    p {
+      color: $grey--lighter;
+      margin-bottom: 3rem;
+    }
+  }
 }
