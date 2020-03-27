@@ -14,9 +14,9 @@
   --font-primary: #{$font-primary};
   --font-display: #{$font-display};
 
-  --font-size--small: 1.4rem;
-  --font-size--medium: 1.7rem;
-  --font-size--large: 2rem;  
+  --font-size--small: 1.3rem;
+  --font-size--medium: 1.5rem;
+  --font-size--large: 1.8rem;  
   --font-size--heading: 5vmin;
 
   --shadow--dark: 0 2rem 6rem rgba(#{$black}, .4);
@@ -42,9 +42,9 @@ html {
     box-sizing: border-box; 
     font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px  
     // font-size: calc(var(--font-size-small) + (var(--font-size-large) - var(--font-size-small)) * ((100vw - 360px) / (1200px - 360px)));
-    // @media screen and (min-width: $breakpoint-lg) {
-    //    font-size: 67.5%; 
-    // }
+    @media screen and (min-width: $breakpoint-lg) {
+       font-size: 67.5%; 
+    }
 }
 
 body {

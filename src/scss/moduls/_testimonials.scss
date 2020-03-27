@@ -1,6 +1,7 @@
 // Testimonial slider
 .testimonals {
-  background-color: #191d32;
+  // background-color: #191d32;
+  background-color: $grey--lighter;
   grid-column: full-start / full-end;
   padding: 10rem 2vw;
 

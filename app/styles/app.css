@@ -12,9 +12,9 @@
   --text-line-height: 1.6;
   --font-primary: Open Sans, sans-serif;
   --font-display: Nunito Sans, sans-serif;
-  --font-size--small: 1.4rem;
-  --font-size--medium: 1.7rem;
-  --font-size--large: 2rem;
+  --font-size--small: 1.3rem;
+  --font-size--medium: 1.5rem;
+  --font-size--large: 1.8rem;
   --font-size--heading: 5vmin;
   --shadow--dark: 0 2rem 6rem rgba(#202020, .4);
   --shadow--light: 0 2rem 6rem rgb(#fff, .3);
@@ -34,6 +34,12 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+}
+
+@media screen and (min-width: 75em) {
+  html {
+    font-size: 67.5%;
+  }
 }
 
 body {
@@ -247,6 +253,42 @@ pre > code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre;
+}
+
+@-webkit-keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
 }
 
 .mb-20 {
@@ -717,6 +759,8 @@ pre > code {
   -webkit-box-align: center;
           align-items: center;
   padding: 5rem 2vw;
+  -webkit-transition: all ease-in-out;
+  transition: all ease-in-out;
 }
 
 .team__instructor-list--blue-bg {
@@ -734,6 +778,10 @@ pre > code {
   border-radius: 50%;
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation: float 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+          animation: float 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 .team__instructor-details {
@@ -962,7 +1010,7 @@ pre > code {
 }
 
 .testimonals {
-  background-color: #191d32;
+  background-color: #FAFAFA;
   grid-column: full-start / full-end;
   padding: 10rem 2vw;
 }

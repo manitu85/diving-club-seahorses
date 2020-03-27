@@ -37,6 +37,8 @@
     align-items: center;
     padding: 5rem 2vw;
 
+    transition: all ease-in-out;
+
      &--blue-bg {
       background-color: $blue-brand;
     }
@@ -52,6 +54,9 @@
     margin-right: 3rem;
     border-radius: 50%; // fallback
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	  transform: translateY(0px);
+	  animation: float 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    
   }
 
   &__instructor-details {
