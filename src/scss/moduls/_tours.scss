@@ -11,26 +11,85 @@
   }
 
   &__activites {
-    background-color: $orange-brand;
+    // background-color: $orange-brand;
     grid-column: col-start / col-end 5;
   }
 
   &__items {
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    justify-content: center;
-    justify-items: center;
-    grid-gap: 5rem;
-    padding: 10rem 0;
+    grid-gap: 6rem;
+    padding: 6rem;
+
+    @media only screen and (max-width: $breakpoint-md) {
+      margin: 6rem 0;
+    }
   }
 
   &__item {
-    width: 20rem;
-    height: 20rem;
-    background-color: $white;
-    border: 5px solid black;
+    background-color: $grey--lighter;
+
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2rem;
     place-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+
+  &__like {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    fill: $blue--darker;
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: 2;
+    justify-self: end;
+    margin: 1rem;
+  }
+
+  &__icon {
+    fill: $orange-brand;
+    height: 5rem;
+    width: 5rem;
+    margin-right: 1rem;
+  }
+
+  &__name {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: end;
+    z-index: 3;
+
+    font-family: $font-display;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: $blue--light;
+    color: #fff;
+    font-weight: 400;
+    width: 80%;
+    transform: translateY(50%);
+  }
+
+  &__location,
+  &__hours,
+  &__people,
+  &__depth {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
   }
 
   &__content {
