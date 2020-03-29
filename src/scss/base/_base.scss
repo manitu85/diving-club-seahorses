@@ -69,8 +69,8 @@ body {
     grid-template-columns:  [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];   
 
     // Background dots
-    background: linear-gradient(90deg,#fff 20px,transparent 1%) center,linear-gradient(#fff 20px,transparent 1%) center,#c7c4c4;
-    background-size: 22px 22px;
+    // background: linear-gradient(90deg,#fff 20px,transparent 1%) center,linear-gradient(#fff 20px,transparent 1%) center,#c7c4c4;
+    // background-size: 22px 22px;
   }
 
   @media screen and (min-width: $breakpoint-lg) {

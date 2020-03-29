@@ -67,8 +67,6 @@ body {
     grid-template-rows: 6rem 80vh repeat(13, min-content);
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
-    background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #c7c4c4;
-    background-size: 22px 22px;
   }
 }
 
@@ -813,7 +811,7 @@ pre > code {
   grid-column: 1 / -1;
   -webkit-box-ordinal-group: 1;
           order: 0;
-  background-color: #004962;
+  background-color: #0b4e50;
   color: #fff;
   padding: 8vmax 5vmin;
   display: -webkit-box;
@@ -863,6 +861,8 @@ pre > code {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  -webkit-box-pack: center;
+          justify-content: center;
   grid-gap: 6rem;
   padding: 6rem;
 }
@@ -873,21 +873,12 @@ pre > code {
   }
 }
 
-@media screen and (min-width: 75em) {
-  .tours__items {
-    grid-template-columns: repeat(2, min-max(-webkit-min-content, 30rem));
-    grid-template-columns: repeat(2, min-max(min-content, 30rem));
-    -webkit-box-pack: center;
-            justify-content: center;
-  }
-}
-
 .tours__item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 2rem;
   place-items: center;
-  background-color: #FAFAFA;
+  background-color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -935,6 +926,8 @@ pre > code {
   fill: #ff9e42;
   height: 5rem;
   width: 5rem;
+  -webkit-box-pack: baseline;
+          justify-content: baseline;
 }
 
 .tours__descriptions {
@@ -956,8 +949,8 @@ pre > code {
   color: #fff;
   font-weight: 400;
   width: 80%;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(50%) skewX(-20deg);
+          transform: translateY(50%) skewX(-20deg);
 }
 
 .tours__location, .tours__hours, .tours__people {
@@ -980,6 +973,9 @@ pre > code {
 
 .tours__btn {
   grid-column: 1 / -1;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  width: 60%;
 }
 
 .tours__content {
@@ -1151,6 +1147,10 @@ pre > code {
 .testimonial__text {
   text-align: center;
   max-width: 50rem;
+}
+
+.pricing {
+  grid-column: center-start / center-end;
 }
 
 .gallery {
