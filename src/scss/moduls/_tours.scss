@@ -12,28 +12,55 @@
 
   &__activites {
     // background-color: $orange-brand;
-    grid-column: col-start / col-end 5;
+    grid-column: col-start 1 / col-end 5;
   }
 
   &__items {
-
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem;
     padding: 6rem;
 
+
     @media only screen and (max-width: $breakpoint-md) {
       margin: 6rem 0;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(2, min-max(min-content, 30rem));
+      justify-content: center;
     }
   }
 
   &__item {
-    background-color: $grey--lighter;
-
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 2rem;
     place-items: center;
+    
+    background-color: $grey--lighter;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 5px;
+      background-color: $orange-brand;
+      transition: 0.5s;
+    }
   }
 
   &__img {
@@ -57,7 +84,11 @@
     fill: $orange-brand;
     height: 5rem;
     width: 5rem;
-    margin-right: 1rem;
+  }
+
+  &__descriptions {
+    grid-column: 1 / -1;
+    padding: 1rem 2rem 0;
   }
 
   &__name {
@@ -80,12 +111,17 @@
 
   &__location,
   &__hours,
-  &__people,
-  &__depth {
+  &__people {
     font-size: 1.5rem;
-    margin-left: 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+
+    p {
+      margin: 0;
+    }
   }
 
   &__btn {

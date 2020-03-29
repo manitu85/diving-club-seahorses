@@ -856,10 +856,11 @@ pre > code {
 }
 
 .tours__activites {
-  grid-column: col-start / col-end 5;
+  grid-column: col-start 1 / col-end 5;
 }
 
 .tours__items {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
@@ -872,12 +873,45 @@ pre > code {
   }
 }
 
+@media screen and (min-width: 75em) {
+  .tours__items {
+    grid-template-columns: repeat(2, min-max(-webkit-min-content, 30rem));
+    grid-template-columns: repeat(2, min-max(min-content, 30rem));
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+}
+
 .tours__item {
-  background-color: #FAFAFA;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 2rem;
   place-items: center;
+  background-color: #FAFAFA;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.tours__item:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.tours__item:hover::after {
+  width: 100%;
+}
+
+.tours__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #ff9e42;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .tours__img {
@@ -901,7 +935,11 @@ pre > code {
   fill: #ff9e42;
   height: 5rem;
   width: 5rem;
-  margin-right: 1rem;
+}
+
+.tours__descriptions {
+  grid-column: 1 / -1;
+  padding: 1rem 2rem 0;
 }
 
 .tours__name {
@@ -922,13 +960,22 @@ pre > code {
           transform: translateY(50%);
 }
 
-.tours__location, .tours__hours, .tours__people, .tours__depth {
+.tours__location, .tours__hours, .tours__people {
   font-size: 1.5rem;
-  margin-left: 2rem;
   display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   -webkit-box-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 0 1rem;
+}
+
+.tours__location p, .tours__hours p, .tours__people p {
+  margin: 0;
 }
 
 .tours__btn {
