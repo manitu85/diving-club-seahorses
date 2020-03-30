@@ -6,7 +6,7 @@
 
     @media screen and(min-width: $breakpoint-md) {
       // grid-column: full-start / col-end 4;
-      grid-column: col-start 5 / full-end;
+      grid-column: col-start 4 / full-end;
     }
   }
 
@@ -53,6 +53,7 @@
     height: 8rem;
     margin-right: 3rem;
     border-radius: 50%; // fallback
+    
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 	  transform: translateY(0px);
 	  animation: float 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
@@ -86,7 +87,7 @@
 
     @media screen and(min-width: $breakpoint-md) {
       // grid-column: col-start 5 / full-end;
-      grid-column: full-start / col-end 4 ;
+      grid-column: full-start / col-end 3 ;
       padding: 6rem 8vw;
       
     }
