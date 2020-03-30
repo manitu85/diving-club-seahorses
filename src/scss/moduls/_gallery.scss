@@ -9,8 +9,8 @@
   padding: 2px;
 
   @media screen and (min-width: $breakpoint-sm) {
-    grid-gap: 1rem;
-    padding: 1rem;
+    grid-gap: .5rem;
+    padding: .5rem;
   }
 
   &__img {

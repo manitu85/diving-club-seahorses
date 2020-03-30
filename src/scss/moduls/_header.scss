@@ -1,6 +1,7 @@
 .header {
   // background-color: $blue;
-  background-color: #0065b7;
+  // background-color: #0065b7;
+  background-color: #222;
   grid-column: full-start / full-end;    
   position: sticky; 
   z-index: $zindex-sticky;
@@ -15,9 +16,11 @@
 .logo {
   grid-column: col-start 1 / col-end 1;
 
-  z-index: $zindex-positioning;
-  width: 10rem;
-  height: 10rem;
+  &__brand {
+    width: 10rem;
+    height: 6rem;
+    z-index: $zindex-positioning;
+  }
 }
 
 .menu {

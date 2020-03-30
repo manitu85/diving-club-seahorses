@@ -414,7 +414,7 @@ pre > code {
 }
 
 .header {
-  background-color: #0065b7;
+  background-color: #222;
   grid-column: full-start / full-end;
   position: -webkit-sticky;
   position: sticky;
@@ -429,9 +429,12 @@ pre > code {
 
 .logo {
   grid-column: col-start 1 / col-end 1;
-  z-index: 990;
+}
+
+.logo__brand {
   width: 10rem;
-  height: 10rem;
+  height: 6rem;
+  z-index: 990;
 }
 
 .menu {
@@ -877,20 +880,18 @@ pre > code {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 2rem;
-  place-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   background-color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  border-radius: 5px;
 }
 
 .tours__item:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
   box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
-}
-
-.tours__item:hover::after {
-  width: 100%;
 }
 
 .tours__item::after {
@@ -905,6 +906,10 @@ pre > code {
   transition: 0.5s;
 }
 
+.tours__item:hover::after {
+  width: 100%;
+}
+
 .tours__img {
   width: 100%;
   grid-row: 1 / 2;
@@ -913,13 +918,12 @@ pre > code {
 
 .tours__like {
   grid-row: 1 / 2;
-  grid-column: 2 / 3;
-  fill: #001C57;
-  height: 2.5rem;
-  width: 2.5rem;
-  z-index: 2;
+  grid-column: 3 / 4;
+  fill: #ffc02e;
+  height: 5rem;
+  width: 5rem;
+  z-index: 10;
   justify-self: end;
-  margin: 1rem;
 }
 
 .tours__icon {
@@ -930,7 +934,7 @@ pre > code {
           justify-content: baseline;
 }
 
-.tours__descriptions {
+.tours__description {
   grid-column: 1 / -1;
   padding: 1rem 2rem 0;
 }
@@ -973,13 +977,15 @@ pre > code {
 
 .tours__btn {
   grid-column: 1 / -1;
+  justify-self: center;
+  width: 60%;
   -webkit-transform: translateY(30%);
           transform: translateY(30%);
-  width: 60%;
 }
 
 .tours__content {
   background-color: #1D2C8F;
+  background-color: #273331;
   padding: 10rem 8vmin;
   grid-column: col-start 6 / col-end 8;
   display: grid;
@@ -1165,8 +1171,8 @@ pre > code {
 
 @media screen and (min-width: 37.5em) {
   .gallery {
-    grid-gap: 1rem;
-    padding: 1rem;
+    grid-gap: .5rem;
+    padding: .5rem;
   }
 }
 
