@@ -13,7 +13,8 @@
   &__instructor {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    background-color: $black;
+    // background-color: $black;
+    background-color: #105DA9;
 
     @media screen and(max-width: 500px) {
       grid-auto-rows: auto;
@@ -40,11 +41,13 @@
     transition: all ease-in-out;
 
      &--blue-bg {
-      background-color: $blue-brand;
+      // background-color: $blue-brand;
+      background-color: #114E6F;
     }
 
      &--black-bg {
-      background-color: #000;
+      // background-color: #000;
+      background-color: #02ABED;
     }
   }
 
@@ -105,6 +108,7 @@
 
     p {
       margin-bottom: 3rem;
+
     }
   }
 }

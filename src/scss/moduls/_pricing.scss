@@ -2,12 +2,89 @@
   grid-column: center-start / center-end;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); // auto-fit
   justify-content: center;
   grid-gap: 6rem;
 
+  position: relative;
+
   &__table {
-    height: 40rem;
-    background-color: $blue;
+    background-color: $grey--lighter;
+    text-align: center;
+    padding-top: 6rem;
+    border: .1px solid #d9bf77;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1rem 0;
+
+    transition: all .3s ease-in-out;
+
+    &--inverse {
+      // background-color: #000;
+      // background-color: #114e6f;
+      background-color: #202020;
+      color: $grey--lighter;
+      // transform: scale(1.05);
+      // box-shadow: 0 20px 35px 0 rgba(#fff, 0.08);
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 5px;
+      background-color: $orange-brand;
+      transition: 0.5s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+    &--bolder {
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__price {
+    font-size: 40px;
+    font-weight: 500;
+    color: #d9bf77;
+  }
+
+  &__number {
+    font-size: 60px;
+  }
+
+  &__pass {
+    margin-bottom: 1rem;
+    color: #999;
+  }
+
+  &__items {
+    font-size: var(--font-size--medium);
+    text-transform: capitalize;
+  }
+
+  &__item {
   }
 }

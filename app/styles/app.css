@@ -731,7 +731,7 @@ pre > code {
 .team__instructor {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  background-color: #202020;
+  background-color: #105DA9;
 }
 
 @media screen and (max-width: 500px) {
@@ -765,11 +765,11 @@ pre > code {
 }
 
 .team__instructor-list--blue-bg {
-  background-color: #003270;
+  background-color: #114E6F;
 }
 
 .team__instructor-list--black-bg {
-  background-color: #000;
+  background-color: #02ABED;
 }
 
 .team__instructor-avatar {
@@ -1162,11 +1162,82 @@ pre > code {
   -webkit-box-pack: center;
           justify-content: center;
   grid-gap: 6rem;
+  position: relative;
 }
 
 .pricing__table {
-  height: 40rem;
-  background-color: #2B6EB1;
+  background-color: #FAFAFA;
+  text-align: center;
+  padding-top: 6rem;
+  border: .1px solid #d9bf77;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+          align-items: center;
+  grid-gap: 1rem 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.pricing__table--inverse {
+  background-color: #202020;
+  color: #FAFAFA;
+}
+
+.pricing__table:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.pricing__table::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #ff9e42;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.pricing__table:hover::after {
+  width: 100%;
+}
+
+.pricing__heading {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.pricing__heading--bolder {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.pricing__price {
+  font-size: 40px;
+  font-weight: 500;
+  color: #d9bf77;
+}
+
+.pricing__number {
+  font-size: 60px;
+}
+
+.pricing__pass {
+  margin-bottom: 1rem;
+  color: #999;
+}
+
+.pricing__items {
+  font-size: var(--font-size--medium);
+  text-transform: capitalize;
 }
 
 .gallery {

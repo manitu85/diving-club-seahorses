@@ -27,16 +27,6 @@
     @media only screen and (max-width: $breakpoint-md) {
       margin: 6rem 0;
     }
-
-    // @media screen and (min-width: 1600px) {
-    //   grid-template-columns: repeat(3, minmax(min-conten, 25rem));
-    //   justify-content: center;
-    // }
-
-    // @media screen and (min-width: 2200px) {
-    //   grid-template-columns: repeat(3, minmax(min-conten, 25rem));
-    //   justify-content: center;
-    // }
   }
 
   &__item {
