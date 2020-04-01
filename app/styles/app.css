@@ -1157,6 +1157,16 @@ pre > code {
 
 .pricing {
   grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  -webkit-box-pack: center;
+          justify-content: center;
+  grid-gap: 6rem;
+}
+
+.pricing__table {
+  height: 40rem;
+  background-color: #2B6EB1;
 }
 
 .gallery {
