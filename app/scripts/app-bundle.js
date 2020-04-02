@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../../../../node_modules/jquery/dist/jquery.js":
-/*!************************************************************!*\
-  !*** C:/Users/ManituX8/node_modules/jquery/dist/jquery.js ***!
-  \************************************************************/
+/***/ "./node_modules/jquery/dist/jquery.js":
+/*!********************************************!*\
+  !*** ./node_modules/jquery/dist/jquery.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10720,7 +10720,7 @@ var modal = new _moduls_Modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "../../../../node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -10734,7 +10734,7 @@ var Modal = /*#__PURE__*/function () {
   function Modal() {
     _classCallCheck(this, Modal);
 
-    this.openModalButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.open-modal');
+    this.openModalButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.modal__open');
     this.modal = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.modal');
     this.closeModalButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.modal__close');
     this.events();
@@ -10761,7 +10761,7 @@ var Modal = /*#__PURE__*/function () {
     key: "openModal",
     value: function openModal() {
       this.modal.addClass('modal--is-visible');
-      return false;
+      return false; // prevent default behavior for link
     }
   }, {
     key: "closeModal",

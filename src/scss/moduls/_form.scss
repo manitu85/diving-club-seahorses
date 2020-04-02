@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: stretch;
+
+  min-width: 50rem;
+
+  & > * {
+    flex: 1;
+  }
+
+  &__group {
+    padding: 1rem 0;
+  }
+
+  &__label {
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__btn {
+    align-self: start;
+    margin-top: 3rem;
+  }
+}

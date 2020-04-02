@@ -138,39 +138,6 @@ figcaption {
   text-align: center;
 }
 
-table {
-  border-collapse: collapse;
-  border-color: gray;
-  border-spacing: 2px;
-  max-width: 100%;
-  width: 100%;
-}
-
-table thead th {
-  vertical-align: bottom;
-  border-bottom: 1px solid #ccc;
-}
-
-table th,
-table td {
-  padding: 0.6rem;
-  vertical-align: top;
-  border-top: 1px solid #ccc;
-}
-
-table th,
-table tfoot td {
-  font-weight: 700;
-  text-align: left;
-}
-
-table td {
-  border-bottom: 1px solid #ccc;
-  padding: .6rem;
-  text-align: left;
-  vertical-align: top;
-}
-
 textarea,
 select {
   height: 38px;
@@ -231,26 +198,6 @@ label > .label-body {
   display: inline-block;
   font-weight: normal;
   margin-left: .5rem;
-}
-
-pre {
-  overflow: auto;
-}
-
-code {
-  background: gainsboro;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  font-size: 90%;
-  margin: 0 .2rem;
-  padding: .2rem .5rem;
-  white-space: nowrap;
-}
-
-pre > code {
-  display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre;
 }
 
 @-webkit-keyframes float {
@@ -1421,6 +1368,101 @@ pre > code {
   font-size: 6rem;
   line-height: 1;
   color: currentColor;
+}
+
+.modal {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(94, 93, 163, 0.2)), color-stop(rgba(2, 2, 2, 0.5)), to(rgba(226, 26, 26, 0.3))), url("/assets/images/hero-2.jpg") center center/cover no-repeat, #020202;
+  background: linear-gradient(to right, rgba(94, 93, 163, 0.2), rgba(2, 2, 2, 0.5), rgba(226, 26, 26, 0.3)), url("/assets/images/hero-2.jpg") center center/cover no-repeat, #020202;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.modal--is-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+}
+
+.modal__title {
+  font-size: 6rem;
+  color: #ffc02e;
+}
+
+.modal__description {
+  max-width: 50rem;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.modal__close {
+  color: #fff;
+  font-size: 5rem;
+  line-height: 0.85;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+
+.modal__close:hover {
+  color: #ff9e42;
+}
+
+.form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: nowrap column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  min-width: 50rem;
+}
+
+.form > * {
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+
+.form__group {
+  padding: 1rem 0;
+}
+
+.form__input {
+  width: 100%;
+}
+
+.form__btn {
+  align-self: start;
+  margin-top: 3rem;
 }
 
 .footer {

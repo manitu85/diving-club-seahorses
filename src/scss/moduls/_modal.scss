@@ -1,0 +1,62 @@
+.modal {
+  color: $white;
+  background: linear-gradient(
+      to right,
+      rgba(#5e5da3, 0.2),
+      rgba(#020202, 0.5),
+      rgba(#e21a1a, 0.3)
+    ),
+    url("/assets/images/hero-2.jpg") center center/cover no-repeat, #020202;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: $zindex-modal;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.25);
+  transition: all 0.3s ease-out;
+
+  &--is-visible {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+
+  &__title {
+    font-size: 6rem;
+    color: $yellow-brand;
+  }
+
+  &__description {
+    max-width: 50rem;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+
+  &__close {
+    color: #fff;
+    font-size: 5rem;
+    line-height: 0.85;
+    font-weight: 400;
+    cursor: pointer;
+
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+    transform: scaleX(1.1);
+    transform-origin: 100% 0;
+
+    &:hover {
+      color: $orange-brand;
+    }
+  }
+}

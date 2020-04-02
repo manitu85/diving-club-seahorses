@@ -76,45 +76,6 @@ figcaption {
   text-align: center;
 }
 
-// Tables
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-
-table {
-  // border-spacing: 0;
-  // border: 0;
-  border-collapse: collapse;
-  border-color: gray;
-  border-spacing: 2px;
-  max-width: 100%;
-  width: 100%;
-
-  thead th {
-    vertical-align: bottom;
-    border-bottom: 1px solid #ccc;
-  }
-
-  th,
-  td {
-    padding: 0.6rem;
-    vertical-align: top;
-    border-top: 1px solid #ccc;
-  }
-
-  th,
-  tfoot td {
-    font-weight: 700;
-    text-align: left;
-  }
-
-  td {
-    border-bottom: 1px solid #ccc;
-    padding: .6rem;
-    text-align: left;
-    vertical-align: top;
-  }
-}
-
 // Forms
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -193,29 +154,6 @@ label > .label-body {
   margin-left: .5rem;
 }
 
-// Code
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// Contain overflow in all browsers.
-pre {
-  overflow: auto;
-}
-
-code {
-  background: lighten(#ccc, 6.4%);
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  font-size: 90%;
-  margin: 0 .2rem;
-  padding: .2rem .5rem;
-  white-space: nowrap;
-}
-
-pre > code {
-  display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre;
-}
 
 
 

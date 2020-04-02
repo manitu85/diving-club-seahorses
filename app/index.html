@@ -8,6 +8,8 @@
     <!-- build:css /styles/app.css -->
     <link rel="stylesheet" href="./styles/app.css" />
     <!-- endbuild -->
+    <script src="./scripts/vendor-bundle.js.js"></script> 
+
   </head>
 
   <body class="site-container">
@@ -46,7 +48,7 @@
             <a class="menu__link" href="">gallery</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">contact</a>
+            <a class="menu__link modal__open" href="">contact</a>
           </li>
         </ul>
       </nav>
@@ -325,7 +327,7 @@
 
     <!-- SECTION TOURS -->
     <div class="tours page-section">
-        <div class="tours__content">
+      <div class="tours__content">
         <h2 class="heading-2">Tours and Adventures</h2>
         <div class="tours__text">
           <p>
@@ -576,8 +578,6 @@
           </div>
         </div>
       </div>
-
-    
     </div>
 
     <!-- SECTION SHOW  -->
@@ -637,7 +637,7 @@
 
     <section class="pricing page-section">
       <article class="pricing__table">
-        <h2 class="pricing__heading">Monthly Card</h2>
+        <h2 class="pricing__heading">Monthly Membership</h2>
         <span class="pricing__price">
           <sup>&euro;</sup>
           <span class="pricing__number">59</span>
@@ -657,7 +657,7 @@
       </article>
 
       <article class="pricing__table pricing__table--inverse">
-        <h2 class="pricing__heading">Anual Card</h2>
+        <h2 class="pricing__heading">Anual Membership</h2>
         <span class="pricing__price">
           <sup>&euro;</sup>
           <span class="pricing__number">490</span>
@@ -677,7 +677,7 @@
       </article>
 
       <article class="pricing__table">
-        <h2 class="pricing__heading">Lifelong Card</h2>
+        <h2 class="pricing__heading">Lifelong Membership</h2>
         <span class="pricing__price">
           <sup>&euro;</sup>
           <span class="pricing__number">995</span>
@@ -940,13 +940,70 @@
         <h2>GET IN TOUCH</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
-          delectus omnis, aliquid praesentium veritatis commodi soluta
-          facilis dignissimos necessitatibus,
-          laudantium voluptates autem? Fugiat, tempore!
+          delectus omnis, aliquid praesentium veritatis commodi soluta facilis
+          dignissimos necessitatibus, laudantium voluptates autem? Fugiat,
+          tempore!
         </p>
-         <button class="btn btn--orange btn--large">send us a message</button>
+        <button class="btn btn--orange btn--large  modal__open">send us a message</button>
       </div>
     </section>
+
+    <!-- Section modal - contact form  -->
+    <div class="modal">
+      <h2 class="modal__title">
+        Get in <strong>Touch</strong>
+      </h2>
+      <p class="modal__description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ut
+        voluptas ab totam quisquam temporibus eos voluptatibus harum velit.
+        Ipsum!
+      </p>
+
+      <form class="form">
+        <div class="form__group">
+          <label class="form__label" for="name">Name</label>
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter Name"
+          />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input
+            class="form__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="phone">Phone Number</label>
+          <input
+            class="form__input"
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Enter Phone Number"
+          />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="message">Message</label>
+          <textarea
+            class="form__input"
+            name="message"
+            id="message"
+            placeholder="Enter Message"
+          ></textarea>
+        </div>
+        <a class="btn btn--large btn--orange form__btn" type="submit">Send message </a>
+      </form>
+
+      <div class="modal__close">x</div>
+    </div>
 
     <!-- SITE FOOTER -->
     <footer class="footer">

@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 class Modal {
   constructor() {
-    this.openModalButton = $('.open-modal')
+    this.openModalButton = $('.modal__open')
     this.modal = $('.modal')
     this.closeModalButton = $('.modal__close')
     this.events()
@@ -25,7 +25,7 @@ class Modal {
 
   openModal() {
     this.modal.addClass('modal--is-visible')
-    return false
+    return false // prevent default behavior for link
   }
 
   closeModal() {
