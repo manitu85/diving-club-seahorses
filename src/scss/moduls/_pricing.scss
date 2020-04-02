@@ -22,10 +22,10 @@
     transition: all .3s ease-in-out;
 
     &--inverse {
+      color: $grey--lighter;
+      background-color: #202020;
       // background-color: #000;
       // background-color: #114e6f;
-      background-color: #202020;
-      color: $grey--lighter;
       // transform: scale(1.05);
       // box-shadow: 0 20px 35px 0 rgba(#fff, 0.08);
     }
@@ -66,13 +66,13 @@
   }
 
   &__price {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 500;
     color: #d9bf77;
   }
 
   &__number {
-    font-size: 60px;
+    font-size: 6rem;
   }
 
   &__pass {

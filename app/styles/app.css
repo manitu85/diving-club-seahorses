@@ -54,8 +54,8 @@ body {
 .site-container {
   position: relative;
   display: grid;
-  grid-template-rows: 6rem calc(100vh - 6rem) repeat(13, -webkit-min-content);
-  grid-template-rows: 6rem calc(100vh - 6rem) repeat(13, min-content);
+  grid-template-rows: 6rem calc(100vh - 6rem) repeat(15, -webkit-min-content);
+  grid-template-rows: 6rem calc(100vh - 6rem) repeat(15, min-content);
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, -webkit-max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
 }
@@ -63,8 +63,8 @@ body {
 @media screen and (min-width: 37.5em) {
   .site-container {
     display: grid;
-    grid-template-rows: 6rem 80vh repeat(13, -webkit-min-content);
-    grid-template-rows: 6rem 80vh repeat(13, min-content);
+    grid-template-rows: 6rem 80vh repeat(15, -webkit-min-content);
+    grid-template-rows: 6rem 80vh repeat(15, min-content);
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
   }
@@ -73,8 +73,8 @@ body {
 @media screen and (min-width: 75em) {
   .site-container {
     display: grid;
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(13, -webkit-min-content);
-    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(13, min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(15, -webkit-min-content);
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(15, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
@@ -1180,8 +1180,8 @@ pre > code {
 }
 
 .pricing__table--inverse {
-  background-color: #202020;
   color: #FAFAFA;
+  background-color: #202020;
 }
 
 .pricing__table:hover {
@@ -1221,13 +1221,13 @@ pre > code {
 }
 
 .pricing__price {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 500;
   color: #d9bf77;
 }
 
 .pricing__number {
-  font-size: 60px;
+  font-size: 6rem;
 }
 
 .pricing__pass {
@@ -1367,6 +1367,60 @@ pre > code {
 .gallery__item--21 {
   grid-row: 10 / span 1;
   grid-column: 2 / span 2;
+}
+
+.map {
+  grid-column: full-start / full-end;
+  position: relative;
+}
+
+.map__location {
+  display: block;
+  width: 100%;
+  min-height: 40vh;
+  overflow: hidden;
+  padding: 0 .1rem .1rem .1rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  .map__location {
+    padding: 0 .5rem .5rem .5rem;
+  }
+}
+
+.map__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #202020;
+  z-index: 10;
+  opacity: .2;
+}
+
+.map__contact {
+  width: 40rem;
+  height: 30vh;
+  background-color: #2B6EB1;
+  opacity: .8;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 20;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
+
+.map__contact h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 6rem;
+  color: #fff;
+  line-height: 1;
+  align-self: center;
 }
 
 .footer {
