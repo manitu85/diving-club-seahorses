@@ -9,7 +9,8 @@
   position: relative;
 
   &__table {
-    background-color: $grey--lighter;
+    // background-color: $grey--lighter;
+    background-color: $white;
     text-align: center;
     padding-top: 6rem;
     border: .1px solid #d9bf77;
@@ -23,8 +24,8 @@
 
     &--inverse {
       color: $grey--lighter;
-      background-color: #202020;
-      // background-color: #000;
+      // background-color: #202020;
+      background-color: #114e6f;
       // background-color: #114e6f;
       // transform: scale(1.05);
       // box-shadow: 0 20px 35px 0 rgba(#fff, 0.08);
