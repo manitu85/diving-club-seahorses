@@ -282,6 +282,17 @@ label > .label-body {
   }
 }
 
+.heading-2--larger {
+  --font-size--heading: 5vmin;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 37.5em) {
+  .heading-2 {
+    --font-size--heading: 3rem;
+  }
+}
+
 .heading-3--light {
   --font-size--heading: 1.6rem;
   --heading-color: #ffc02e;
@@ -459,14 +470,17 @@ label > .label-body {
 
 .large-hero__title {
   color: #ffab5c;
+  margin: 0.5rem 0 4rem;
+  font-size: 3vmax;
   line-height: 1;
-  margin: .5rem 0 4rem;
-  font-size: 3rem;
+  letter-spacing: 0.061em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 37.5em) {
   .large-hero__title {
-    font-size: 5vmin;
+    font-size: 4vmin;
   }
 }
 
@@ -724,7 +738,7 @@ label > .label-body {
 }
 
 .team__instructor-list--black-bg {
-  background-color: #02ABED;
+  background-color: #009ad6;
 }
 
 .team__instructor-avatar {
@@ -1347,6 +1361,7 @@ label > .label-body {
 }
 
 .map__contact {
+  display: block;
   width: 40rem;
   height: 30vh;
   background-color: #2B6EB1;
@@ -1368,6 +1383,12 @@ label > .label-body {
           align-items: flex-start;
   -webkit-box-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 37.5em) {
+  .map__contact {
+    display: none;
+  }
 }
 
 .map__contact h2 {
@@ -1411,17 +1432,6 @@ label > .label-body {
   visibility: visible;
 }
 
-.modal__title {
-  font-size: 6rem;
-  color: #ffc02e;
-}
-
-.modal__description {
-  max-width: 50rem;
-  margin-bottom: 6rem;
-  text-align: center;
-}
-
 .modal__close {
   color: #FAFAFA;
   font-size: 5rem;
@@ -1439,6 +1449,17 @@ label > .label-body {
 
 .modal__close:hover {
   color: #ff9e42;
+}
+
+.modal__title {
+  font-size: 6rem;
+  color: #ffc02e;
+}
+
+.modal__description {
+  max-width: 50rem;
+  margin-bottom: 6rem;
+  text-align: center;
 }
 
 .form {

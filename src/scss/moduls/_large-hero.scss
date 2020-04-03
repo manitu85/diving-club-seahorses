@@ -1,7 +1,7 @@
 .large-hero {
   grid-column: full-start / full-end;
-  
-  background: url('/assets/images/hero-3.jpg') no-repeat bottom 90% center/cover;
+
+  background: url("/assets/images/hero-3.jpg") no-repeat bottom 90% center/cover;
   background-attachment: fixed;
   color: white;
 
@@ -15,18 +15,21 @@
     padding: 0 2rem;
 
     @media screen and (min-width: $breakpoint-sm) {
-     grid-column: col-start 1 / col-end 5;
+      grid-column: col-start 1 / col-end 5;
     }
   }
 
   &__title {
     color: lighten($orange-brand, 5);
+    margin: 0.5rem 0 4rem;
+    font-size: 3vmax;
     line-height: 1;
-    margin: .5rem 0 4rem;
-    font-size: 3rem;
+    letter-spacing: 0.061em;
+    font-weight: 600;
+    text-transform: uppercase;
 
     @media screen and (min-width: $breakpoint-sm) {
-      font-size: 5vmin;
+        font-size: 4vmin;
     }
   }
 

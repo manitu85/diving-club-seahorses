@@ -1,4 +1,3 @@
-
 class Modal {
   constructor() {
     this.openModalButton = document.querySelectorAll('.modal__open')

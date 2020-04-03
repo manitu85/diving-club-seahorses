@@ -26,6 +26,8 @@
   }
 
   &__contact {
+    display:  block;
+    // visibility: hidden;
     width: 40rem;
     height: 30vh;
     background-color: $blue;
@@ -37,6 +39,11 @@
     z-index: 20;
     color: $white;
     padding: 2rem;
+
+   @media screen and (max-width: $breakpoint-sm ) {
+      display:  none;
+      // visibility: visible;
+    }
 
     display: flex;
     flex-direction: column;

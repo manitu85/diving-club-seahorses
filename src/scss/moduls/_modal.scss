@@ -24,23 +24,14 @@
   transform: scale(1.25);
   transition: all 0.3s ease-out;
 
+  // js-hook
   &--is-visible {
     opacity: 1;
     transform: scale(1);
     visibility: visible;
   }
 
-  &__title {
-    font-size: 6rem;
-    color: $yellow-brand;
-  }
-
-  &__description {
-    max-width: 50rem;
-    margin-bottom: 6rem;
-    text-align: center;
-  }
-
+  // js-hook
   &__close {
     color: $grey--lighter;
     font-size: 5rem;
@@ -58,5 +49,16 @@
     &:hover {
       color: $orange-brand;
     }
+  }
+  
+  &__title {
+    font-size: 6rem;
+    color: $yellow-brand;
+  }
+
+  &__description {
+    max-width: 50rem;
+    margin-bottom: 6rem;
+    text-align: center;
   }
 }
