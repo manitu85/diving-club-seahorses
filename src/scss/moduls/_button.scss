@@ -6,34 +6,34 @@
   border-radius: 0;
   font-family: var(--font-display);
   text-transform: uppercase;
-  padding: 1.8rem 3rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all .2s ease-in-out;
-  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
 
   &--orange {
     background-color: var(--orange-brand);
     &:hover {
-      background-color: lighten($orange-brand, 5) ;
+      background-color: lighten($orange-brand, 5);
     }
   }
 
   // ghost button
   &--inverse {
-    border: 2px solid  var(--orange-brand);
+    border: 2px solid var(--orange-brand);
     padding: 1.5rem 4rem;
-      &:hover {
-      background-color: lighten($orange-brand, 5) ;
+    &:hover {
+      background-color: lighten($orange-brand, 5);
     }
   }
 
   &--large {
-
+    padding: 1.8rem 3rem;
+    font-size: 1.2rem;
   }
 
   &--small {
-    
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
   }
 
   &--sm-none {
@@ -41,5 +41,4 @@
       display: none;
     }
   }
-
 }
