@@ -8,8 +8,8 @@
 //   }
 
 //   events() {
-//     this.menuItem.forEach(link => link.addEventListener('click', menuLink, this.nextLink.bind(this)))
-//     this.menuItem.forEach(link => link.addEventListener('click', menuLink, this.previousLink.bind(this)))
+//     this.menuItem.forEach(link => link.addEventListener('click', this.nextLink.bind(this)))
+//     this.menuItem.forEach(link => link.addEventListener('click', this.previousLink.bind(this)))
 //   }
 
 //   nextLink() {
