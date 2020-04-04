@@ -8,47 +8,55 @@
     <!-- build:css /styles/app.css -->
     <link rel="stylesheet" href="./styles/app.css" />
     <!-- endbuild -->
-    <!-- <script src="./scripts/vendor-bundle.js.js"></script>  -->
-
+    <!-- <script src="./scripts/vendor-bundle.js.js"></script> -->
   </head>
 
-  <body class="site-container">
+  <body id="home" class="site-container">
     <header class="header">
       <!-- site brand  -->
       <div class="logo">
-        <img
-          class="logo__brand"
-          src="assets/images/logo_4.jpg"
-          alt="logo-brand"
-        />
+        <span class="logo__text">
+          <img
+            class="logo__brand"
+            src="assets/images/logo_4.jpg"
+            alt="logo-brand"
+          />
+          <!-- SCUBA DIVING CLUB -->
+        </span>
+      </div>
+
+      <div class="menu-icon">
+        <svg class="menu-icon__box">
+          <use href="assets/sprite/sprite.svg#align-right"></use>
+        </svg>
       </div>
 
       <!-- Site Navigation  -->
-      <nav class="menu">
-        <ul class="menu__items">
-          <li class="menu__item">
-            <a class="menu__link" href="">home</a>
+      <nav class="menu menu--underline">
+        <ul class="menu__list">
+          <li class="menu__item menu__item--current">
+            <a class="menu__link" href="#home">home</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">services</a>
+            <a class="menu__link" href="#features">services</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">team</a>
+            <a class="menu__link" href="#team">team</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">tours</a>
+            <a class="menu__link" href="#tours">tours</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">pricing</a>
+            <a class="menu__link" href="#pricing">pricing</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">testimonials</a>
+            <a class="menu__link" href="#testimonials">testimonials</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">gallery</a>
+            <a class="menu__link" href="#gallery">gallery</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link modal__open" href="">contact</a>
+            <a class="menu__link modal__open" href="#contact">contact</a>
           </li>
         </ul>
       </nav>
@@ -105,7 +113,7 @@
     </section>
 
     <!-- SECTION SERVICES -->
-    <section class="features page-section">
+    <section id="features" class="features page-section">
       <div class="feature">
         <svg class="feature__icon">
           <use href="assets/sprite/sprite.svg#diving-goggles"></use>
@@ -190,11 +198,13 @@
     </div> -->
 
     <!-- SECTION TEAM -->
-    <div class="team__content">
+    <div id="team" class="team__content">
       <h3 class="heading-3 heading-3--light">
         <em>&rdquo; best decision of your life &rdquo;</em>
       </h3>
-      <h2 class="heading-2 heading-2--light heading-2--larger">Meet our professional team</h2>
+      <h2 class="heading-2 heading-2--light heading-2--larger">
+        Meet our professional team
+      </h2>
       <div class="team__text">
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta sunt
@@ -281,11 +291,10 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- SECTION TOURS -->
-    <div class="tours page-section">
+    <div id="tours" class="tours page-section">
       <div class="tours__content">
         <h2 class="heading-2">Tours and Adventures</h2>
         <div class="tours__text">
@@ -338,7 +347,9 @@
               </svg>
             </div>
 
-            <button class="tours__btn btn btn--orange btn--large">Book now</button>
+            <button class="tours__btn btn btn--orange btn--large">
+              Book now
+            </button>
           </div>
 
           <div class="tours__item">
@@ -375,7 +386,9 @@
                 <p>8 people</p>
               </svg>
             </div>
-            <button class="tours__btn btn btn--orange btn--large">Book now</button>
+            <button class="tours__btn btn btn--orange btn--large">
+              Book now
+            </button>
           </div>
 
           <div class="tours__item">
@@ -415,7 +428,9 @@
                 </p>
               </svg>
             </div>
-            <button class="tours__btn btn btn--orange btn--large">Book now</button>
+            <button class="tours__btn btn btn--orange btn--large">
+              Book now
+            </button>
           </div>
 
           <div class="tours__item">
@@ -455,7 +470,9 @@
                 <p>6 people</p>
               </svg>
             </div>
-            <button class="tours__btn btn btn--orange btn--large">Book now</button>
+            <button class="tours__btn btn btn--orange btn--large">
+              Book now
+            </button>
           </div>
           <div class="tours__item">
             <img
@@ -494,7 +511,9 @@
                 <p>6 people</p>
               </svg>
             </div>
-            <button class="tours__btn btn btn--orange btn--large">Book now</button>
+            <button class="tours__btn btn btn--orange btn--large">
+              Book now
+            </button>
           </div>
           <div class="tours__item">
             <img
@@ -533,7 +552,9 @@
                 <p>6 people</p>
               </svg>
             </div>
-            <button class="tours__btn btn btn--orange btn--large">Book now</button>
+            <button class="tours__btn btn btn--orange btn--large">
+              Book now
+            </button>
           </div>
         </div>
       </div>
@@ -594,7 +615,8 @@
       </div>
     </section>
 
-    <section class="pricing page-section">
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="pricing page-section">
       <article class="pricing__table">
         <h2 class="pricing__heading">Monthly Membership</h2>
         <span class="pricing__price">
@@ -612,7 +634,9 @@
           <li class="pricing__item">free services</li>
           <li class="pricing__item">certification</li>
         </ul>
-        <button class="tours__btn btn btn--orange btn--large">Get Started</button>
+        <button class="tours__btn btn btn--orange btn--large">
+          Get Started
+        </button>
       </article>
 
       <article class="pricing__table pricing__table--inverse">
@@ -632,7 +656,9 @@
           <li class="pricing__item">free services</li>
           <li class="pricing__item">certification</li>
         </ul>
-        <button class="tours__btn btn btn--orange btn--large">Get Started</button>
+        <button class="tours__btn btn btn--orange btn--large">
+          Get Started
+        </button>
       </article>
 
       <article class="pricing__table">
@@ -652,7 +678,9 @@
           <li class="pricing__item">free services</li>
           <li class="pricing__item">certification</li>
         </ul>
-        <button class="tours__btn btn btn--orange btn--large">Get Started</button>
+        <button class="tours__btn btn btn--orange btn--large">
+          Get Started
+        </button>
       </article>
     </section>
 
@@ -683,11 +711,14 @@
         <p class="cta-ship__paragraph">
           3 breathtaking shipwrecks packed into 1 fun filled day!
         </p>
-        <button class="btn btn--orange btn--large btn--sm-none">Book a tour</button>
+        <button class="btn btn--orange btn--large btn--sm-none">
+          Book a tour
+        </button>
       </div>
     </div>
 
-    <section class="testimonals">
+    <!-- TESTIMONAIL SECTION -->
+    <section id="testimonials" class="testimonals">
       <!-- <h1>What customers says</h1> -->
       <div class="testimonial">
         <div class="testimonial__user">
@@ -711,7 +742,7 @@
     </section>
 
     <!-- SECTION GALLERY -->
-    <section class="gallery">
+    <section id="gallery" class="gallery">
       <figure class="gallery__item gallery__item--1">
         <img
           src="assets/images/gal-1.jpg"
@@ -902,15 +933,15 @@
           delectus omnis, aliquid praesentium veritatis commodi soluta facilis
           tempore!
         </p>
-        <button class="btn btn--orange btn--small modal__open">send us a message</button>
+        <button class="btn btn--orange btn--small modal__open">
+          send us a message
+        </button>
       </div>
     </section>
 
     <!-- Section modal - contact form  -->
     <div class="modal">
-      <h2 class="modal__title">
-        Get in <strong>Touch</strong>
-      </h2>
+      <h2 class="modal__title">Get in <strong>Touch</strong></h2>
       <p class="modal__description">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ut
         voluptas ab totam quisquam temporibus eos voluptatibus harum velit.
@@ -957,7 +988,9 @@
             placeholder="Enter Message"
           ></textarea>
         </div>
-        <a class="btn btn--large btn--orange form__btn" type="submit">Send message </a>
+        <a class="btn btn--large btn--orange form__btn" type="submit"
+          >Send message
+        </a>
       </form>
 
       <div class="modal__close">x</div>
@@ -1039,6 +1072,8 @@
       </div>
     </section>
 
+
+      
     <!-- build:js /scripts/app-bundle.js -->
     <script src="./scripts/app-bundle.js"></script>
     <!-- endbuild -->
