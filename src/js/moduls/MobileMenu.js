@@ -21,7 +21,7 @@
 
 class MobileMenu {
   constructor() {
-    // selecting elements from DOM
+    // Selecting elements from DOM
     this.menuIcon = document.querySelector('.menu-icon')
     this.menu = document.querySelector('.menu')
     this.events()

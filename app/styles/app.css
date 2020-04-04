@@ -380,21 +380,29 @@ label > .label-body {
 }
 
 .header {
-  background-color: #222;
+  background-color: #0065b7;
   grid-column: full-start / full-end;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: [center-start] repeat(4, [col-start] minmax(-webkit-min-content, 28rem) [col-end]) [center-end];
+  grid-template-columns: [center-start] repeat(4, [col-start] minmax(min-content, 28rem) [col-end]) [center-end];
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.header--dark {
+  background-color: #191d32;
   position: -webkit-sticky;
   position: sticky;
   z-index: 1020;
   top: 0;
   left: 0;
   right: 0;
-  display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .logo {
-  grid-column: col-start 1 / col-end 1;
+  grid-column: col-start 1 / col-end 2;
 }
 
 .logo__brand {
@@ -406,7 +414,10 @@ label > .label-body {
 .menu-icon {
   grid-column: col-start 8 / col-end 8;
   margin-left: auto;
-  display: block;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 65em) {
@@ -415,12 +426,18 @@ label > .label-body {
   }
 }
 
+.menu-icon__text {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
 .menu-icon__box {
   fill: #fff;
-  width: 6rem;
-  height: 6rem;
-  -webkit-transition: fill .3s ease-in;
-  transition: fill .3s ease-in;
+  width: 4rem;
+  height: 4rem;
+  -webkit-transition: fill 0.3s ease-in;
+  transition: fill 0.3s ease-in;
 }
 
 .menu-icon__box:hover {
@@ -428,7 +445,7 @@ label > .label-body {
 }
 
 .menu {
-  grid-column: col-start 5 / col-end 8;
+  grid-column: col-start 3 / col-end 4;
   line-height: 1;
   margin: 0 auto;
   display: none;
@@ -463,11 +480,11 @@ label > .label-body {
 }
 
 .menu__item:not(:last-child) {
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .menu__link {
-  font-size: .85em;
+  font-size: 0.85em;
   font-weight: bold;
   display: block;
   padding: 1em;
@@ -528,7 +545,7 @@ label > .label-body {
 
 .menu--underline .menu__link::before,
 .menu--underline .menu__link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1.35rem;
   left: 0;

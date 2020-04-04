@@ -1,12 +1,14 @@
 import $ from 'jquery'
 
 import Modal from './moduls/Modal'
-// import Header from './moduls/Header'
 import MobileMenu from './moduls/MobileMenu'
+import StickyHeader from './moduls/StickyHeader'
+// import Header from './moduls/Header'
 
 
 const modal = new Modal();
 const mobileMenu = new MobileMenu();
+const stickyHeader = new StickyHeader();
 // const header = new Header();
 
 
