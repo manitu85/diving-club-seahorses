@@ -5,21 +5,22 @@
 
   transition: background-color 0.3s ease-in-out;
 
-  display: grid;
-  grid-template-columns: [center-start] repeat(
-      4,
-      [col-start] minmax(min-content, 28rem) [col-end]
-    ) [center-end];
-  justify-content: center;
-
-  &--dark {
-    // background-color: #222;
-    background-color: #191d32;
     position: sticky;
     z-index: $zindex-sticky;
     top: 0;
     left: 0;
     right: 0;
+
+  display: grid;
+  grid-template-columns:
+    [center-start] repeat(4, [col-start] minmax(min-content, 28rem) [col-end])
+    [center-end];
+  justify-content: center;
+
+  &--dark {
+    // background-color: #222;
+    background-color: #191d32;
+  
   }
 }
 
@@ -115,7 +116,30 @@
     -webkit-touch-callout: none;
     -khtml-user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    color: #fff;
+    color: #e4e4e4;
+
+    &::after {
+      content: "";
+      position: relative;
+      top: 2.35rem;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      height: 0.3rem;
+      background: #ffd767;
+      // background: linear-gradient(to left, #ffd767, #0bd8e7 );
+      width: 0;
+      transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0
+    }
+
+    &:hover {
+      color: #ffd767;
+    }
 
     &.is-current-link {
       color: #ffd767;
@@ -125,40 +149,22 @@
       content: "";
       position: relative;
       top: 2.35rem;
+      left: 50%;
+      bottom: 0;
+      
+
       display: block;
       height: 0.3rem;
       background-color: #ffd767;
       width: 0;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
 
     &.is-current-link::after {
       width: 100%;
-    }
-
-    &:hover {
-      color: #ffd767;
-
+      left: 0
     }
   }
-
-}
-
-// Stroke from zero to 100%
-.link-underline::after {
-    content: "";
-    position: relative;
-    top: 2.35rem;
-    display: block;
-    height: .3rem;
-    background-color: #ffd767;
-    width: 0;
-    transition: all .4s ease-in-out;
-
-}
-
-.link-underline:hover::after {
-    width: 100%;
 }
 
 
