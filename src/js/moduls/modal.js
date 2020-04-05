@@ -1,7 +1,7 @@
 class Modal {
   constructor() {
-    this.openModalButton = document.querySelectorAll('.modal__open')
     this.modal = document.querySelector('.modal')
+    this.openModalButton = document.querySelectorAll('.modal__open')
     this.closeModalButton = document.querySelector('.modal__close')
     this.events()
   }

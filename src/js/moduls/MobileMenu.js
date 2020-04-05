@@ -19,20 +19,20 @@
 // export default MobileMenu
 
 
+// Selecting elements from DOM
+// Event Handling watch for
+// Defining functionality
 class MobileMenu {
   constructor() {
-    // Selecting elements from DOM
     this.menuIcon = document.querySelector('.menu-icon')
     this.menu = document.querySelector('.menu')
     this.events()
   }
 
-  // Event Handling watch for
   events() {
     this.menuIcon.addEventListener('click', this.toggleMenu.bind(this))
   }
 
-  // Defining functionality
   toggleMenu() {
     this.menu.classList.toggle('menu--is-visible')
   }

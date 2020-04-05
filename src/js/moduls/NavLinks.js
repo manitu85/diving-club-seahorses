@@ -1,29 +1,29 @@
 // import $ from 'jquery'
 
-// class Header {
+// class NavLinks {
 //   constructor() {
 //     this.menuItem = document.querySelectorAll('.menu__item')
 //     this.menuLink = document.querySelectorAll('.menu__link')
-//     this.events()    
+//     this.events()
 //   }
 
 //   events() {
-//     this.menuItem.forEach(link => link.addEventListener('click', this.nextLink.bind(this)))
 //     this.menuItem.forEach(link => link.addEventListener('click', this.previousLink.bind(this)))
+//     this.menuItem.forEach(link => link.addEventListener('click', this.nextLink.bind(this)))
 //   }
 
-//   nextLink() {
-//     this.menuItem.classList.remove('menu__item--current')
-//     console.log('Menu ITem', this.menuItem);    
-//   }
-
-//   previousLink() {
+//   nextLink(e) {
+//     e.preventDefault;
 //     this.menuItem.classList.add('menu__item--current')
-//     console.log('Menu ITem', this.menuItem);    
+//   }
+
+//   previousLink(e) {
+//     e.preventDefault;
+//     this.menuItem.classList.remove('menu__item--current')
 //   }
 // }
 
-// export default Header
+// export default NavLinks
 
 // $(document).ready(
 //   $(".menu__item").click('.menu__link', function (e) {

@@ -11,7 +11,12 @@
     <!-- <script src="./scripts/vendor-bundle.js.js"></script> -->
   </head>
 
-  <body id="home" class="site-container">
+  <body 
+    id="home" 
+    class="site-container section"
+    data-matching-link="#home-link"
+  >
+
     <header class="header">
       <!-- site brand  -->
       <div class="logo">
@@ -26,7 +31,7 @@
       </div>
 
       <div class="menu-icon">
-        <h3 class="menu-icon__text">MENU</h3>
+        <span class="menu-icon__text">MENU</span>
         <svg class="menu-icon__box">
           <use href="assets/sprite/sprite.svg#align-right"></use>
         </svg>
@@ -36,28 +41,52 @@
       <nav class="menu menu--underline">
         <ul class="menu__list">
           <li class="menu__item menu__item--current">
-            <a class="menu__link" href="#home">home</a>
+            <a 
+              id="home-link"
+              class="menu__link" 
+              href="#home">home</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#features">services</a>
+            <a 
+              id="features-link"
+              class="menu__link" 
+              href="#features">services</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#team">team</a>
+            <a 
+              id="team-link"
+              class="menu__link" 
+              href="#team">team</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#tours">tours</a>
+            <a 
+              id="tours-link"
+              class="menu__link" 
+              href="#tours">tours</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#pricing">pricing</a>
+            <a 
+              id="pricing-link"
+              class="menu__link" 
+              href="#pricing">pricing</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#testimonials">testimonials</a>
+            <a 
+              id="testimonials-link"
+              class="menu__link" 
+              href="#testimonials">testimonials</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#gallery">gallery</a>
+            <a 
+              id="gallery-link"
+              class="menu__link" 
+              href="#gallery">gallery</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link modal__open" href="#">contact</a>
+            <a 
+              id="contact-link"
+              class="menu__link modal__open" 
+              href="#">contact</a>
           </li>
         </ul>
       </nav>
@@ -114,7 +143,11 @@
     </section>
 
     <!-- SECTION SERVICES -->
-    <section id="features" class="features page-section">
+    <section 
+      id="features" 
+      class="features section page-section "
+      data-matching-link="#features-link"
+    >
       <div class="feature">
         <svg class="feature__icon">
           <use href="assets/sprite/sprite.svg#diving-goggles"></use>
@@ -199,7 +232,11 @@
     </div> -->
 
     <!-- SECTION TEAM -->
-    <div id="team" class="team__content">
+    <div 
+      id="team" 
+      class="team__content section"
+      data-matching-link="#team-link"
+    >
       <h3 class="heading-3 heading-3--light">
         <em>&rdquo; best decision of your life &rdquo;</em>
       </h3>
@@ -295,7 +332,11 @@
     </div>
 
     <!-- SECTION TOURS -->
-    <div id="tours" class="tours page-section">
+    <div 
+      id="tours" 
+      class="tours page-section section"
+      data-matching-link="#tours-link"
+    >
       <div class="tours__content">
         <h2 class="heading-2">Tours and Adventures</h2>
         <div class="tours__text">
@@ -617,7 +658,11 @@
     </section>
 
     <!-- PRICING SECTION -->
-    <section id="pricing" class="pricing page-section">
+    <section 
+      id="pricing" 
+      class="pricing section page-section"
+      data-matching-link="#pricing-link"
+    >
       <article class="pricing__table">
         <h2 class="pricing__heading">Monthly Membership</h2>
         <span class="pricing__price">
@@ -719,7 +764,11 @@
     </div>
 
     <!-- TESTIMONAIL SECTION -->
-    <section id="testimonials" class="testimonals">
+    <section 
+      id="testimonials" 
+      class="testimonals section"
+      data-matching-link="#testimonials-link"
+    >
       <!-- <h1>What customers says</h1> -->
       <div class="testimonial">
         <div class="testimonial__user">
@@ -743,7 +792,11 @@
     </section>
 
     <!-- SECTION GALLERY -->
-    <section id="gallery" class="gallery">
+    <section 
+      id="gallery" 
+      class="gallery section"
+      data-matching-link="#gallery-link"
+    >
       <figure class="gallery__item gallery__item--1">
         <img
           src="assets/images/gal-1.jpg"
@@ -915,7 +968,7 @@
       </figure>
     </section>
 
-    <section class="map">
+    <section class="map section" data-matching-link="#contact-link">
       <div class="map__overlay"></div>
       <iframe
         class="map__location"
