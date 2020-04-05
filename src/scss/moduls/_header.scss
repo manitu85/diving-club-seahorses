@@ -120,10 +120,47 @@
     &.is-current-link {
       color: #ffd767;
     }
+
+    &.is-current-link::after {
+      content: "";
+      position: relative;
+      top: 2.35rem;
+      display: block;
+      height: 0.3rem;
+      background-color: #ffd767;
+      width: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &.is-current-link::after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: #ffd767;
+
+    }
   }
-  
 
 }
+
+// Stroke from zero to 100%
+.link-underline::after {
+    content: "";
+    position: relative;
+    top: 2.35rem;
+    display: block;
+    height: .3rem;
+    background-color: #ffd767;
+    width: 0;
+    transition: all .4s ease-in-out;
+
+}
+
+.link-underline:hover::after {
+    width: 100%;
+}
+
 
 // .menu__link:hover,
 // .menu__link:focus {

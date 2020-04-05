@@ -34,8 +34,9 @@ class StickyHeader {
 
   addSmoothScroll() {
     this.headerLinks.smoothScroll({
-      offset: -70,
-      speed: 600
+      offset: -80,
+      speed: 600,
+      preventDefault: true
     })
   }
 

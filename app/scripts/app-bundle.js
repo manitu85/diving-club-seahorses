@@ -12045,8 +12045,9 @@ var StickyHeader = /*#__PURE__*/function () {
     key: "addSmoothScroll",
     value: function addSmoothScroll() {
       this.headerLinks.smoothScroll({
-        offset: -70,
-        speed: 600
+        offset: -80,
+        speed: 600,
+        preventDefault: true
       });
     }
   }, {
