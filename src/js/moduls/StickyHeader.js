@@ -84,19 +84,21 @@ export default StickyHeader
 //   constructor() {
 //     this.siteHeader = document.querySelector('.header')
 //     this.headerTriggerElement = document.querySelector('.info')
+//     this.headerLinks = document.querySelectorAll('.menu .menu__link')
 //     // Calls
 //     this.createHeaderWaypoint()
+//     this.addSmoothScroll()
 //   }
 
 //   createHeaderWaypoint() {
-//     let self = this;
+//     // let self = this;
 //     new Waypoint({
 //       element: this.headerTriggerElement,
 //       handler: direction => {
-//         if (direction == 'down') {
-//           self.siteHeader.classList.add('header--dark')
+//         if (direction == 'down') {    
+//           this.siteHeader.classList.add('header--dark')
 //         } else {
-//           self.siteHeader.classList.remove('header--dark')
+//           this.siteHeader.classList.remove('header--dark')
 //         }
 //       }
 //     })

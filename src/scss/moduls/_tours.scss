@@ -29,7 +29,7 @@
   &__item {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 2rem;
+    grid-row-gap: 1rem;
     justify-content: center;
     // place-items: center;
     
@@ -73,6 +73,7 @@
     width: 5rem;
     z-index: 10;
     justify-self: end;
+    fill: $yellow-brand;
     // margin: 1rem;
   }
 
@@ -85,7 +86,8 @@
 
   &__description {
     grid-column: 1 / -1;
-    padding: 1rem 2rem 0;
+    padding: 4rem 2rem 0;
+     margin: 0;
   }
 
   &__name {
@@ -115,10 +117,6 @@
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
-
-    p {
-      margin: 0;
-    }
   }
 
   &__btn {
