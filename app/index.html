@@ -43,43 +43,43 @@
           <li class="menu__item menu__item--current ">
             <a 
               id="home-link"
-              class="menu__link link-underline" 
+              class="menu__link " 
               href="#home">home</a>
           </li>
           <li class="menu__item ">
             <a 
               id="features-link"
-              class="menu__link link-underline" 
+              class="menu__link" 
               href="#features">services</a>
           </li>
           <li class="menu__item ">
             <a 
               id="team-link"
-              class="menu__link link-underline" 
+              class="menu__link" 
               href="#team">team</a>
           </li>
           <li class="menu__item ">
             <a 
               id="tours-link"
-              class="menu__link link-underline" 
+              class="menu__link" 
               href="#tours">tours</a>
           </li>
           <li class="menu__item ">
             <a 
               id="pricing-link"
-              class="menu__link link-underline" 
-              href="#pricing">pricing</a>
+              class="menu__link" 
+              href="#pricing">membership</a>
           </li>
           <li class="menu__item ">
             <a 
               id="testimonials-link"
-              class="menu__link link-underline" 
+              class="menu__link" 
               href="#testimonials">testimonials</a>
           </li>
           <li class="menu__item ">
             <a 
               id="gallery-link"
-              class="menu__link link-underline" 
+              class="menu__link" 
               href="#gallery">gallery</a>
           </li>
           <li class="menu__item">
@@ -105,6 +105,9 @@
         </p>
         <button class="btn btn--orange btn--large">book a tour</button>
       </div>
+      <!-- <div class="large-hero__club">
+        mask image
+      </div> -->
     </div>
 
     <!-- SECTION INFO -->
@@ -142,12 +145,14 @@
       </div>
     </section>
 
+
     <!-- SECTION SERVICES -->
     <section 
       id="features" 
       class="features section page-section "
       data-matching-link="#features-link"
     >
+
       <div class="feature">
         <svg class="feature__icon">
           <use href="assets/sprite/sprite.svg#diving-goggles"></use>
@@ -338,17 +343,25 @@
       data-matching-link="#tours-link"
     >
       <div class="tours__content">
-        <h2 class="heading-2">Tours and Adventures</h2>
-        <div class="tours__text">
-          <p>
+        
+        <div class="main-heading">
+          <h2 class="main-heading__title">Tours and Adventures</h2>
+          <div class="main-heading__stroke">
+           <svg class="main-heading__icon">
+              <use href="assets/sprite/sprite.svg#anchor-2"></use>
+          </svg>
+          </div>
+          <p class="main-heading__subtitle">” best decision of your life ”</p>
+        </div>
+
+        <p class="tours__content-text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
             sunt libero cum, esse optio necessitatibus ut vel. Lorem ipsum dolor
             sit amet con. Possimus eaque sunt quia eligendi, ipsam magnam,
             obcaecati. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Soluta sunt libero cum, esse optio necessitatibus ut vel. Lorem
             ipsum dolor sit.
-          </p>
-        </div>
+        </p>
         <!-- <button class="btn btn--orange">Learn more</button> -->
       </div>
 
@@ -661,10 +674,22 @@
     <!-- PRICING SECTION -->
     <section 
       id="pricing" 
-      class="pricing section page-section"
+      class="pricing-cards section page-section"
       data-matching-link="#pricing-link"
     >
-      <article class="pricing__table">
+
+    <div class="main-heading main-heading--margin-bottom">
+      <h2 class="main-heading__title">Membership</h2>
+      <div class="main-heading__stroke">
+       <svg class="main-heading__icon">
+          <use href="assets/sprite/sprite.svg#anchor-1"></use>
+      </svg>
+      </div>
+      <p class="main-heading__subtitle">” best pricing of your life ”</p>
+    </div>
+
+    <div class="pricing">
+       <article class="pricing__table">
         <h2 class="pricing__heading">Monthly Membership</h2>
         <span class="pricing__price">
           <sup>&euro;</sup>
@@ -729,6 +754,8 @@
           Get Started
         </button>
       </article>
+    </div>
+     
     </section>
 
     <div class="cta-ship">
@@ -758,7 +785,7 @@
         <p class="cta-ship__paragraph">
           3 breathtaking shipwrecks packed into 1 fun filled day!
         </p>
-        <button class="btn btn--orange btn--large btn--sm-none">
+        <button class="btn btn--orange btn--large ">
           Book a tour
         </button>
       </div>
@@ -767,10 +794,20 @@
     <!-- TESTIMONAIL SECTION -->
     <section 
       id="testimonials" 
-      class="testimonals section page-section"
+      class="testimonals section"
       data-matching-link="#testimonials-link"
     >
-      <!-- <h1>What customers says</h1> -->
+    
+    <div class="main-heading main-heading--margin-bottom main-heading--margin-bottom">
+      <h2 class="main-heading__title">What customers says</h2>
+      <div class="main-heading__stroke">
+       <svg class="main-heading__icon">
+          <use href="assets/sprite/sprite.svg#anchor-4"></use>
+      </svg>
+      </div>
+      <!-- <p class="main-heading__subtitle">” best decision of your life ”</p> -->
+    </div>
+
       <div class="testimonial">
         <div class="testimonial__user">
           <img
@@ -1119,11 +1156,19 @@
     </footer>
 
     <section class="copyright">
-      <div>
+      <span>
         scuba diving club &copy;2020, all right reserved
-      </div>
-      <div>
-        social icons
+      </span>
+      <div class="social-icons">
+         <svg class="social-icons__icon social-icons__icon--facebook">
+            <use href="assets/sprite/sprite.svg#facebook"></use>
+          </svg>
+         <svg class="social-icons__icon social-icons__icon--instagram">
+            <use href="assets/sprite/sprite.svg#instagram"></use>
+          </svg>
+         <svg class="social-icons__icon social-icons__icon--twitter">
+            <use href="assets/sprite/sprite.svg#twitter"></use>
+          </svg>
       </div>
     </section>
 

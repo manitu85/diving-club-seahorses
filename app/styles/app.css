@@ -322,13 +322,71 @@ label > .label-body {
   --heading-color: #171717;
 }
 
+.main-heading {
+  font-size: 2.5rem;
+  display: grid;
+  grid-auto-columns: auto;
+  justify-items: center;
+}
+
+.main-heading--margin-bottom {
+  margin-bottom: 6rem;
+}
+
+.main-heading--margin-top {
+  margin-top: 6rem;
+}
+
+.main-heading__title {
+  color: #a7a7a7;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 0.027em;
+  font-weight: 600;
+}
+
+.main-heading__subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: #ffc02e;
+  margin: 0;
+}
+
+.main-heading__stroke {
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 0;
+  -webkit-box-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  color: #d1d1d1;
+}
+
+.main-heading__stroke::before, .main-heading__stroke::after {
+  content: "";
+  height: .2rem;
+  display: block;
+  background-color: currentColor;
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.main-heading__icon {
+  width: 6rem;
+  height: 6rem;
+  fill: #ff9e42;
+}
+
 .page-section {
-  margin: 6rem 0;
+  padding: 6rem 0;
 }
 
 @media screen and (min-width: 65em) {
   .page-section {
-    margin: 10rem 0;
+    margin: 7rem 0;
   }
 }
 
@@ -496,7 +554,7 @@ label > .label-body {
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  color: #e4e4e4;
+  color: #e3e3e3;
 }
 
 .menu__link::after {
@@ -507,7 +565,7 @@ label > .label-body {
   left: 50%;
   display: block;
   height: 0.3rem;
-  background: #ffd767;
+  background: #fff;
   width: 0;
   -webkit-transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -518,8 +576,8 @@ label > .label-body {
   left: 0;
 }
 
-.menu__link:hover {
-  color: #ffd767;
+.menu__link:hover, .menu__link:focus {
+  color: #fff;
 }
 
 .menu__link.is-current-link {
@@ -743,17 +801,12 @@ label > .label-body {
 
 .cta-ship {
   grid-column: full-start / full-end;
+  height: 50vh;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(152, 163, 93, 0.1)), color-stop(rgba(2, 2, 2, 0.2)), to(rgba(226, 26, 26, 0.3))), url("/assets/images/gal-1.jpg") center center/cover no-repeat, #020202;
+  background: linear-gradient(to right, rgba(152, 163, 93, 0.1), rgba(2, 2, 2, 0.2), rgba(226, 26, 26, 0.3)), url("/assets/images/gal-1.jpg") center center/cover no-repeat, #020202;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
-}
-
-@media screen and (min-width: 75em) {
-  .cta-ship {
-    height: 50vh;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(152, 163, 93, 0.1)), color-stop(rgba(2, 2, 2, 0.2)), to(rgba(226, 26, 26, 0.3))), url("/assets/images/gal-1.jpg") center center/cover no-repeat, #020202;
-    background: linear-gradient(to right, rgba(152, 163, 93, 0.1), rgba(2, 2, 2, 0.2), rgba(226, 26, 26, 0.3)), url("/assets/images/gal-1.jpg") center center/cover no-repeat, #020202;
-    background-attachment: fixed;
-  }
 }
 
 .cta-ship__backdrop {
@@ -1049,15 +1102,20 @@ label > .label-body {
 
 .tours__content {
   color: #273331;
-  padding: 2rem 2vmin 4rem;
   grid-column: col-start 2 / col-end 7;
   display: grid;
   justify-items: center;
 }
 
-.tours__content p {
+.tours__content-text {
   color: currentColor;
-  margin-bottom: 3rem;
+  margin: 5rem 0;
+}
+
+@media screen and (max-width: 37.5em) {
+  .tours__content-text {
+    margin: 3rem 0 1rem;
+  }
 }
 
 .show {
@@ -1180,6 +1238,7 @@ label > .label-body {
   background-color: #FAFAFA;
   grid-column: full-start / full-end;
   padding: 5rem 2vw;
+  padding: 10rem 2vw;
 }
 
 .testimonial {
@@ -1217,8 +1276,11 @@ label > .label-body {
   max-width: 50rem;
 }
 
-.pricing {
+.pricing-cards {
   grid-column: center-start / center-end;
+}
+
+.pricing {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   -webkit-box-pack: center;
@@ -1658,6 +1720,41 @@ label > .label-body {
             flex-direction: row;
     justify-content: space-around;
   }
+}
+
+.social-icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 1rem;
+}
+
+.social-icons__icon {
+  border: 0.1rem solid var(--text-color);
+  width: 4rem;
+  height: 4rem;
+  fill: #FAFAFA;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  align-self: center;
+  justify-self: center;
+}
+
+.social-icons__icon:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-color: transparent;
+}
+
+.social-icons__icon--facebook:hover {
+  fill: #3b5998;
+}
+
+.social-icons__icon--instagram:hover {
+  fill: #e1306c;
+}
+
+.social-icons__icon--twitter:hover {
+  fill: #1da1f2;
 }
 
 .bg--light {

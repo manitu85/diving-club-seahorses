@@ -12045,7 +12045,7 @@ var StickyHeader = /*#__PURE__*/function () {
     key: "addSmoothScroll",
     value: function addSmoothScroll() {
       this.headerLinks.smoothScroll({
-        offset: -80,
+        offset: -60,
         speed: 600,
         preventDefault: true
       });

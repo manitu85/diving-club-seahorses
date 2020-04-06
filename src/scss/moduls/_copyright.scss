@@ -9,8 +9,51 @@
   flex-direction: column;
   align-items: center;
 
+
   @media screen and (min-width: $breakpoint-sm) {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+
+.social-icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 1rem;
+
+
+
+  &__icon {
+    border: .1rem solid var(--text-color);
+    width: 4rem;
+    height: 4rem;
+    fill: $grey--lighter;
+    transition: all .3s ease-in-out;
+
+    align-self: center;
+    justify-self: center;
+
+    &:hover {
+      transform: scale(.9);
+      background-color: transparent;
+      // fill: $white;
+      // translateY(-2px) 
+      // border-radius: 50%;
+    }
+ 
+    &--facebook:hover {
+      // background-color: #3b5998;
+      fill: #3b5998;
+    }
+
+    &--instagram:hover{
+      // background-color: #e1306c;
+      fill: #e1306c;
+    }
+
+    &--twitter:hover  {
+      // background-color: #1da1f2;
+      fill: #1da1f2;
+    }
   }
 }

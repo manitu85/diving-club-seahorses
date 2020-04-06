@@ -29,7 +29,7 @@
 .cta-ship {
   grid-column: full-start / full-end;
   // temp for large image
-  @media screen and (min-width: $breakpoint-lg) {
+  // @media screen and (min-width: $breakpoint-lg) {
     height: 50vh;
     background: linear-gradient(
         to right,
@@ -43,7 +43,7 @@
 
       background-attachment: fixed;
     
-  }
+  // }
   
   position: relative;
   overflow: hidden;

@@ -45,8 +45,8 @@
   }
 
   @media screen and (max-width: $breakpoint-sm) {
-      --font-size--heading: 3rem;
-    }
+    --font-size--heading: 3rem;
+  }
 }
 
 .heading-3 {
@@ -80,5 +80,63 @@
 
   &--dark {
     --heading-color: #{$grey--dark};
+  }
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  display: grid;
+  grid-auto-columns: auto;
+  justify-items: center;
+
+  &--margin-bottom {
+    margin-bottom: 6rem;
+  }
+
+  &--margin-top {
+    margin-top: 6rem;
+  }
+
+  &__title {
+    color: #a7a7a7;
+    font-family: $font-primary;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: 0.027em;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    color: $yellow-brand;
+    margin: 0;
+  }
+
+  &__stroke {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 0;
+    align-items: center;
+
+    font-size: 1.6rem;
+    color: #d1d1d1;
+
+    &::before,
+    &::after {
+      content: "";
+      height: .2rem;
+      display: block;
+      background-color: currentColor;
+      width: 8rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    fill: $orange-brand;
   }
 }

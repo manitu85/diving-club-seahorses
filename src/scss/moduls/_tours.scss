@@ -20,7 +20,6 @@
     grid-gap: 6rem;
     padding-bottom: 6rem;
 
-
     @media only screen and (max-width: $breakpoint-md) {
       margin: 6rem 0;
     }
@@ -32,7 +31,7 @@
     grid-row-gap: 1rem;
     justify-content: center;
     // place-items: center;
-    
+
     background-color: #fff;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
@@ -56,7 +55,6 @@
     &:hover::after {
       width: 100%;
     }
-
   }
 
   &__img {
@@ -87,7 +85,7 @@
   &__description {
     grid-column: 1 / -1;
     padding: 4rem 2rem 0;
-     margin: 0;
+    margin: 0;
   }
 
   &__name {
@@ -132,19 +130,21 @@
     // background-color: $blue--dark;
     color: #273331;
     // max-width: 60rem;
-    
-    padding: 2rem 2vmin 4rem;
+
+    // padding: 2rem 2vmin 4rem;
 
     grid-column: col-start 2 / col-end 7;
 
     display: grid;
     justify-items: center;
     // text-align: center;
-    
+  }
+  &__content-text {
+    color: currentColor;
+    margin: 5rem 0;
 
-    p {
-      color: currentColor;
-      margin-bottom: 3rem;
+    @media screen and (max-width: $breakpoint-sm) {
+      margin: 3rem 0 1rem;
     }
   }
 }
