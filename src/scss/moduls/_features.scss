@@ -1,9 +1,11 @@
 // Layout block
-.features {
+.services {
+  grid-column: center-start / center-end;
+}
 
+.features {
   // background-color: $grey--lighter;
   background-color: #fff;
-  grid-column: center-start / center-end;
   align-items: start;
 
   display: grid;

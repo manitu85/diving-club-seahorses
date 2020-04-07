@@ -377,7 +377,7 @@ label > .label-body {
 .main-heading__icon {
   width: 6rem;
   height: 6rem;
-  fill: #ff9e42;
+  fill: #246d75;
 }
 
 .page-section {
@@ -386,7 +386,7 @@ label > .label-body {
 
 @media screen and (min-width: 65em) {
   .page-section {
-    margin: 7rem 0;
+    margin: 4rem 0;
   }
 }
 
@@ -710,9 +710,12 @@ label > .label-body {
   color: #ffc02e;
 }
 
+.services {
+  grid-column: center-start / center-end;
+}
+
 .features {
   background-color: #fff;
-  grid-column: center-start / center-end;
   -webkit-box-align: start;
           align-items: start;
   display: grid;
