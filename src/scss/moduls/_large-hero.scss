@@ -1,4 +1,7 @@
 .large-hero {
+  position: relative;
+  z-index: 1;
+  
   grid-column: full-start / full-end;
 
   background: url("/assets/images/hero-3.jpg") no-repeat bottom 90% center/cover;

@@ -1,5 +1,4 @@
 .team {
-
   &__instructors {
     background-color: $grey--dark;
     grid-column: 1 / -1;
@@ -14,7 +13,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     // background-color: $black;
-    background-color: #105DA9;
+    background-color: #105da9;
 
     @media screen and(max-width: 500px) {
       grid-auto-rows: auto;
@@ -27,7 +26,7 @@
   }
 
   &__instructor-img--order-sm {
-     @media screen and(max-width: 500px) {
+    @media screen and(max-width: 500px) {
       order: -1;
     }
   }
@@ -40,12 +39,12 @@
 
     transition: all ease-in-out;
 
-     &--blue-bg {
+    &--blue-bg {
       // background-color: $blue-brand;
-      background-color: #114E6F;
+      background-color: #114e6f;
     }
 
-     &--black-bg {
+    &--black-bg {
       // background-color: #000;
       background-color: rgb(0, 154, 214);
     }
@@ -56,11 +55,10 @@
     height: 8rem;
     margin-right: 3rem;
     border-radius: 50%; // fallback
-    
+
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-	  transform: translateY(0px);
-	  animation: float 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-    
+    transform: translateY(0px);
+    animation: float 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
   }
 
   &__instructor-details {
@@ -85,14 +83,15 @@
 
   &__content {
     grid-column: 1 / -1;
-
     order: 0;
+
+    position: relative;
+    z-index: 1;
 
     @media screen and(min-width: $breakpoint-md) {
       // grid-column: col-start 5 / full-end;
-      grid-column: full-start / col-end 3 ;
+      grid-column: full-start / col-end 3;
       padding: 6rem 8vw;
-      
     }
 
     // background-color: #004962; // bluebrand
@@ -108,7 +107,6 @@
 
     p {
       margin-bottom: 3rem;
-
     }
   }
 }

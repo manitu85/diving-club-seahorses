@@ -30,27 +30,30 @@
   grid-column: full-start / full-end;
   // temp for large image
   // @media screen and (min-width: $breakpoint-lg) {
-    height: 50vh;
-    background: linear-gradient(
-        to right,
-        rgba(#98a35d, 0.1),
-        rgba(#020202, 0.2),
-        rgba(rgb(226, 26, 26), 0.3)
-      ),
-      // url("/assets/images/cta/cta-ship--large.jpg") center center/cover no-repeat,
-      url("/assets/images/gal-1.jpg") center center/cover no-repeat,
-      #020202;
+  height: 50vh;
+  background: linear-gradient(
+      to right,
+      rgba(#98a35d, 0.1),
+      rgba(#020202, 0.2),
+      rgba(rgb(226, 26, 26), 0.3)
+    ),
+    // url("/assets/images/cta/cta-ship--large.jpg") center center/cover no-repeat,
+      url("/assets/images/gal-1.jpg")center center/cover no-repeat,
+    #020202;
 
-      background-attachment: fixed;
-    
+  background-attachment: fixed;
+
+  position: relative;
+  z-index: 1;
+
   // }
-  
+
   position: relative;
   overflow: hidden;
 
   &__backdrop {
     position: absolute;
-    background-color: rgba(#000, .5);
+    background-color: rgba(#000, 0.5);
     top: 0;
     bottom: 0;
     left: 0;
