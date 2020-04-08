@@ -106,5 +106,13 @@ export default StickyHeader
 
 // }
 
+
+// window.addEventListener('scroll', () => {
+//   const nav = document.querySelector('.navbar');
+//   window.scrollY > 100
+//     ? nav.classList.add('header--dark')
+//     : nav.classList.remove('header--dark')
+// });
+
 // export default StickyHeader
 

@@ -11852,12 +11852,6 @@ __webpack_require__.r(__webpack_exports__);
 var modal = new _moduls_Modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
 var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
 var stickyHeader = new _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_3__["default"](); // const navLinks = new NavLinks();
-// $(document).ready(
-//   $(".menu__item").click('.menu__link', function (e) {
-//     $(".menu__item").removeClass("menu__item--current");
-//     $(this).addClass("menu__item--current");
-//   })
-// );
 
 /***/ }),
 
@@ -12110,6 +12104,12 @@ var StickyHeader = /*#__PURE__*/function () {
 //     })
 //   }
 // }
+// window.addEventListener('scroll', () => {
+//   const nav = document.querySelector('.navbar');
+//   window.scrollY > 100
+//     ? nav.classList.add('header--dark')
+//     : nav.classList.remove('header--dark')
+// });
 // export default StickyHeader
 
 /***/ })

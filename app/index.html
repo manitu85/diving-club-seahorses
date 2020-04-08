@@ -82,12 +82,11 @@
               class="menu__link" 
               href="#gallery">gallery</a>
           </li>
-          <li class="menu__item">
-            <a 
-              id="contact-link"
-              class="menu__link modal__open" 
-              href="#">contact</a>
-          </li>
+          <a href="#" class=" btn-contact btn-contact--padding modal__open">
+            contact
+            <span class="btn-ccontact--gradient"></span>
+          </a>
+          <!-- </li> -->
         </ul>
       </nav>
     </header>
@@ -142,7 +141,18 @@
           <use href="assets/sprite/sprite.svg#user-add-outline"></use>
         </svg>
         <h4 class="heading-4 heading-4--white">Follow us on</h4>
-        <p class="info__text">Social Icons</p>
+        <!-- <p class="info__text">Social Icons</p> -->
+        <div class="social-icons">
+         <svg class="social-icons__icon social-icons__icon--info">
+            <use href="assets/sprite/sprite.svg#facebook"></use>
+          </svg>
+         <svg class="social-icons__icon social-icons__icon--info">
+            <use href="assets/sprite/sprite.svg#instagram"></use>
+          </svg>
+         <svg class="social-icons__icon social-icons__icon--info">
+            <use href="assets/sprite/sprite.svg#twitter"></use>
+          </svg>
+      </div>
       </div>
     </section>
 
@@ -656,7 +666,7 @@
             </button> -->
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -674,6 +684,7 @@
           we bring scuba diving to a
           <span style="color: lightskyblue;">brand new level</span>
         </h2>
+        <hr class="divider">
         <p style="color: #fff;">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
           dolorum, atque, nostrum illo minus culpa rem architecto beatae eius
@@ -1085,28 +1096,31 @@
       </p>
 
       <form class="form">
+
         <div class="form__group">
-          <label class="form__label" for="name">Name</label>
+          <label class="form__label" for="name"></label>
           <input
             class="form__input"
             type="text"
             name="name"
             id="name"
-            placeholder="Enter Name"
+            placeholder="Name"
           />
         </div>
+
         <div class="form__group">
-          <label class="form__label" for="email">Email</label>
+          <label class="form__label shrink" for="email"></label>
           <input
             class="form__input"
             type="email"
             name="email"
             id="email"
-            placeholder="Enter Email"
+            placeholder="Email"
           />
         </div>
+
         <div class="form__group">
-          <label class="form__label" for="phone">Phone Number</label>
+          <label class="form__label" for="phone"></label>
           <input
             class="form__input"
             type="text"
@@ -1115,8 +1129,9 @@
             placeholder="Enter Phone Number"
           />
         </div>
+
         <div class="form__group">
-          <label class="form__label" for="message">Message</label>
+          <label class="form__label" for="message"></label>
           <textarea
             class="form__input"
             name="message"
@@ -1124,6 +1139,7 @@
             placeholder="Enter Message"
           ></textarea>
         </div>
+        
         <a class="btn-narrow btn-narrow--large form__btn" type="submit"
           >Send message
         </a>

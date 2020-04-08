@@ -1,0 +1,26 @@
+.divider {
+  display: inline-block;
+  overflow: hidden;
+  background-color: #87cefa;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 10rem;
+  height: 5px;
+  margin: .5rem 0 2.5rem;
+  // margin-left: auto;
+  // margin-right: auto;
+
+  // &--medium {
+  //   @include breakpoint-md {
+  //     height: 5px;
+  //     // margin-bottom: 3rem;
+  //   }
+  // }
+
+  //   &--small {
+  //     @include breakpoint-md {
+  //       height: 5px;
+  //       margin: 0 2rem;
+  //   }
+  // }
+}
