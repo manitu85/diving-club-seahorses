@@ -1,5 +1,7 @@
+////////////////////////////////////////////////
+// ### REGULAR BUTTON
 %btn {
-  display: inline-block;
+  display: block;
   background-color: transparent;
   color: #{$white};
   border: none;
@@ -17,9 +19,13 @@
   transition: all 0.2s ease-in-out;
 
   &--orange {
-    background-color: var(--orange-brand);
+    // background-color: var(--orange-brand);
+    background-image: linear-gradient(to right bottom, var(--orange-brand), var(--yellow-brand));
+    transition: all 0.2s ease-in-out;
     &:hover {
-      background-color: lighten($orange-brand, 5);
+      // background-color: lighten($orange-brand, 5);
+      background-image: linear-gradient(to left top, var(--orange-brand), var(--yellow-brand));
+      opacity: .95;
     }
   }
 
@@ -48,12 +54,15 @@
   }
 }
 
+
+////////////////////////////////////////////////
+// ### NARROW EFFECT BUTTON
 .btn-narrow {
   @extend %btn;
   position: relative;
-  border: 2px solid var(--orange-brand);
+  border: 2px solid var(--yellow-brand);
   color: var(--orange-brand);
-  font-weight: 800;
+  font-weight: 600;
   overflow: hidden;
   transition: all 0.3s;
 
@@ -71,7 +80,8 @@
     height: 0;
     top: 50%;
     left: 50%;
-    background: $orange-brand;
+    // background: $orange-brand;
+    background-image: linear-gradient(to right bottom, var(--orange-brand), var(--yellow-brand));
     opacity: 0;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
@@ -82,12 +92,64 @@
   }
 
   &:hover:after {
-    height: 240%;
+    height: 260%;
     opacity: 1;
+    background-image: linear-gradient(to left top, var(--orange-brand), var(--yellow-brand));
   }
 
   &:active:after {
     height: 400%;
     opacity: 1;
   }
+}
+
+////////////////////////////////////////////////
+// ### CALL TO ACTION BUTTON TOURS
+.btn-cta {
+  @extend %btn; 
+  position: relative;
+  overflow: hidden;
+  font-weight: 300;
+  // border-radius: 100px;
+  background-image: linear-gradient(to right bottom, var(--orange-brand), var(--yellow-brand));
+  color:  $white;
+
+  & > * {
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .3s ease;
+  } 
+
+  &--visible {
+    padding: 1.8rem 6rem;
+  }
+
+  &--invisible {
+    display: inline-block;
+    padding: 2rem 0;
+   
+    position: absolute;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left top, var(--orange-brand), var(--yellow-brand));
+  }
+
+  &:hover &--visible {
+    transform: translateY(100%);
+    }
+
+  &:hover  &--invisible {
+      top: 0
+  }
+
+  // &:focus {
+  //   outline: none;
+  //   animation: pulsate 1s infinite;
+  // }
+  
+
 }
