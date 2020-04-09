@@ -74,22 +74,22 @@
 	margin: 1em;
 	max-width: 550px;
 	width: calc(100% - 2em);
-	vertical-align: top;
+	// vertical-align: top;
   flex: 1;
 }
 
 .input__field {
 	position: relative;
-	display: block;
-	float: right;
+	// display: block;
+	// float: right;
 	padding: 0.8em;
 	// width: 80%;
 	border: none;
-	border-radius: 0;
-	background: #f0f0f0;
-	color: #aaa;
-	font-weight: bold;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// border-radius: 0;
+	// background: #f0f0f0;
+	// color: #aaa;
+	// font-weight: bold;
+	// font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -98,13 +98,13 @@
 }
 
 .input__label {
-	display: inline-block;
-	float: right;
-	padding: 0 1em;
-	width: 40%;
+	// display: inline-block;
+	// float: right;
+	// padding: 0 1em;
+	// width: 40%;
 	color: #fcff3d;
-	font-weight: bold;
-	font-size: 70.25%;
+	// font-weight: bold;
+	font-size: 1.4rem;
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 	-webkit-touch-callout: none;
@@ -118,8 +118,9 @@
 .input__label-content {
 	position: relative;
 	display: block;
-	padding: 1.6em 0;
+	padding: 1rem 0;
 	width: 100%;
+  // font-size: 1rem;
 }
 
 
@@ -146,6 +147,7 @@
 	height: calc(100% - 1em);
 	text-align: left;
 	pointer-events: none;
+  // font-size: 1rem;
 }
 
 .input__label-content--hoshi {
