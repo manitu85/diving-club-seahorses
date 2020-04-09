@@ -43,3 +43,18 @@
     background-position: 0% 50%;
   }
 }
+
+@keyframes anime-form-line {
+	50% {
+		opacity: 0;
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, -40%, 0);
+	}
+}

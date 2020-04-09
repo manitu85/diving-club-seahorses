@@ -29,8 +29,8 @@
   // js-hook
   &--is-visible {
     opacity: 1;
-    transform: scale(1);
     visibility: visible;
+    transform: scale(1);
   }
 
   // js-hook
@@ -60,7 +60,7 @@
   }
 
   &__description {
-    max-width: 35rem;
+    max-width: 36rem;
     padding: 0 2vmin;
     margin-bottom: 4rem;
     text-align: center;
