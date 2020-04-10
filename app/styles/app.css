@@ -1458,10 +1458,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .testimonals {
-  background-color: #FAFAFA;
   grid-column: full-start / full-end;
-  padding: 5rem 2vw;
-  padding: 10rem 2vw;
+  padding: 6rem 2vw;
+  margin: 2rem 2vw;
 }
 
 .testimonial {
@@ -2071,12 +2070,12 @@ input[type="checkbox"], input[type="radio"] {
   height: 3.6rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  fill: #ff9e42;
 }
 
 .social-icons__icon--info:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  background-color: transparent;
 }
 
 .social-icons__icon--facebook:hover {
