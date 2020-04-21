@@ -1,7 +1,7 @@
 .large-hero {
   position: relative;
   z-index: 1;
-  
+
   grid-column: full-start / full-end;
 
   background: url("/assets/images/hero-3.jpg") no-repeat bottom 90% center/cover;
@@ -9,7 +9,10 @@
   color: white;
 
   display: grid;
-  grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
+  grid-template-columns: repeat(
+    8,
+    [col-start] minmax(min-content, 14rem) [col-end]
+  );
   justify-content: center;
   align-items: center;
 
@@ -32,7 +35,7 @@
     text-transform: uppercase;
 
     @media screen and (min-width: $breakpoint-sm) {
-        font-size: 4vmin;
+      font-size: 4vmin;
     }
   }
 
@@ -45,5 +48,26 @@
   &__description {
     margin-bottom: 2rem;
     font-size: var(--font-size--small);
+  }
+
+  &__club {
+    // background: url(/assets/images/hero-3.jpg) bottom 65px center/cover;
+     background: linear-gradient(-45deg, #00a2ff 30%, #c300ff, #ffab3d);
+    height: min-content;
+    grid-column: col-start 6 / col-end 8;
+    padding: 5vmin;
+    //fallback
+    color: $white;
+    background-clip: text;
+    color: transparent;
+ 
+
+    h1 {
+      font-size: 10rem;
+      line-height: 0.9em;
+      letter-spacing: 5.08px;
+      font-weight: 700;
+    }
+
   }
 }
