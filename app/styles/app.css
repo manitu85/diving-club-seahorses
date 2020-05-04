@@ -817,6 +817,23 @@ input[type="checkbox"], input[type="radio"] {
   left: 0;
 }
 
+@media only screen and (max-width: 599px) {
+  nav {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    /* override Safari bug */
+    position: fixed;
+    /* or choose `absolute` depending on desired behavior*/
+    width: 300px;
+    left: -340px;
+  }
+}
+
 .large-hero {
   position: relative;
   z-index: 1;
