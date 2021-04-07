@@ -643,6 +643,7 @@ input[type="checkbox"], input[type="radio"] {
 .logo__brand {
   width: 10rem;
   height: 6rem;
+  padding: 5px 0;
   z-index: 990;
 }
 
@@ -651,6 +652,7 @@ input[type="checkbox"], input[type="radio"] {
   margin-left: auto;
   display: flex;
   align-items: center;
+  z-index: 1060;
 }
 
 @media screen and (min-width: 50em) {
@@ -833,8 +835,8 @@ input[type="checkbox"], input[type="radio"] {
   background-attachment: fixed;
   color: white;
   display: grid;
-  grid-template-columns: repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]);
-  grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
+  grid-template-columns: repeat(8, [col-start] minmax(-webkit-min-content, 12rem) [col-end]);
+  grid-template-columns: repeat(8, [col-start] minmax(min-content, 12rem) [col-end]);
   justify-content: center;
   align-items: center;
 }

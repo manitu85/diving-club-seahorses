@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: repeat(
     8,
-    [col-start] minmax(min-content, 14rem) [col-end]
+    [col-start] minmax(min-content, 12rem) [col-end]
   );
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@
 
   &__club {
     // background: url(/assets/images/hero-3.jpg) bottom 65px center/cover;
-     background: linear-gradient(-45deg, #00a2ff 30%, #c300ff, #ffab3d);
+    background: linear-gradient(-45deg, #00a2ff 30%, #c300ff, #ffab3d);
     height: min-content;
     grid-column: col-start 6 / col-end 8;
     padding: 5vmin;
@@ -60,7 +60,6 @@
     color: $white;
     background-clip: text;
     color: transparent;
- 
 
     h1 {
       font-size: 10rem;
@@ -68,6 +67,5 @@
       letter-spacing: 5.08px;
       font-weight: 700;
     }
-
   }
 }

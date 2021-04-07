@@ -12132,13 +12132,6 @@ __webpack_require__.r(__webpack_exports__);
 var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
 var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
 var stickyHeader = new _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_2__["default"](); // const navLinks = new NavLinks();
-// When user clicks anywhere outside of the Modal, close Modal
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
 
 /***/ }),
 
@@ -12166,19 +12159,42 @@ var MobileMenu = /*#__PURE__*/function () {
 
     this.menuIcon = document.querySelector(".menu-icon");
     this.menu = document.querySelector(".menu");
+    this.menuItem = document.querySelectorAll(".menu__item");
     this.events();
   }
 
   _createClass(MobileMenu, [{
     key: "events",
     value: function events() {
+      var _this = this;
+
       this.menuIcon.addEventListener("click", this.toggleMenu.bind(this));
+      this.menuItem.forEach(function (item) {
+        return item.addEventListener("click", _this.closeModal.bind(_this));
+      });
+      document.addEventListener("keyup", this.keyPressHandler.bind(this));
+    }
+  }, {
+    key: "keyPressHandler",
+    value: function keyPressHandler(e) {
+      if (e.keyCode == "27") {
+        this.closeModal();
+      }
     }
   }, {
     key: "toggleMenu",
     value: function toggleMenu() {
       this.menu.classList.toggle("menu--is-visible");
     }
+  }, {
+    key: "closeModal",
+    value: function closeModal() {
+      this.menu.classList.remove("menu--is-visible");
+    } // openModal(e) {
+    //   e.preventDefault();
+    //   this.menu.classList.add("menu--is-visible");
+    // }
+
   }]);
 
   return MobileMenu;
