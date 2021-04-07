@@ -2,6 +2,10 @@
   "name": "scuba-diving",
   "version": "1.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.9.0",
