@@ -25,3 +25,4 @@ nbproject
 # Local Netlify folder
 .netlify
 build
+.env
