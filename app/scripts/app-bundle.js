@@ -12122,19 +12122,23 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _moduls_Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/Modal */ "./src/js/moduls/Modal.js");
-/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
-/* harmony import */ var _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/StickyHeader */ "./src/js/moduls/StickyHeader.js");
-
+/* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
+/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
+/* harmony import */ var _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/StickyHeader */ "./src/js/moduls/StickyHeader.js");
 
 
  // import NavLinks from './moduls/NavLinks'
 
-var modal = new _moduls_Modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
-var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
-var stickyHeader = new _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_3__["default"](); // const navLinks = new NavLinks();
+var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
+var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
+var stickyHeader = new _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_2__["default"](); // const navLinks = new NavLinks();
+// When user clicks anywhere outside of the Modal, close Modal
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
 /***/ }),
 
@@ -12153,21 +12157,6 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-// import $ from 'jquery'
-// class MobileMenu {
-//   constructor() {
-//     this.menuIcon = $('.menu-icon')
-//     this.menu = $('.menu')
-//     this.events()
-//   }
-//   events() {
-//     this.menuIcon.click(this.toggleMenu.bind(this)) 
-//   }
-//   toggleMenu() {
-//     this.menu.toggleClass('menu--is-visible')
-//   }
-// }
-// export default MobileMenu
 // Selecting elements from DOM
 // Event Handling watch for
 // Defining functionality
@@ -12175,20 +12164,20 @@ var MobileMenu = /*#__PURE__*/function () {
   function MobileMenu() {
     _classCallCheck(this, MobileMenu);
 
-    this.menuIcon = document.querySelector('.menu-icon');
-    this.menu = document.querySelector('.menu');
+    this.menuIcon = document.querySelector(".menu-icon");
+    this.menu = document.querySelector(".menu");
     this.events();
   }
 
   _createClass(MobileMenu, [{
     key: "events",
     value: function events() {
-      this.menuIcon.addEventListener('click', this.toggleMenu.bind(this));
+      this.menuIcon.addEventListener("click", this.toggleMenu.bind(this));
     }
   }, {
     key: "toggleMenu",
     value: function toggleMenu() {
-      this.menu.classList.toggle('menu--is-visible');
+      this.menu.classList.toggle("menu--is-visible");
     }
   }]);
 
@@ -12196,69 +12185,6 @@ var MobileMenu = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (MobileMenu);
-
-/***/ }),
-
-/***/ "./src/js/moduls/Modal.js":
-/*!********************************!*\
-  !*** ./src/js/moduls/Modal.js ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var Modal = /*#__PURE__*/function () {
-  function Modal() {
-    _classCallCheck(this, Modal);
-
-    this.modal = document.querySelector('.modal');
-    this.openModalButton = document.querySelectorAll('.modal__open');
-    this.closeModalButton = document.querySelector('.modal__close');
-    this.events();
-  }
-
-  _createClass(Modal, [{
-    key: "events",
-    value: function events() {
-      var _this = this;
-
-      this.openModalButton.forEach(function (modal) {
-        return modal.addEventListener('click', _this.openModal.bind(_this));
-      });
-      this.closeModalButton.addEventListener('click', this.closeModal.bind(this));
-      document.addEventListener('keyup', this.keyPressHandler.bind(this));
-    }
-  }, {
-    key: "keyPressHandler",
-    value: function keyPressHandler(e) {
-      if (e.keyCode == '27') {
-        this.closeModal();
-      }
-    }
-  }, {
-    key: "openModal",
-    value: function openModal(e) {
-      e.preventDefault();
-      this.modal.classList.add('modal--is-visible');
-    }
-  }, {
-    key: "closeModal",
-    value: function closeModal() {
-      this.modal.classList.remove('modal--is-visible');
-    }
-  }]);
-
-  return Modal;
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (Modal);
 
 /***/ }),
 
@@ -12394,6 +12320,69 @@ var StickyHeader = /*#__PURE__*/function () {
 //     : nav.classList.remove('header--dark')
 // });
 // export default StickyHeader
+
+/***/ }),
+
+/***/ "./src/js/moduls/modal.js":
+/*!********************************!*\
+  !*** ./src/js/moduls/modal.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Modal = /*#__PURE__*/function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.modal = document.querySelector('.modal');
+    this.openModalButton = document.querySelectorAll('.modal__open');
+    this.closeModalButton = document.querySelector('.modal__close');
+    this.events();
+  }
+
+  _createClass(Modal, [{
+    key: "events",
+    value: function events() {
+      var _this = this;
+
+      this.openModalButton.forEach(function (modal) {
+        return modal.addEventListener('click', _this.openModal.bind(_this));
+      });
+      this.closeModalButton.addEventListener('click', this.closeModal.bind(this));
+      document.addEventListener('keyup', this.keyPressHandler.bind(this));
+    }
+  }, {
+    key: "keyPressHandler",
+    value: function keyPressHandler(e) {
+      if (e.keyCode == '27') {
+        this.closeModal();
+      }
+    }
+  }, {
+    key: "openModal",
+    value: function openModal(e) {
+      e.preventDefault();
+      this.modal.classList.add('modal--is-visible');
+    }
+  }, {
+    key: "closeModal",
+    value: function closeModal() {
+      this.modal.classList.remove('modal--is-visible');
+    }
+  }]);
+
+  return Modal;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Modal);
 
 /***/ })
 

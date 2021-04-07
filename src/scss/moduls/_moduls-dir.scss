@@ -1,34 +1,6 @@
-// 1 Layout related sections
-
-
-// 2. Components
-
-
-// 3 Typography
-
-
-@import 
-  './layout',
-  './typography',
-  './page-section',
-  './button',
-  './header',
-  './large-hero',
-  './info',
-  './features',
-  './cta',
-  './team',
-  './tours',
-  './show',
-  './counter',
-  './testimonials',
-  './pricing',
-  './gallery',
-  './location',
-  './modal',
-  './form',
-  './divider',
-  './social-icon',
-  './footer',
-  './copyright';
-
+// pretier-ignore
+@import "./layout", "./typography", "./page-section", "./button", "./header",
+  "./large-hero", "./info", "./features", "./cta", "./team", "./tours", "./show",
+  "./counter", "./testimonials", "./pricing", "./gallery", "./location",
+  "./menu-overlay", "./modal", "./form", "./divider", "./social-icon",
+  "./footer", "./copyright";

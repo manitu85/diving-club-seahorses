@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
 
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: $breakpoint-sm) {
     display: none;
   }
 
@@ -77,8 +77,9 @@
   line-height: 1;
   margin: 0 auto;
   display: none;
+  position: relative;
 
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: $breakpoint-sm) {
     display: block;
   }
 
@@ -96,6 +97,21 @@
 
     margin: 0;
     padding: 0;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #191d32;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: $zindex-modal;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      transition: 0.5s;
+    }
   }
 
   &__item {
@@ -133,6 +149,10 @@
       // background: linear-gradient(to left, #ffd767, #0bd8e7 );
       width: 0;
       transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+      @media screen and (max-width: $breakpoint-sm) {
+        display: none;
+      }
     }
 
     &:hover::after {
@@ -161,6 +181,9 @@
       background-color: $orange-brand;
       width: 0;
       transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+      @media screen and (max-width: $breakpoint-sm) {
+        display: none;
+      }
     }
 
     &.is-current-link::after {
@@ -170,14 +193,18 @@
   }
 }
 
-@media only screen and (max-width: 599px) {
-  nav {
-    transition: transform 0.3s ease-in-out;
+@media only screen and (max-width: $breakpoint-md) {
+  .menu-overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
     top: 0;
-    bottom: 0;
-    min-height: 100vh; /* override Safari bug */
-    position: fixed; /* or choose `absolute` depending on desired behavior*/
-    width: 300px;
-    left: -340px;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   }
 }

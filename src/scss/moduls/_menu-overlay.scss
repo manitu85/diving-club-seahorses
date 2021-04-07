@@ -1,0 +1,47 @@
+.modal-menu {
+  color: $white;
+  background: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $zindex-modal;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.25);
+  transition: all 0.3s ease-out;
+
+  // js-hook
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  // js-hook
+  &__close {
+    color: $grey--lighter;
+    font-size: 5rem;
+    line-height: 0.85;
+    font-weight: 400;
+    cursor: pointer;
+
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+    transform: scaleX(1.1);
+    transform-origin: 100% 0;
+
+    &:hover {
+      color: $orange-brand;
+    }
+  }
+}

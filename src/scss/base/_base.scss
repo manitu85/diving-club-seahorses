@@ -17,35 +17,32 @@
 
   --font-size--small: 1.3rem;
   --font-size--medium: 1.5rem;
-  --font-size--large: 1.8rem;  
+  --font-size--large: 1.8rem;
   --font-size--heading: 5vmin;
 
-  --shadow--dark: 0 2rem 6rem rgba(#{$black}, .4);
-  --shadow--light: 0 2rem 6rem rgb(#{$white}, .3);  
+  --shadow--dark: 0 2rem 6rem rgba(#{$black}, 0.4);
+  --shadow--light: 0 2rem 6rem rgb(#{$white}, 0.3);
 
   --font-weight--light: 300;
   --font-weight--noramal: 400;
   --font-weight--semi-bold: 600;
-
-
 }
-
 
 *,
 *:before,
 *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box; 
-    font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px  
-    // font-size: calc(var(--font-size-small) + (var(--font-size-large) - var(--font-size-small)) * ((100vw - 360px) / (1200px - 360px)));
-    @media screen and (min-width: $breakpoint-lg) {
-       font-size: 67.5%; 
-    }
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
+  // font-size: calc(var(--font-size-small) + (var(--font-size-large) - var(--font-size-small)) * ((100vw - 360px) / (1200px - 360px)));
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 67.5%;
+  }
 }
 
 body {
@@ -61,13 +58,19 @@ body {
 .site-container {
   position: relative;
   display: grid;
-  grid-template-rows:  6rem calc(100vh - 6rem) repeat(15, min-content);
-  grid-template-columns:  [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, max-content) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];   
+  grid-template-rows: 6rem calc(100vh - 6rem) repeat(15, min-content);
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, max-content) [col-end]
+    ) [center-end] minmax(2rem, 1fr) [full-end];
 
   @media screen and (min-width: $breakpoint-sm) {
     display: grid;
     grid-template-rows: 6rem 80vh repeat(15, min-content);
-    grid-template-columns:  [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];   
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      ) [center-end] minmax(4rem, 1fr) [full-end];
 
     // Background dots
     // background: linear-gradient(90deg,#fff 20px,transparent 1%) center,linear-gradient(#fff 20px,transparent 1%) center,#c7c4c4;
@@ -76,15 +79,10 @@ body {
 
   @media screen and (min-width: $breakpoint-lg) {
     display: grid;
-    grid-template-rows:  6rem calc(85vh - 6rem) 15vh repeat(15, min-content);
-    grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];   
+    grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(15, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      ) [center-end] minmax(6rem, 1fr) [full-end];
   }
-  
-  // & > * { 
-  //   padding: 1rem;
-  // }
 }
-
-
-
-
