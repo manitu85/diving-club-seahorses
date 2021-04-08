@@ -1,4 +1,4 @@
-import Modal from "./moduls/Modal";
+import Modal from "./moduls/modal";
 import MobileMenu from "./moduls/MobileMenu";
 import StickyHeader from "./moduls/StickyHeader";
 
