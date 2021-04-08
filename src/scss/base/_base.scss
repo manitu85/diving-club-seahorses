@@ -59,18 +59,22 @@ body {
   position: relative;
   display: grid;
   grid-template-rows: 6rem calc(100vh - 6rem) repeat(15, min-content);
-  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(
+  grid-template-columns:
+    [full-start] minmax(2rem, 1fr) [center-start] repeat(
       8,
       [col-start] minmax(min-content, max-content) [col-end]
-    ) [center-end] minmax(2rem, 1fr) [full-end];
+    )
+    [center-end] minmax(2rem, 1fr) [full-end];
 
   @media screen and (min-width: $breakpoint-sm) {
     display: grid;
     grid-template-rows: 6rem 80vh repeat(15, min-content);
-    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(
+    grid-template-columns:
+      [full-start] minmax(4rem, 1fr) [center-start] repeat(
         8,
         [col-start] minmax(min-content, 14rem) [col-end]
-      ) [center-end] minmax(4rem, 1fr) [full-end];
+      )
+      [center-end] minmax(4rem, 1fr) [full-end];
 
     // Background dots
     // background: linear-gradient(90deg,#fff 20px,transparent 1%) center,linear-gradient(#fff 20px,transparent 1%) center,#c7c4c4;
@@ -80,9 +84,11 @@ body {
   @media screen and (min-width: $breakpoint-lg) {
     display: grid;
     grid-template-rows: 6rem calc(85vh - 6rem) 15vh repeat(15, min-content);
-    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
         8,
         [col-start] minmax(min-content, 14rem) [col-end]
-      ) [center-end] minmax(6rem, 1fr) [full-end];
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
   }
 }

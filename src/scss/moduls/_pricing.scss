@@ -2,11 +2,9 @@
   grid-column: center-start / center-end;
 }
 
-
 .pricing {
-
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); // auto-fit
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr)); // auto-fit
   justify-content: center;
   grid-gap: 6rem;
 
@@ -17,20 +15,20 @@
     background-color: $white;
     text-align: center;
     padding-top: 6rem;
-    border: .1px solid #d9bf77;
+    border: 0.1px solid #d9bf77;
 
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-gap: 1rem 0;
+    grid-gap: 1.5rem 0;
 
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     // transition: all 0.2s ease-in-out;
 
     &--inverse {
       color: $grey--lighter;
-      // background-color: #202020;
       background-color: #114e6f;
+      // background-color: #202020;
       // background-color: #114e6f;
       // transform: scale(1.05);
       // box-shadow: 0 20px 35px 0 rgba(#fff, 0.08);

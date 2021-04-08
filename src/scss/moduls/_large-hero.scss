@@ -4,7 +4,8 @@
 
   grid-column: full-start / full-end;
 
-  background: url("/assets/images/hero-3.jpg") no-repeat bottom 90% center/cover;
+  background: url("/assets/images/hero/hero--large.jpg") no-repeat bottom 90%
+    center/cover;
   background-attachment: fixed;
   color: white;
 
@@ -18,7 +19,7 @@
 
   &__content {
     grid-column: 1 / -1;
-    padding: 0 2rem;
+    padding: 0 5rem;
 
     @media screen and (min-width: $breakpoint-sm) {
       grid-column: col-start 1 / col-end 5;

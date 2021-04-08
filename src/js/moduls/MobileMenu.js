@@ -3,17 +3,17 @@
 // Defining functionality
 class MobileMenu {
   constructor() {
-    this.menuIcon = document.querySelector(".menu-icon");
     this.menu = document.querySelector(".menu");
+    this.menuIcon = document.querySelector(".menu-icon");
     this.menuItem = document.querySelectorAll(".menu__item");
     this.events();
   }
 
   events() {
-    this.menuIcon.addEventListener("click", this.toggleMenu.bind(this));
     this.menuItem.forEach((item) =>
       item.addEventListener("click", this.closeModal.bind(this))
     );
+    this.menuIcon.addEventListener("click", this.toggleMenu.bind(this));
     document.addEventListener("keyup", this.keyPressHandler.bind(this));
   }
 

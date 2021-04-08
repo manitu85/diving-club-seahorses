@@ -1,19 +1,30 @@
 .footer {
-  background-color: #191D32;
+  background-color: #191d32;
   grid-column: full-start / full-end;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, min-content));
-  justify-content: center;
-  justify-items: center;
-  grid-gap: 3rem;
+  &__wrapper {
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
 
-  padding: 6rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, min-content));
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 3rem;
 
-   @media screen and (min-width: $breakpoint-sm) and (max-width: 1100px) {
-     grid-template-columns: repeat(4, minmax(min-content, max-content));
-     grid-column-gap: 6rem;
-   }
+    padding: 6rem 0;
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: 1100px) {
+      grid-template-columns: repeat(4, minmax(min-content, max-content));
+      grid-column-gap: 6rem;
+    }
+  }
+
+  &__heading-color {
+    color: $orange-brand;
+    font-weight: bold;
+  }
 
   &__lists {
     text-align: center;
@@ -23,14 +34,13 @@
     }
   }
 
-  &__list {
+  &__item {
     text-transform: uppercase;
-    font-size: 1.1rem;
-
+    font-size: 0.95rem;
   }
 
   &__link {
-    color: #a8a8a8;
+    color: #e6e6e6;
 
     &:hover {
       // color: $blue;
