@@ -1,5 +1,6 @@
 /* typography vars */
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700|Open+Sans:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ruluko&display=swap");
 /* Basic config */
 :root {
   --orange-brand: #ff9e42;
@@ -13,7 +14,7 @@
   --text-color: #707070;
   --heading-color: #202020;
   --text-line-height: 1.6;
-  --font-primary: Open Sans, sans-serif;
+  --font-primary: Ruluko, sans-serif;
   --font-display: Nunito Sans, sans-serif;
   --font-size--small: 1.3rem;
   --font-size--medium: 1.5rem;
@@ -49,7 +50,7 @@ html {
 }
 
 body {
-  font-size: var(--font-size--small);
+  font-size: var(--font-size--medium);
   line-height: var(--text-line-height);
   background-color: var(--background-color);
   color: var(--text-color);
@@ -415,7 +416,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .main-heading__title {
   color: #868686;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Ruluko", sans-serif;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 0.078em;
@@ -608,7 +609,7 @@ input[type="checkbox"], input[type="radio"] {
 .btn-contact {
   font-weight: bold;
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Ruluko", sans-serif;
   color: #ffffffe6;
   font-size: 1.2rem;
   padding: 0 2rem;
@@ -770,7 +771,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .menu__link {
-  font-size: 0.85em;
+  font-size: 0.8em;
   font-weight: bold;
   display: block;
   padding: 1em;
@@ -908,7 +909,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .large-hero__description {
   margin-bottom: 2.5rem;
-  font-size: var(--font-size--small);
+  font-size: var(--font-size--medium);
 }
 
 .large-hero__club {
@@ -1013,7 +1014,7 @@ input[type="checkbox"], input[type="radio"] {
   word-wrap: break;
   margin: 0 auto;
   margin-bottom: 100px;
-  font-size: 1.4rem;
+  font-size: var(--font-size--medium);
   padding: 0 1rem;
 }
 
@@ -1056,6 +1057,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .feature__text {
   font-size: var(--font-size-small);
+  line-height: 1.5;
 }
 
 .cta-equipment {
@@ -1371,7 +1373,7 @@ input[type="checkbox"], input[type="radio"] {
   word-wrap: break;
   margin: 0 auto;
   margin-bottom: 100px;
-  font-size: 1.4rem;
+  font-size: var(--font-size--medium);
   padding: 0 1rem;
   margin-top: 7rem;
   font-weight: 300;
@@ -1509,11 +1511,6 @@ input[type="checkbox"], input[type="radio"] {
   border-radius: 50%;
   margin-bottom: 3rem;
   box-shadow: 5px 5px 1.5rem rgba(32, 32, 32, 0.3);
-}
-
-.testimonial__img:hover {
-  transform: scale(1.15);
-  transition: 0.3 ease;
 }
 
 .testimonial__user-info {
