@@ -5,6 +5,10 @@
   --cyan-brand: #{$cyan-brand};
   --blue-brand: #{$blue-brand};
 
+  --black: #2e2e2e;
+  --white: #fff;
+  --grey: #efefef;
+
   // --background-color: #{$grey--lighter};
   --background-color: #{$white};
 
@@ -43,6 +47,9 @@ html {
   @media screen and (min-width: $breakpoint-lg) {
     font-size: 67.5%;
   }
+  /* Scrollbar Styles */
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-brand) var(--white);
 }
 
 body {
@@ -52,6 +59,19 @@ body {
   color: var(--text-color);
   font-family: var(--font-primary);
   font-weight: var(--font-weight--light);
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--white);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--orange-brand);
+  border-radius: 6px;
+  border: 3px solid var(--white);
 }
 
 // Overall site layout
