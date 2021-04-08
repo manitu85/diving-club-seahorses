@@ -1288,7 +1288,6 @@ input[type="checkbox"], input[type="radio"] {
   width: 5rem;
   z-index: 10;
   justify-self: end;
-  fill: #ffc02e;
 }
 
 .tours__icon {
