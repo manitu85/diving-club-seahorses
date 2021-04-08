@@ -21,7 +21,7 @@
   --font-size--heading: 5vmin;
 
   --shadow--dark: 0 2rem 6rem rgba(#{$black}, 0.4);
-  --shadow--light: 0 2rem 6rem rgb(#{$white}, 0.3);
+  --shadow--light: 0 2rem 6rem rgba(#{$white}, 0.3);
 
   --font-weight--light: 300;
   --font-weight--noramal: 400;
@@ -75,10 +75,6 @@ body {
         [col-start] minmax(min-content, 14rem) [col-end]
       )
       [center-end] minmax(4rem, 1fr) [full-end];
-
-    // Background dots
-    // background: linear-gradient(90deg,#fff 20px,transparent 1%) center,linear-gradient(#fff 20px,transparent 1%) center,#c7c4c4;
-    // background-size: 22px 22px;
   }
 
   @media screen and (min-width: $breakpoint-lg) {

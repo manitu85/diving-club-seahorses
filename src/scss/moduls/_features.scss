@@ -25,20 +25,32 @@
     grid-gap: 6rem;
   }
 
+  &__content-text {
+    max-width: 700px;
+    text-align: justify;
+    word-wrap: break;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    font-size: 1.4rem;
+    padding: 0 1rem;
+
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 5rem;
+      font-size: 1.4rem;
+    }
+  }
 }
 
 .feature {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-column-gap: 1rem;
-  grid-row-gap: .3rem;
-  padding: .5rem;
+  grid-row-gap: 0.3rem;
+  padding: 0.5rem;
 
   @media (min-width: $breakpoint-sm) {
     padding: 2rem;
   }
-
-
 
   &__icon {
     fill: var(--orange-brand);
@@ -49,7 +61,7 @@
     align-self: start;
 
     transform: translateY(-2.7rem);
-    transition: .3s all ease-out;
+    transition: 0.3s all ease-out;
 
     &:hover {
       fill: var(--yellow-brand);

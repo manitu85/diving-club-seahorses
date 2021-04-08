@@ -8,7 +8,7 @@
       rgba(#020202, 0.7),
       rgba(#000, 0.5)
     ),
-    url("/assets/images/cta-5.jpg") left 30% bottom 60% / cover no-repeat,
+    url("/assets/images/cta--bg-2.webp") left 30% bottom 60% / cover no-repeat,
     #020202;
 
   display: flex;
@@ -29,7 +29,6 @@
 .cta-ship {
   grid-column: full-start / full-end;
   // temp for large image
-  // @media screen and (min-width: $breakpoint-lg) {
   height: 60vh;
   background: linear-gradient(
       to right,
@@ -37,17 +36,13 @@
       rgba(#020202, 0.2),
       rgba(rgb(226, 26, 26), 0.3)
     ),
-    // url("/assets/images/cta/cta-ship--large.jpg") center center/cover no-repeat,
-      url("/assets/images/cta/cta--bg-3.jpg")center center/cover no-repeat,
+    url("/assets/images/cta/cta--bg-3.webp") center center/cover no-repeat,
     #020202;
 
   background-attachment: fixed;
 
   position: relative;
   z-index: 1;
-
-  // }
-
   position: relative;
   overflow: hidden;
 

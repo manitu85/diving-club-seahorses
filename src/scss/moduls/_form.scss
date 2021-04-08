@@ -12,7 +12,7 @@
   margin: 1em;
   max-width: 550px;
   width: calc(100% - 2em);
-  // vertical-align: top;
+  // vertical-align: bottom;
   flex: 1;
 }
 
@@ -93,25 +93,25 @@
 
 .input__label--m::after {
   margin-top: 2px;
-  border-bottom: 4px solid red;
+  border-bottom: 4px solid var(--yellow-brand);
   transform: translate3d(-100%, 0, 0);
   transition: transform 0.3s;
 }
 
 .input__label--m-color-1::after {
-  border-color: hsl(200, 100%, 50%);
+  border-color: var(--yellow-brand);
 }
 
 .input__label--m-color-2::after {
-  border-color: hsl(160, 100%, 50%);
+  border-color: var(--yellow-brand);
 }
 
 .input__label--m-color-3::after {
-  border-color: hsl(20, 100%, 50%);
+  border-color: var(--yellow-brand);
 }
 
 .input__label--m-color-3::after {
-  border-color: hsl(288, 100%, 50%);
+  border-color: var(--yellow-brand);
 }
 
 .input__field--m:focus + .input__label--m::after,
@@ -123,63 +123,3 @@
 .input--filled .input__label-content--m {
   animation: anime-form-line 0.3s forwards;
 }
-
-// $main-color: black;
-// $sub-color: #f5f5f5;
-
-// @mixin shrinkLabel {
-//   top: -14px;
-//   font-size: 12px;
-//   color: $main-color;
-// }
-
-// .form {
-//   display: flex;
-//   flex-flow: nowrap column;
-//   justify-content: center;
-//   align-items: stretch;
-//   padding: 0 2vmin;
-
-//   min-width: 30rem;
-
-//   @media screen and (min-width: $breakpoint-sm ){
-//     min-width: 50rem;
-
-//   }
-
-//   &__group {
-//     padding: 1rem 0;
-//     position: relative;
-
-//   & > * {
-//     flex: 1;
-//   }
-//   }
-
-//   &__label {
-//   }
-
-//   &__input {
-//     width: 100%;
-//     background: none;
-//     color: $sub-color;
-//     font-size: 18px;
-//     padding: 10px 10px 10px 5px;
-//     display: block;
-//     width: 100%;
-//     border: none;
-//     border-radius: 0;
-//     border-bottom: 1px solid #fafafa;
-//     margin: 1.2rem 0;
-
-//     &:focus {
-//       border: 1px solid $yellow-brand;
-//       outline: 0;
-//     }
-//   }
-
-//     &__btn {
-//       align-self: start;
-//       margin-top: 3rem;
-//     }
-// }

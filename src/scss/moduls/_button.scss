@@ -22,13 +22,12 @@
     background-image: linear-gradient(
       to right,
       var(--orange-brand),
-      var(--yellow-brand),
-      
+      var(--yellow-brand)
     );
     transition: all 0.2s ease-in-out;
     &:hover {
       background-image: linear-gradient(
-        to left ,
+        to left,
         var(--orange-brand),
         var(--yellow-brand)
       );
@@ -44,7 +43,7 @@
   }
 
   &--large {
-    padding: 1.8rem 3rem;
+    padding: 1.5rem 2.5rem;
     font-size: 1.2rem;
   }
 
@@ -72,7 +71,7 @@
   transition: all 0.3s;
 
   &--large {
-    padding: 1.5rem 4rem;
+    padding: 1rem 2.5rem;
     font-size: 1.2rem;
   }
 
@@ -140,8 +139,6 @@
 
   &--visible {
     padding: 1.8rem 0;
-
-   
   }
 
   &--invisible {
@@ -168,7 +165,6 @@
   &:hover &--invisible {
     top: 0;
   }
-
 }
 
 ////////////////////////////////////////////////
@@ -207,5 +203,3 @@
     padding: 1rem 2rem;
   }
 }
-
-

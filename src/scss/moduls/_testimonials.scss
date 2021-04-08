@@ -30,12 +30,14 @@
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    // border: 5px solid $grey--lighter;
     margin-bottom: 3rem;
+    box-shadow: 5px 5px 1.5rem rgba($black, 0.3);
+    // border: 5px solid $grey--lighter;
     // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 
     &:hover {
-      box-shadow: 5px 5px 1.5rem rgba($black, 0.3);
+      transform: scale(1.15);
+      transition: 0.3 ease;
     }
   }
 
@@ -50,35 +52,35 @@
     max-width: 36rem;
 
     margin: 0;
-		border: 0;
-		position: relative;
+    border: 0;
+    position: relative;
 
     &::after,
     &::before {
-			position: absolute;
+      position: absolute;
       color: #e7e7e7;
-			line-height: 1;
-			width: 2rem;
-			height: 2rem;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
-			font: {
-				size: 5rem;
-				weight: 600;
-			};
+      line-height: 1;
+      width: 2rem;
+      height: 2rem;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+      font: {
+        size: 8rem;
+        weight: 600;
+      }
     }
-			
-			&::after {
-				content: "\201d";
-        bottom: -2rem;
-        right: -2%;
-				// right: 0;
-			}
-			
-			&::before {
-				content: "\201c";
-				top: -3rem;
-        left: -2%;
-			}
+
+    &::after {
+      content: "\201d";
+      bottom: -2rem;
+      right: -2%;
+      // right: 0;
+    }
+
+    &::before {
+      content: "\201c";
+      top: -4rem;
+      left: -3%;
+    }
 
     @media screen and (min-width: $breakpoint-sm) {
       padding: 0 2vmin;
@@ -95,10 +97,11 @@
   }
 
   &__user-work {
-    margin: .5rem 0;
+    margin-top: 0.25rem 0;
     font-weight: 300;
   }
 
   &__user-rating {
+    color: red;
   }
 }

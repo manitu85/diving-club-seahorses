@@ -43,4 +43,5 @@
     "preview": "gulp previewProd",
     "deploy": "netlify deploy --prod --open"
   }
+
 }
