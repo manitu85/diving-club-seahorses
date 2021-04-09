@@ -467,7 +467,7 @@ input[type="checkbox"], input[type="radio"] {
   padding: 5rem 0;
 }
 
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 62.5em) {
   .page-section {
     margin: 6rem 0;
   }
@@ -843,7 +843,7 @@ input[type="checkbox"], input[type="radio"] {
   left: 0;
 }
 
-@media only screen and (max-width: 65em) {
+@media only screen and (max-width: 62.5em) {
   .menu-overlay {
     height: 100%;
     width: 0;
@@ -942,7 +942,7 @@ input[type="checkbox"], input[type="radio"] {
   align-content: center;
 }
 
-@media (min-width: 50em) and (max-width: 65em) {
+@media (min-width: 50em) and (max-width: 62.5em) {
   .info {
     display: grid;
     grid-template-columns: repeat(2, minmax(30rem, 1fr));
@@ -1005,7 +1005,7 @@ input[type="checkbox"], input[type="radio"] {
   .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 6rem;
+    grid-gap: 1.5rem;
   }
 }
 
@@ -1126,7 +1126,7 @@ input[type="checkbox"], input[type="radio"] {
   grid-column: 1 / -1;
 }
 
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 62.5em) {
   .team__instructors {
     grid-column: col-start 4 / full-end;
   }
@@ -1219,7 +1219,7 @@ input[type="checkbox"], input[type="radio"] {
   align-items: flex-start;
 }
 
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 62.5em) {
   .team__content {
     grid-column: full-start / col-end 3;
     padding: 6rem 8vw;
@@ -1235,7 +1235,7 @@ input[type="checkbox"], input[type="radio"] {
   grid-column: center-start / center-end;
 }
 
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 62.5em) {
   .tours {
     display: grid;
     grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
@@ -1255,7 +1255,7 @@ input[type="checkbox"], input[type="radio"] {
   padding-bottom: 6rem;
 }
 
-@media only screen and (max-width: 65em) {
+@media only screen and (max-width: 62.5em) {
   .tours__items {
     margin: 6rem 0;
   }
@@ -1293,7 +1293,6 @@ input[type="checkbox"], input[type="radio"] {
 
 .tours__img {
   width: 100%;
-  height: 100%;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
 }
@@ -1439,7 +1438,7 @@ input[type="checkbox"], input[type="radio"] {
   }
 }
 
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 62.5em) {
   .show__content {
     grid-column: col-start 5 / col-end 8;
   }
@@ -1460,7 +1459,7 @@ input[type="checkbox"], input[type="radio"] {
   }
 }
 
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 62.5em) {
   .show__counter {
     grid-template-columns: repeat(4, 1fr);
     justify-items: space-between;
@@ -2102,7 +2101,7 @@ input[type="checkbox"], input[type="radio"] {
   padding: 6rem 0;
 }
 
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 62.5em) {
   .footer__wrapper {
     grid-template-columns: repeat(auto-fill, minmax(-webkit-min-content, -webkit-max-content));
     grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
