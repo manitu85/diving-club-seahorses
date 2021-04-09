@@ -44,6 +44,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
   // font-size: calc(var(--font-size-small) + (var(--font-size-large) - var(--font-size-small)) * ((100vw - 360px) / (1200px - 360px)));
+  // scroll-behavior: smooth;
   @media screen and (min-width: $breakpoint-lg) {
     font-size: 67.5%;
   }

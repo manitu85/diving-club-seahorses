@@ -1,31 +1,3 @@
-.cta-equipment {
-  grid-column: full-start / full-end;
-  height: 45vh;
-
-  background: linear-gradient(
-      to right,
-      rgba(#5d75a3, 0.7),
-      rgba(#020202, 0.7),
-      rgba(#000, 0.5)
-    ),
-    url("/assets/images/cta--bg-2.webp") left 30% bottom 60% / cover no-repeat,
-    #020202;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  p {
-    width: 60rem;
-    color: $grey--lighter;
-    font-size: var(--font-size-small);
-    text-align: center;
-    margin: 1rem 0 4rem 0;
-  }
-}
-
 .cta-ship {
   grid-column: full-start / full-end;
   // temp for large image
@@ -48,6 +20,9 @@
   &__heading {
     font-size: 4rem;
     font-weight: 800;
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 2.85rem;
+    }
   }
 
   &__backdrop {
@@ -71,6 +46,10 @@
     left: 25%;
     width: 100%;
     padding-top: 4rem 2vw 0;
+    @media screen and (max-width: $breakpoint-sm) {
+      left: 10%;
+      width: 90%;
+    }
   }
 
   &__paragraph {

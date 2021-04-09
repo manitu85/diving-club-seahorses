@@ -30,6 +30,7 @@
   grid-column: col-start 1 / col-end 2;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   &__text {
     // color: hsl(209, 100%, 92%);
