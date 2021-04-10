@@ -1,21 +1,28 @@
-import $ from 'jquery'
-import waypoints from '../../../node_modules/waypoints/lib/noframework.waypoints'
-import smoothScroll from 'jquery-smooth-scroll'
-
+import $ from "jquery";
+import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
+import smoothScroll from "jquery-smooth-scroll";
 
 class StickyHeader {
   constructor() {
+    // lazy images
+    this.lazyImages = $(".lazyload");
     // Sticky
-    this.siteHeader = $('.header')
-    this.headerTriggerElement = $('.large-hero__title')
+    this.siteHeader = $(".header");
+    this.headerTriggerElement = $(".large-hero__title");
     // Highlight
-    this.pageSections = $('.section')
-    this.headerLinks = $('.menu .menu__link')
+    this.pageSections = $(".section");
+    this.headerLinks = $(".menu .menu__link");
     // Watch onload
-    this.createHeaderWaypoint()
-    this.createPageSectionWaypoint()
-    this.addSmoothScroll()
-    
+    this.createHeaderWaypoint();
+    this.createPageSectionWaypoint();
+    this.addSmoothScroll();
+    this.refreshWaypoints();
+  }
+
+  refreshWaypoints() {
+    this.lazyImages.on("load", () => {
+      Waypoint.refreshAll();
+    });
   }
 
   createHeaderWaypoint() {
@@ -23,62 +30,62 @@ class StickyHeader {
     new Waypoint({
       element: this.headerTriggerElement[0],
       handler: (direction) => {
-        if (direction == 'down') {
-          self.siteHeader.addClass('header--dark')
+        if (direction == "down") {
+          self.siteHeader.addClass("header--dark");
         } else {
-          self.siteHeader.removeClass('header--dark')
+          self.siteHeader.removeClass("header--dark");
         }
-      }
-    })
+      },
+    });
   }
 
   addSmoothScroll() {
     this.headerLinks.smoothScroll({
       offset: -60,
       speed: 600,
-      preventDefault: true
-    })
+      preventDefault: true,
+    });
   }
 
   createPageSectionWaypoint() {
     let self = this;
-    this.pageSections.each(function() {
+    this.pageSections.each(function () {
       let currentPageSection = this;
 
       // Highlight link if scroll down
       new Waypoint({
         element: currentPageSection,
-        handler: direction => {
-          if( direction == 'down') {
-            let matchingHeaderLink = currentPageSection.getAttribute('data-matching-link')
-            self.headerLinks.removeClass('is-current-link')
-            $(matchingHeaderLink).addClass('is-current-link')
+        handler: (direction) => {
+          if (direction == "down") {
+            let matchingHeaderLink = currentPageSection.getAttribute(
+              "data-matching-link"
+            );
+            self.headerLinks.removeClass("is-current-link");
+            $(matchingHeaderLink).addClass("is-current-link");
           }
         },
-        offset: '25%'
-      })
+        offset: "25%",
+      });
 
       // Highlight link if scroll up
       new Waypoint({
         element: currentPageSection,
-        handler: direction => {
-          if (direction == 'up') {
-            let matchingHeaderLink = currentPageSection.getAttribute('data-matching-link')
-            self.headerLinks.removeClass('is-current-link')
-            $(matchingHeaderLink).addClass('is-current-link')
+        handler: (direction) => {
+          if (direction == "up") {
+            let matchingHeaderLink = currentPageSection.getAttribute(
+              "data-matching-link"
+            );
+            self.headerLinks.removeClass("is-current-link");
+            $(matchingHeaderLink).addClass("is-current-link");
           }
         },
-        offset: '-40%'
-      })
-
-    })
+        offset: "-40%",
+      });
+    });
   }
 }
 
-export default StickyHeader
-
-
-
+export default StickyHeader;
 
 // class StickyHeader {
 //   constructor() {
@@ -95,7 +102,7 @@ export default StickyHeader
 //     new Waypoint({
 //       element: this.headerTriggerElement,
 //       handler: direction => {
-//         if (direction == 'down') {    
+//         if (direction == 'down') {
 //           this.siteHeader.classList.add('header--dark')
 //         } else {
 //           this.siteHeader.classList.remove('header--dark')
@@ -106,13 +113,4 @@ export default StickyHeader
 
 // }
 
-
-// window.addEventListener('scroll', () => {
-//   const nav = document.querySelector('.navbar');
-//   window.scrollY > 100
-//     ? nav.classList.add('header--dark')
-//     : nav.classList.remove('header--dark')
-// });
-
 // export default StickyHeader
-

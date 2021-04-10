@@ -12140,7 +12140,13 @@ siteLogos.forEach(function (logo) {
       behavior: "smooth"
     });
   });
-});
+}); // Change header color on scroll
+// const siteHeader = document.querySelector(".header");
+// window.addEventListener("scroll", function () {
+//   window.scrollY > 100
+//     ? siteHeader.classList.add("header--dark")
+//     : siteHeader.classList.remove("header--dark");
+// });
 
 /***/ }),
 
@@ -12242,29 +12248,39 @@ var StickyHeader = /*#__PURE__*/function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
-    // Sticky
-    this.siteHeader = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header');
-    this.headerTriggerElement = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.large-hero__title'); // Highlight
+    // lazy images
+    this.lazyImages = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lazyload"); // Sticky
 
-    this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section');
-    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu .menu__link'); // Watch onload
+    this.siteHeader = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header");
+    this.headerTriggerElement = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".large-hero__title"); // Highlight
+
+    this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".section");
+    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu .menu__link"); // Watch onload
 
     this.createHeaderWaypoint();
     this.createPageSectionWaypoint();
     this.addSmoothScroll();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyHeader, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.on("load", function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
     key: "createHeaderWaypoint",
     value: function createHeaderWaypoint() {
       var self = this;
       new Waypoint({
         element: this.headerTriggerElement[0],
         handler: function handler(direction) {
-          if (direction == 'down') {
-            self.siteHeader.addClass('header--dark');
+          if (direction == "down") {
+            self.siteHeader.addClass("header--dark");
           } else {
-            self.siteHeader.removeClass('header--dark');
+            self.siteHeader.removeClass("header--dark");
           }
         }
       });
@@ -12288,25 +12304,25 @@ var StickyHeader = /*#__PURE__*/function () {
         new Waypoint({
           element: currentPageSection,
           handler: function handler(direction) {
-            if (direction == 'down') {
-              var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
-              self.headerLinks.removeClass('is-current-link');
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass('is-current-link');
+            if (direction == "down") {
+              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+              self.headerLinks.removeClass("is-current-link");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
             }
           },
-          offset: '25%'
+          offset: "25%"
         }); // Highlight link if scroll up
 
         new Waypoint({
           element: currentPageSection,
           handler: function handler(direction) {
-            if (direction == 'up') {
-              var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
-              self.headerLinks.removeClass('is-current-link');
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass('is-current-link');
+            if (direction == "up") {
+              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+              self.headerLinks.removeClass("is-current-link");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
             }
           },
-          offset: '-40%'
+          offset: "-40%"
         });
       });
     }
@@ -12329,7 +12345,7 @@ var StickyHeader = /*#__PURE__*/function () {
 //     new Waypoint({
 //       element: this.headerTriggerElement,
 //       handler: direction => {
-//         if (direction == 'down') {    
+//         if (direction == 'down') {
 //           this.siteHeader.classList.add('header--dark')
 //         } else {
 //           this.siteHeader.classList.remove('header--dark')
@@ -12338,12 +12354,6 @@ var StickyHeader = /*#__PURE__*/function () {
 //     })
 //   }
 // }
-// window.addEventListener('scroll', () => {
-//   const nav = document.querySelector('.navbar');
-//   window.scrollY > 100
-//     ? nav.classList.add('header--dark')
-//     : nav.classList.remove('header--dark')
-// });
 // export default StickyHeader
 
 /***/ }),
