@@ -1,6 +1,6 @@
 {
   "name": "diving club seahoreses",
-  "short_name": "seahorese",
+  "short_name": "seahoreses ",
   "start_url": "/",
   "lang": "en-US",
   "display": "standalone",
@@ -11,12 +11,12 @@
     {
       "src": "assets/icons/icon-512.webp",
       "sizes": "512x512",
-      "type": "webp"
+      "type": "image/webp"
     },
     {
       "src": "assets/icons/icon-192.webp",
       "sizes": "192x192",
-      "type": "webp"
+      "type": "image/webp"
     },
     {
       "src": "assets/icons/icon-144.webp",
