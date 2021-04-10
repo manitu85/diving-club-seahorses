@@ -12132,8 +12132,8 @@ var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
 var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
 var stickyHeader = new _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_2__["default"](); // Add handle click logo as button to top of page
 
-var logos = document.querySelectorAll(".logo");
-logos.forEach(function (logo) {
+var siteLogos = document.querySelectorAll(".logo");
+siteLogos.forEach(function (logo) {
   logo.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
