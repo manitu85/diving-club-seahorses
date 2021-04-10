@@ -27,7 +27,7 @@
     <!-- build:css /styles/app.css -->
     <link rel="stylesheet" href="./styles/app.css" />
     <!-- endbuild -->
-    <!-- <script src="./scripts/vendor-bundle.js.js"></script> -->
+    <script src="./scripts/vendor-bundle.js"></script>
   </head>
 
   <body
@@ -40,7 +40,7 @@
       <div class="logo">
         <img
           class="logo__brand"
-          src="assets/images/logo--2.webp"
+          src="assets/images/logo--1.webp"
           alt="logo-brand"
         />
         <span class="logo__text"> SEAHORSES </span>
@@ -283,16 +283,16 @@
     <div class="team__instructors">
       <div class="team__instructor">
         <img
-          src="assets/images/instructor--1.webp"
+          data-src="assets/images/instructor--1.webp"
           alt="instructor 1"
-          class="team__instructor-img"
+          class="team__instructor-img lazyload"
         />
 
         <div class="team__instructor-list">
           <img
-            src="assets/images/avatar-1.webp"
+            data-src="assets/images/avatar-1.webp"
             alt="instuructor-avatar 1"
-            class="team__instructor-avatar"
+            class="team__instructor-avatar lazyload"
           />
           <div class="team__instructor-details">
             <h4 class="heading-4 heading-4--white">Alex Burke</h4>
@@ -307,9 +307,9 @@
       <div class="team__instructor">
         <div class="team__instructor-list team__instructor-list--blue-bg">
           <img
-            src="assets/images/avatar-3.webp"
+            data-src="assets/images/avatar-3.webp"
             alt="Instructor"
-            class="team__instructor-avatar"
+            class="team__instructor-avatar lazyload"
           />
           <div class="team__instructor-details team__instructor-details--order">
             <h4 class="heading-4 heading-4--white">Calavera Fancy</h4>
@@ -318,24 +318,24 @@
           </div>
         </div>
         <img
-          src="assets/images/instructor--2.webp"
+          data-src="assets/images/instructor--2.webp"
           alt="instructor"
-          class="team__instructor-img team__instructor-img--order-sm"
+          class="team__instructor-img team__instructor-img--order-sm lazyload"
         />
       </div>
 
       <div class="team__instructor">
         <img
-          src="assets/images/instructor--3.webp"
+          data-src="assets/images/instructor--3.webp"
           alt="instructor"
-          class="team__instructor-img"
+          class="team__instructor-img lazyload"
         />
 
         <div class="team__instructor-list team__instructor-list--black-bg">
           <img
-            src="assets/images/avatar-2.webp"
+            data-src="assets/images/avatar-2.webp"
             alt="Instructor 3"
-            class="team__instructor-avatar"
+            class="team__instructor-avatar lazyload"
           />
           <div class="team__instructor-details">
             <h4 class="heading-4 heading-4--white">Maria Manita</h4>
@@ -377,9 +377,9 @@
         <div class="tours__items">
           <div class="tours__item">
             <img
-              src="assets/images/tours-caves--medium.webp"
+              data-src="assets/images/tours-caves--medium.webp"
               alt="tour 1"
-              class="tours__img"
+              class="tours__img lazyload"
             />
             <svg class="tours__like">
               <use href="assets/sprite/sprite.svg#star"></use>
@@ -420,9 +420,9 @@
 
           <div class="tours__item">
             <img
-              src="assets/images/tours-shipwreck--medium.webp"
+              data-src="assets/images/tours-shipwreck--medium.webp"
               alt="tour 1"
-              class="tours__img"
+              class="tours__img lazyload"
             />
             <svg class="tours__like">
               <use href="assets/sprite/sprite.svg#star"></use>
@@ -462,9 +462,9 @@
 
           <div class="tours__item">
             <img
-              src="assets/images/tours-kayak--medium.webp"
+              data-src="assets/images/tours-kayak--medium.webp"
               alt="tour 1"
-              class="tours__img"
+              class="tours__img lazyload"
             />
             <svg class="tours__like">
               <use href="assets/sprite/sprite.svg#heart"></use>
@@ -510,7 +510,7 @@
 
     <!-- SECTION SHOW  -->
     <section class="show">
-      <img src="assets/images/cta--photo.webp" class="show__photo"></img>
+      <img data-src="assets/images/cta--photo.webp" class="show__photo lazyload"></img>
 
       <div class="show__content">
         <h2
@@ -647,7 +647,7 @@
       </div>
     </section>
 
-    <div class="cta-ship">
+    <div class="cta-ship lazyload" data-sizes="auto">
       <div class="cta-ship__backdrop"></div>
       <div class="cta-ship__text-content">
         <h2
@@ -684,9 +684,9 @@
       <div class="testimonial">
         <article class="testimonial__user">
           <img
-            src="assets/images/instructor--4.webp"
+            data-src="assets/images/instructor--4.webp"
             alt="customer-1"
-            class="testimonial__img"
+            class="testimonial__img lazyload"
           />
 
           <blockquote class="testimonial__user-info">
@@ -718,114 +718,114 @@
     >
       <figure class="gallery__item gallery__item--1">
         <img
-          src="assets/images/gal--1.webp"
+          data-src="assets/images/gal--1.webp"
           alt="Gallery image 1"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--2">
         <img
-          src="assets/images/gal--2.webp"
+          data-src="assets/images/gal--2.webp"
           alt="Gallery image 2"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--3">
         <img
-          src="assets/images/gal--3.webp"
+          data-src="assets/images/gal--3.webp"
           alt="Gallery image 3"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--4">
         <img
-          src="assets/images/gal--4.webp"
+          data-src="assets/images/gal--4.webp"
           alt="Gallery image 4"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--5">
         <img
           s
-          src="assets/images/gal--5.webp"
+          data-src="assets/images/gal--5.webp"
           alt="Gallery image 5"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--6">
         <img
-          src="assets/images/gal--6.webp"
+          data-src="assets/images/gal--6.webp"
           alt="Gallery image 6"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--7">
         <img
-          src="assets/images/gal--7.webp"
+          data-src="assets/images/gal--7.webp"
           alt="Gallery image 7"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--8">
         <img
-          src="assets/images/gal--8.webp"
+          data-src="assets/images/gal--8.webp"
           alt="Gallery image 8"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--9">
         <img
-          src="assets/images/gal--9.webp"
+          data-src="assets/images/gal--9.webp"
           alt="Gallery image 9"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--10">
         <img
-          src="assets/images/gal--10.webp"
+          data-src="assets/images/gal--10.webp"
           alt="Gallery image 10"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--11">
         <img
-          src="assets/images/gal--11.webp"
+          data-src="assets/images/gal--11.webp"
           alt="Gallery image 11"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--12">
         <img
-          src="assets/images/gal--12.webp"
+          data-src="assets/images/gal--12.webp"
           alt="Gallery image 12"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--13">
         <img
-          src="assets/images/gal--13.webp"
+          data-src="assets/images/gal--13.webp"
           alt="Gallery image 13"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
 
       <figure class="gallery__item gallery__item--14">
         <img
-          src="assets/images/gal--14.webp"
+          data-src="assets/images/gal--14.webp"
           alt="Gallery image 14"
-          class="gallery__img"
+          class="gallery__img lazyload"
         />
       </figure>
     </section>
@@ -856,7 +856,7 @@
     </section>
 
     <!-- Section modal - contact form  -->
-    <div class="modal">
+    <div class="modal lazyload">
       <h2 class="modal__title">Get in <strong>Touch</strong></h2>
       <p class="modal__description">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ut

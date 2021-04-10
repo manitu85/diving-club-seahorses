@@ -1,21 +1,23 @@
 .cta-ship {
   grid-column: full-start / full-end;
-  // temp for large image
   height: 60vh;
-  background: linear-gradient(
-      to right,
-      rgba(#98a35d, 0.1),
-      rgba(#020202, 0.2),
-      rgba(rgb(226, 26, 26), 0.3)
-    ),
-    url("/assets/images/cta--bg-3.webp") center center/cover no-repeat, #020202;
-
-  background-attachment: fixed;
 
   position: relative;
   z-index: 1;
   position: relative;
   overflow: hidden;
+
+  &.lazyloaded {
+    background: linear-gradient(
+        to right,
+        rgba(#98a35d, 0.1),
+        rgba(#020202, 0.2),
+        rgba(rgb(226, 26, 26), 0.3)
+      ),
+      url("/assets/images/cta--bg-3.webp") center center/cover no-repeat,
+      #020202;
+    background-attachment: fixed;
+  }
 
   &__heading {
     font-size: 4rem;

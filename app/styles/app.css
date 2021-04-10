@@ -1072,12 +1072,15 @@ input[type="checkbox"], input[type="radio"] {
 .cta-ship {
   grid-column: full-start / full-end;
   height: 60vh;
-  background: linear-gradient(to right, rgba(152, 163, 93, 0.1), rgba(2, 2, 2, 0.2), rgba(226, 26, 26, 0.3)), url("/assets/images/cta--bg-3.webp") center center/cover no-repeat, #020202;
-  background-attachment: fixed;
   position: relative;
   z-index: 1;
   position: relative;
   overflow: hidden;
+}
+
+.cta-ship.lazyloaded {
+  background: linear-gradient(to right, rgba(152, 163, 93, 0.1), rgba(2, 2, 2, 0.2), rgba(226, 26, 26, 0.3)), url("/assets/images/cta--bg-3.webp") center center/cover no-repeat, #020202;
+  background-attachment: fixed;
 }
 
 .cta-ship__heading {
@@ -1865,7 +1868,6 @@ input[type="checkbox"], input[type="radio"] {
 
 .modal {
   color: #fff;
-  background: linear-gradient(to right, rgba(30, 29, 111, 0.3), rgba(2, 2, 2, 0.6), rgba(10, 29, 94, 0.3)), url("/assets/images/cta--bg-3.webp") center center/cover no-repeat, #020202;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1880,6 +1882,10 @@ input[type="checkbox"], input[type="radio"] {
   visibility: hidden;
   transform: scale(1.25);
   transition: all 0.3s ease-out;
+}
+
+.modal.lazyloaded {
+  background: linear-gradient(to right, rgba(30, 29, 111, 0.3), rgba(2, 2, 2, 0.6), rgba(10, 29, 94, 0.3)), url("/assets/images/cta--bg-3.webp") center center/cover no-repeat, #020202;
 }
 
 .modal--is-visible {
@@ -2121,6 +2127,12 @@ input[type="checkbox"], input[type="radio"] {
   }
 }
 
+@media screen and (min-width: 50em) and (max-width: 62.5em) {
+  .footer {
+    justify-items: start;
+  }
+}
+
 .footer__heading-color {
   color: #ff9e42;
   font-weight: bold;
@@ -2138,7 +2150,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .footer__item {
   text-transform: capitalize;
-  font-size: var(--font-size--medium);
+  font-size: 1.4rem;
 }
 
 .footer__link {

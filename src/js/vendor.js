@@ -1,3 +1,4 @@
-import 'picturefill'
-import 'lazysizes'
+import "lazysizes";
+import "picturefill";
 
+// console.log("vendors:", lazysizes);
