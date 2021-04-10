@@ -12140,13 +12140,18 @@ siteLogos.forEach(function (logo) {
       behavior: "smooth"
     });
   });
-}); // Change header color on scroll
-// const siteHeader = document.querySelector(".header");
-// window.addEventListener("scroll", function () {
-//   window.scrollY > 100
-//     ? siteHeader.classList.add("header--dark")
-//     : siteHeader.classList.remove("header--dark");
-// });
+}); // ServiceWorker is a progressive technology. Ignore unsupported browsers
+
+if ("serviceWorker" in navigator) {
+  console.log("CLIENT: service worker registration in progress.");
+  navigator.serviceWorker.register("/service-worker.js").then(function () {
+    console.log("CLIENT: service worker registration complete.");
+  }, function () {
+    console.log("CLIENT: service worker registration failure.");
+  });
+} else {
+  console.log("CLIENT: service worker is not supported.");
+}
 
 /***/ }),
 
@@ -12353,7 +12358,14 @@ var StickyHeader = /*#__PURE__*/function () {
 //       }
 //     })
 //   }
-// }
+//
+// Change header color on scroll
+// const siteHeader = document.querySelector(".header");
+// window.addEventListener("scroll", function () {
+//   window.scrollY > 100
+//     ? siteHeader.classList.add("header--dark")
+//     : siteHeader.classList.remove("header--dark");
+// });
 // export default StickyHeader
 
 /***/ }),

@@ -111,6 +111,14 @@ export default StickyHeader;
 //     })
 //   }
 
-// }
+//
+
+// Change header color on scroll
+// const siteHeader = document.querySelector(".header");
+// window.addEventListener("scroll", function () {
+//   window.scrollY > 100
+//     ? siteHeader.classList.add("header--dark")
+//     : siteHeader.classList.remove("header--dark");
+// });
 
 // export default StickyHeader
