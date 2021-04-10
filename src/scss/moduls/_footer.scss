@@ -3,10 +3,6 @@
   grid-column: full-start / full-end;
 
   &__wrapper {
-    // width: 1100px;
-    // max-width: 100%;
-    // margin: auto;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, min-content));
     justify-content: center;
@@ -24,6 +20,11 @@
     }
   }
 
+  // check again
+  @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    justify-items: start;
+  }
+
   &__heading-color {
     color: $orange-brand;
     font-weight: bold;
@@ -39,14 +40,14 @@
 
   &__item {
     text-transform: capitalize;
-    font-size: var(--font-size--medium);
+    // font-size: var(--font-size--medium);
+    font-size: 1.4rem;
   }
 
   &__link {
     color: #e6e6e6;
 
     &:hover {
-      // color: $blue;
       color: #87cefa;
     }
   }
