@@ -1,0 +1,27 @@
+{
+  "name": "diving club seahoreses",
+  "short_name": "seahorese",
+  "start_url": "/",
+  "lang": "en-US",
+  "display": "standalone",
+  "theme_color": "#ff9e42",
+  "background_color": "#003270",
+  "description": "diving club seahoreses, malta.",
+  "icons": [
+    {
+      "src": "assets/icons/icon-512x512.webp",
+      "sizes": "512x512",
+      "type": "webp"
+    },
+    {
+      "src": "assets/icons/icon-192x192.webp",
+      "sizes": "192x192",
+      "type": "webp"
+    },
+    {
+      "src": "assets/icons/icon-144x144.webp",
+      "sizes": "144x144",
+      "type": "image/webp"
+    }
+  ]
+}
