@@ -20,7 +20,7 @@
   --font-size--medium: 1.5rem;
   --font-size--large: 1.8rem;
   --font-size--heading: 5vmin;
-  --shadow--dark: 0 2rem 6rem rgba(#202020, 0.4);
+  --shadow--dark: 0 2rem 6rem 2rem rgba(#202020, 0.4);
   --shadow--light: 0 2rem 6rem rgba(#fff, 0.3);
   --font-weight--light: 300;
   --font-weight--noramal: 400;
@@ -652,8 +652,8 @@ input[type="checkbox"], input[type="radio"] {
   left: 0;
   right: 0;
   display: grid;
-  grid-template-columns: [center-start] repeat(4, [col-start] minmax(-webkit-min-content, 28rem) [col-end]) [center-end];
-  grid-template-columns: [center-start] repeat(4, [col-start] minmax(min-content, 28rem) [col-end]) [center-end];
+  grid-template-columns: [center-start] repeat(4, [col-start] minmax(-webkit-min-content, 25rem) [col-end]) [center-end];
+  grid-template-columns: [center-start] repeat(4, [col-start] minmax(min-content, 25rem) [col-end]) [center-end];
   justify-content: center;
 }
 
@@ -721,7 +721,7 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0 2rem;
   display: none;
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 @media screen and (min-width: 50em) {
@@ -732,6 +732,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .menu--is-visible {
   display: block;
+  transition: 0.3s ease;
 }
 
 .menu__list {
@@ -749,7 +750,7 @@ input[type="checkbox"], input[type="radio"] {
   .menu__list {
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     background-color: #191d32;
     position: fixed;
     top: 0;
@@ -759,7 +760,7 @@ input[type="checkbox"], input[type="radio"] {
     z-index: 1050;
     overflow-x: hidden;
     /* Disable horizontal scroll */
-    transition: all 0.5s ease;
+    transition: 0.3s ease;
   }
 }
 
@@ -785,6 +786,12 @@ input[type="checkbox"], input[type="radio"] {
   -khtml-user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #e3e3e3;
+}
+
+@media screen and (max-width: 50em) {
+  .menu__link {
+    font-size: 1em;
+  }
 }
 
 .menu__link::after {
@@ -1257,7 +1264,8 @@ input[type="checkbox"], input[type="radio"] {
 
 @media only screen and (max-width: 62.5em) {
   .tours__items {
-    margin: 6rem 0;
+    margin-top: 6rem;
+    margin-bottom: 0;
   }
 }
 
@@ -1269,6 +1277,7 @@ input[type="checkbox"], input[type="radio"] {
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
+  box-shadow: 0 15px 20px 0 rgba(20, 20, 20, 0.1);
 }
 
 .tours__item:hover {
@@ -1404,6 +1413,7 @@ input[type="checkbox"], input[type="radio"] {
   grid-column: 1 / -1;
   display: block;
   max-width: 100%;
+  border-radius: 10px;
   height: 32rem;
   padding-top: -12rem;
 }
@@ -1591,6 +1601,7 @@ input[type="checkbox"], input[type="radio"] {
   justify-items: center;
   align-items: center;
   grid-gap: 1.5rem 0;
+  box-shadow: 0 15px 20px 10px rgba(20, 20, 20, 0.1);
   transition: all 0.3s ease-out;
 }
 
@@ -2125,8 +2136,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .footer__item {
-  text-transform: uppercase;
-  font-size: 0.95rem;
+  font-size: var(--font-size--small);
 }
 
 .footer__link {
