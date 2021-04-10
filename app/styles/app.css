@@ -2137,7 +2137,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .footer__item {
-  font-size: var(--font-size--small);
+  text-transform: capitalize;
+  font-size: var(--font-size--medium);
 }
 
 .footer__link {

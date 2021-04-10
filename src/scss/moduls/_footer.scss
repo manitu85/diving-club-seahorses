@@ -38,8 +38,8 @@
   }
 
   &__item {
-    // text-transform: uppercase;
-    font-size: var(--font-size--small);
+    text-transform: capitalize;
+    font-size: var(--font-size--medium);
   }
 
   &__link {
