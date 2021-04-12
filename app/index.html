@@ -7,40 +7,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!-- === PWA === -->
-    <meta name="theme-color" content="#003270" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="application-name" content="Seahorses" />
-    <meta name="apple-mobile-web-app-title" content="Diving club seahorses" />
-    <meta name="msapplication-starturl" content="/" />
-    <link rel="icon" sizes="144x144" href="assets/icons/icon-144.webp" />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="assets/icons/icon-144.webp"
-    />
-    <link rel="icon" sizes="192x192" href="assets/icons/icon-192.webp" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/icons/icon-192.webp"
-    />
-    <link rel="icon" sizes="512x512" href="assets/icons/icon-512.webp" />
-    <link
-      rel="apple-touch-icon"
-      sizes="512x512"
-      href="assets/icons/icon-512.webp"
-    />
-    <!-- === SEO === -->
     <link
       rel="shortcut icon"
       href="assets/icons/favicon.webp"
       type="image/x-icon"
     />
+    <!-- === SEO === -->
     <title>Seahorses diving club | Malta</title>
     <meta name="author" content="Alex Burke" />
-    <meta name="keywords" content="scuba diving, caves tour, group kayak" />
+    <meta
+      name="keywords"
+      content="scuba diving club, caves tour, group kayak"
+    />
     <meta
       name="description"
       content="Diving club Seahorses - landing page portfolio"
@@ -52,6 +30,76 @@
       content="Diving club Seahorses - landing page portfolio"
     />
     <meta property="og:image" content="assets/images/cta--bg-3.webp" />
+    <!-- === PWA === -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Diving club seahorses" />
+    <meta name="apple-mobile-web-app-title" content="Diving club seahorses" />
+    <meta name="theme-color" content="#003270" />
+    <meta name="msapplication-navbutton-color" content="#003270" />
+    <meta name="msapplication-starturl" content="/" />
+    <link
+      rel="icon"
+      sizes="144x144"
+      href="assets/icons/icon-144.webp"
+      type="image/webp"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/icons/icon-144.webp"
+      type="image/webp"
+    />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="assets/icons/icon-192.webp"
+      type="image/webp"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="assets/icons/icon-192.webp"
+      type="image/webp"
+    />
+    <link
+      rel="icon"
+      sizes="512x512"
+      href="assets/icons/icon-512.webp"
+      type="image/webp"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="assets/icons/icon-512.webp"
+      type="image/webp"
+    />
+    <!-- === PRELOAD GOOGLE FONTS === -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap"
+      rel="stylesheet"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- === SITE MANIFEST JSON === -->
     <link rel="manifest" href="manifest.json" />
     <!-- ================= -->
     <!-- build:css /styles/app.css -->
@@ -87,7 +135,7 @@
       </div>
 
       <!-- Site Navigation  -->
-      <nav class="menu">
+      <nav class="menu" role="navigation" aria-label="menu">
         <ul class="menu__list">
           <li class="menu__item menu__item--current">
             <a id="home-link" class="menu__link" href="#home">home</a>
@@ -117,7 +165,11 @@
             <a id="gallery-link" class="menu__link" href="#gallery">gallery</a>
           </li>
           <li>
-            <a href="#" class="btn-contact btn-contact--padding modal__open">
+            <a
+              href="#"
+              class="btn-contact btn-contact--padding modal__open"
+              aria-label="Contact modal open"
+            >
               contact
               <span class="btn-contact--gradient"></span>
             </a>
@@ -975,7 +1027,7 @@
     </div>
 
     <!-- SITE FOOTER -->
-    <footer class="footer">
+    <footer class="footer" aria-label="footer">
       <div class="footer__wrapper">
         <ul class="footer__list">
           <li>

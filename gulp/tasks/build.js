@@ -29,6 +29,7 @@ gulp.task("copyGeneralFiles", ["deleteBuildFolder"], () => {
   return gulp.src(copyPaths).pipe(gulp.dest("./build"));
 });
 
+// Add gulp-webp plugin into config
 // Optimize and compress -- images go in app/assets, no src ['./src/assets/**']
 gulp.task("optimizeImages", ["deleteBuildFolder", "icons"], () => {
   const config = [

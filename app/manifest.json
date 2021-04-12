@@ -1,11 +1,11 @@
 {
-  "name": "diving club seahoreses",
+  "name": "Diving club seahoreses",
   "short_name": "seahoreses ",
   "start_url": "/",
-  "lang": "en-US",
+  "lang": "en",
   "display": "standalone",
   "theme_color": "#003270",
-  "background_color": "#ff9e42",
+  "background_color": "#003270",
   "description": "diving club seahoreses, malta.",
   "icons": [
     {
