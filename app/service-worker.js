@@ -11,7 +11,7 @@ var version = "v1::";
    during the installation process. If any resource fails to be downloaded,
    then the service worker won't be installed either.
 */
-var offlineFundamentals = ["/", "/styles/app.css", "/js/app-bundle.js"];
+var offlineFundamentals = ["/", "/styles/app-*.css", "/js/app-bundle-*.js"];
 
 /* The install event fires when the service worker is first installed.
    You can use this event to prepare the service worker to be able to serve
