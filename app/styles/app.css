@@ -1159,7 +1159,13 @@ input[type="checkbox"], input[type="radio"] {
   height: 320px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 62.5em) {
+  .team__instructor-img {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 62.5em) {
   .team__instructor-img--order-sm {
     order: -1;
   }
