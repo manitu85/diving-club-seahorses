@@ -3,6 +3,3 @@ command = "gulp build"
 publish = "build"
 [[plugins]]
 package = "netlify-plugin-lazy-load-images"
-[plugins.inputs]
-applyContainer = "body"
-excludeElements = '[data-src], .lazyload'
