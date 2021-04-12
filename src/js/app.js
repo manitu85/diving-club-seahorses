@@ -15,16 +15,32 @@ siteLogos.forEach((logo) => {
 });
 
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
-if ("serviceWorker" in navigator) {
-  console.log("CLIENT: service worker registration in progress.");
-  navigator.serviceWorker.register("/service-worker.js").then(
-    function () {
-      console.log("CLIENT: service worker registration complete.");
-    },
-    function () {
-      console.log("CLIENT: service worker registration failure.");
-    }
-  );
-} else {
-  console.log("CLIENT: service worker is not supported.");
+// if ("serviceWorker" in navigator) {
+//   console.log("CLIENT: service worker registration in progress.");
+//   navigator.serviceWorker.register("/service-worker.js").then(
+//     function () {
+//       console.log("CLIENT: service worker registration complete.");
+//     },
+//     function () {
+//       console.log("CLIENT: service worker registration failure.");
+//     }
+//   );
+// } else {
+//   console.log("CLIENT: service worker is not supported.");
+// }
+
+// Ensure that the browser supports the service worker API
+if (navigator.serviceWorker) {
+  // Start registration process on every page load
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      // The register function takes as argument
+      // the file path to the worker's file
+      .register("/service-worker.js")
+      // Gives us registration object
+      .then((reg) => console.log("Service Worker Registered"))
+      .catch((swErr) =>
+        console.log(`Service Worker Installation Error: ${swErr}}`)
+      );
+  });
 }
