@@ -2,7 +2,7 @@ import $ from "jquery";
 import waypoints from "waypoints/lib/noframework.waypoints";
 import smoothScroll from "jquery-smooth-scroll";
 
-class PageSectionObserver {
+class PageSectionsObserver {
   constructor() {
     // lazy images
     this.lazyImages = $(".lazyload");
@@ -67,7 +67,7 @@ class PageSectionObserver {
   }
 }
 
-export default PageSectionObserver;
+export default PageSectionsObserver;
 
 // class StickyHeader {
 //   constructor() {

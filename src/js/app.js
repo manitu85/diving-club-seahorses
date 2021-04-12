@@ -1,8 +1,7 @@
-import $ from "jquery";
-
-import Modal from "./moduls/Modal";
+import numberRollup from "number-rollup";
+import Modal from "./moduls/modal";
 import MobileMenu from "./moduls/MobileMenu";
-import PageSectionObserver from "./moduls/PageSectionObserver";
+import PageSectionObserver from "./moduls/PageSectionsObserver";
 
 const modal = new Modal();
 const mobileMenu = new MobileMenu();
@@ -24,6 +23,35 @@ window.addEventListener("scroll", function () {
     ? siteHeader.classList.add("header--dark")
     : siteHeader.classList.remove("header--dark");
 });
+
+// Counter from up
+const counterInViewDown = new Waypoint({
+  element: document.getElementById("show"),
+  handler: function (direction) {
+    if (direction == "down") {
+      numberRollup({
+        easing: "easeIn",
+      });
+    }
+  },
+  offset: "30%",
+});
+
+// Counter from down
+const counterInViewUp = new Waypoint({
+  element: document.getElementById("show"),
+  handler: function (direction) {
+    if (direction == "up") {
+      numberRollup({
+        easing: "easeIn",
+      });
+    }
+  },
+  offset: "-40%",
+});
+
+counterInViewDown();
+counterInViewUp();
 
 // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers

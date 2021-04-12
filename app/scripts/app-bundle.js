@@ -11345,6 +11345,18 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./node_modules/number-rollup/dist/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/number-rollup/dist/index.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function(){return function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=0)}([function(e,t,r){"use strict";r.r(t);const n=e=>e&&e.id?o(e):a(e),o=e=>{const t=u(e);return t?[t]:[]},u=e=>{const t=document.getElementById(e.id);if(!i(t))return{domElement:t,startNumber:Number(e.startNumber),endNumber:Number(e.endNumber),duration:Number(e.duration),formatNumber:e.formatNumber,easing:e.easing||""}},a=e=>{const t=document.querySelectorAll(".number-rollup"),r=[];for(let n=0;n<t.length;n++){const o=t[n];if(!i(o)){const t=s(o,e);r.push(t)}}return r},s=(e,t)=>({domElement:e,startNumber:Number(e.getAttribute("data-number-rollup-start")),endNumber:Number(e.getAttribute("data-number-rollup-end")),duration:Number(e.getAttribute("data-number-rollup-duration")),easing:e.getAttribute("data-number-rollup-easing")||"",formatNumber:t?t.formatNumber:void 0}),i=e=>e.classList.contains("number-rollup-is-active");const l=(e,t)=>t.formatNumber?t.formatNumber(e):e;const c=(e,t)=>{const{startNumber:r,endNumber:n,duration:o,easing:u}=t,a=Math.min(r,n),s=m(r,n);switch(u.toLowerCase()){case"linear":default:return Math.floor(s*e/o+a);case"easein":{const t=e/o;return Math.floor(s*t*t+a)}case"easeout":{const t=e/o;return Math.floor(-1*s*t*(t-2)+a)+1}case"easeinquintic":{const t=e/o;return Math.floor(s*t*t*t*t*t+a)}case"easeoutquintic":{const t=e/o-1;return Math.floor(s*(t*t*t*t*t+1)+a)}case"easeinout":{const t=e/(o/2);if(t<1)return Math.floor(s/2*t*t*t*t*t+a);{const e=t-2;return Math.floor(s/2*(e*e*e*e*e+2)+a)}}}},m=(e,t)=>Math.max(e,t)-Math.min(e,t);const f=e=>{const t=performance.now();let r,n=0;const o=()=>{const u=performance.now()-t;if(u!==r){const t=((e,t)=>{console.log(t);const{startNumber:r,endNumber:n}=t,o=c(e,t);if(r>n){const e=r-o;return Math.max(e,n)}return Math.min(o,n)})(u,e);t!==n&&(((e,t)=>{const r=l(t,e);e.domElement.innerHTML=r})(e,t),n=t,r=u)}d(n,e)?requestAnimationFrame(o):b(e.domElement,!1)};o()},b=(e,t)=>{t?e.classList.add("number-rollup-is-active"):e.classList.remove("number-rollup-is-active")},d=(e,t)=>{const{startNumber:r,endNumber:n}=t;return r>n?!(e<=n):!(e>=n)};t.default=e=>{(e=>{const t=n(e);return 0===t.length&&console.warn("number-rollup animation was triggered but no target elements were found"),t})(e).forEach(e=>{(e=>{b(e.domElement,!0),f(e)})(e)})}}])}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+/***/ }),
+
 /***/ "./node_modules/waypoints/lib/noframework.waypoints.js":
 /*!*************************************************************!*\
   !*** ./node_modules/waypoints/lib/noframework.waypoints.js ***!
@@ -12122,18 +12134,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _moduls_Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/Modal */ "./src/js/moduls/Modal.js");
+/* harmony import */ var number_rollup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! number-rollup */ "./node_modules/number-rollup/dist/index.js");
+/* harmony import */ var number_rollup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(number_rollup__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
 /* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
-/* harmony import */ var _moduls_PageSectionObserver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/PageSectionObserver */ "./src/js/moduls/PageSectionObserver.js");
+/* harmony import */ var _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/PageSectionsObserver */ "./src/js/moduls/PageSectionsObserver.js");
 
 
 
 
-var modal = new _moduls_Modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
+var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
 var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
-var pageSection = new _moduls_PageSectionObserver__WEBPACK_IMPORTED_MODULE_3__["default"](); // Add handle click logo as button to top of page
+var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__["default"](); // Add handle click logo as button to top of page
 
 var siteLogos = document.querySelectorAll(".logo");
 siteLogos.forEach(function (logo) {
@@ -12149,7 +12161,33 @@ var siteHeader = document.querySelector(".header");
 window.addEventListener("scroll", function () {
   // pageYOffset or scrollY
   window.pageYOffset > 200 ? siteHeader.classList.add("header--dark") : siteHeader.classList.remove("header--dark");
-}); // Ensure that the browser supports the service worker API
+}); // Counter from up
+
+var counterInViewDown = new Waypoint({
+  element: document.getElementById("show"),
+  handler: function handler(direction) {
+    if (direction == "down") {
+      number_rollup__WEBPACK_IMPORTED_MODULE_0___default()({
+        easing: "easeIn"
+      });
+    }
+  },
+  offset: "30%"
+}); // Counter from down
+
+var counterInViewUp = new Waypoint({
+  element: document.getElementById("show"),
+  handler: function handler(direction) {
+    if (direction == "up") {
+      number_rollup__WEBPACK_IMPORTED_MODULE_0___default()({
+        easing: "easeIn"
+      });
+    }
+  },
+  offset: "-40%"
+});
+counterInViewDown();
+counterInViewUp(); // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
 
 if (navigator.serviceWorker) {
@@ -12233,9 +12271,128 @@ var MobileMenu = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/js/moduls/Modal.js":
+/***/ "./src/js/moduls/PageSectionsObserver.js":
+/*!***********************************************!*\
+  !*** ./src/js/moduls/PageSectionsObserver.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! waypoints/lib/noframework.waypoints */ "./node_modules/waypoints/lib/noframework.waypoints.js");
+/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery-smooth-scroll */ "./node_modules/jquery-smooth-scroll/jquery.smooth-scroll.js");
+/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+
+
+var PageSectionsObserver = /*#__PURE__*/function () {
+  function PageSectionsObserver() {
+    _classCallCheck(this, PageSectionsObserver);
+
+    // lazy images
+    this.lazyImages = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lazyload"); // Highlight
+
+    this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".section");
+    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu .menu__link"); // Watch onload
+
+    this.createPageSectionWaypoint();
+    this.addSmoothScroll();
+    this.refreshWaypoints();
+  }
+
+  _createClass(PageSectionsObserver, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.on("load", function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
+    key: "addSmoothScroll",
+    value: function addSmoothScroll() {
+      this.headerLinks.smoothScroll({
+        offset: -60,
+        speed: 600,
+        preventDefault: true
+      });
+    }
+  }, {
+    key: "createPageSectionWaypoint",
+    value: function createPageSectionWaypoint() {
+      var self = this;
+      this.pageSections.each(function () {
+        var currentPageSection = this; // Highlight link if scroll down
+
+        new Waypoint({
+          element: currentPageSection,
+          handler: function handler(direction) {
+            if (direction == "down") {
+              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+              self.headerLinks.removeClass("is-current-link");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
+            }
+          },
+          offset: "25%"
+        }); // Highlight link if scroll up
+
+        new Waypoint({
+          element: currentPageSection,
+          handler: function handler(direction) {
+            if (direction == "up") {
+              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+              self.headerLinks.removeClass("is-current-link");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
+            }
+          },
+          offset: "-40%"
+        });
+      });
+    }
+  }]);
+
+  return PageSectionsObserver;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (PageSectionsObserver); // class StickyHeader {
+//   constructor() {
+//     this.siteHeader = document.querySelector('.header')
+//     this.headerTriggerElement = document.querySelector('.info')
+//     this.headerLinks = document.querySelectorAll('.menu .menu__link')
+//     // Calls
+//     this.createHeaderWaypoint()
+//     this.addSmoothScroll()
+//   }
+//   createHeaderWaypoint() {
+//     // let self = this;
+//     new Waypoint({
+//       element: this.headerTriggerElement,
+//       handler: direction => {
+//         if (direction == 'down') {
+//           this.siteHeader.classList.add('header--dark')
+//         } else {
+//           this.siteHeader.classList.remove('header--dark')
+//         }
+//       }
+//     })
+//   }
+// export default StickyHeader
+
+/***/ }),
+
+/***/ "./src/js/moduls/modal.js":
 /*!********************************!*\
-  !*** ./src/js/moduls/Modal.js ***!
+  !*** ./src/js/moduls/modal.js ***!
   \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -12293,125 +12450,6 @@ var Modal = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (Modal);
-
-/***/ }),
-
-/***/ "./src/js/moduls/PageSectionObserver.js":
-/*!**********************************************!*\
-  !*** ./src/js/moduls/PageSectionObserver.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! waypoints/lib/noframework.waypoints */ "./node_modules/waypoints/lib/noframework.waypoints.js");
-/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery-smooth-scroll */ "./node_modules/jquery-smooth-scroll/jquery.smooth-scroll.js");
-/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__);
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-
-
-
-
-var PageSectionObserver = /*#__PURE__*/function () {
-  function PageSectionObserver() {
-    _classCallCheck(this, PageSectionObserver);
-
-    // lazy images
-    this.lazyImages = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lazyload"); // Highlight
-
-    this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".section");
-    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu .menu__link"); // Watch onload
-
-    this.createPageSectionWaypoint();
-    this.addSmoothScroll();
-    this.refreshWaypoints();
-  }
-
-  _createClass(PageSectionObserver, [{
-    key: "refreshWaypoints",
-    value: function refreshWaypoints() {
-      this.lazyImages.on("load", function () {
-        Waypoint.refreshAll();
-      });
-    }
-  }, {
-    key: "addSmoothScroll",
-    value: function addSmoothScroll() {
-      this.headerLinks.smoothScroll({
-        offset: -60,
-        speed: 600,
-        preventDefault: true
-      });
-    }
-  }, {
-    key: "createPageSectionWaypoint",
-    value: function createPageSectionWaypoint() {
-      var self = this;
-      this.pageSections.each(function () {
-        var currentPageSection = this; // Highlight link if scroll down
-
-        new Waypoint({
-          element: currentPageSection,
-          handler: function handler(direction) {
-            if (direction == "down") {
-              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
-              self.headerLinks.removeClass("is-current-link");
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
-            }
-          },
-          offset: "25%"
-        }); // Highlight link if scroll up
-
-        new Waypoint({
-          element: currentPageSection,
-          handler: function handler(direction) {
-            if (direction == "up") {
-              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
-              self.headerLinks.removeClass("is-current-link");
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
-            }
-          },
-          offset: "-40%"
-        });
-      });
-    }
-  }]);
-
-  return PageSectionObserver;
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (PageSectionObserver); // class StickyHeader {
-//   constructor() {
-//     this.siteHeader = document.querySelector('.header')
-//     this.headerTriggerElement = document.querySelector('.info')
-//     this.headerLinks = document.querySelectorAll('.menu .menu__link')
-//     // Calls
-//     this.createHeaderWaypoint()
-//     this.addSmoothScroll()
-//   }
-//   createHeaderWaypoint() {
-//     // let self = this;
-//     new Waypoint({
-//       element: this.headerTriggerElement,
-//       handler: direction => {
-//         if (direction == 'down') {
-//           this.siteHeader.classList.add('header--dark')
-//         } else {
-//           this.siteHeader.classList.remove('header--dark')
-//         }
-//       }
-//     })
-//   }
-// export default StickyHeader
 
 /***/ })
 

@@ -34,6 +34,7 @@
     "jquery": "^3.4.1",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^5.1.1",
+    "number-rollup": "^1.2.0",
     "picturefill": "^3.0.3",
     "waypoints": "^4.0.1"
   },
