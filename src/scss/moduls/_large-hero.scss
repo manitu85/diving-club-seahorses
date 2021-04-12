@@ -49,8 +49,9 @@
   }
 
   &__description {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.75rem;
     font-size: var(--font-size--medium);
+    word-wrap: break-word;
   }
 
   &__club {

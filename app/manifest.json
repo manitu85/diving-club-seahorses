@@ -9,9 +9,9 @@
   "description": "diving club seahoreses, malta.",
   "icons": [
     {
-      "src": "assets/icons/icon-512.webp",
+      "src": "assets/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {

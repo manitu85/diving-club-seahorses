@@ -27,7 +27,7 @@
     <meta property="og:title" content="Seahorses diving club | Malta" />
     <meta
       property="og:description"
-      content="Diving club Seahorses - landing page portfolio"
+      content="Diving club Seahorses | Malta - Landing page portfolio"
     />
     <meta property="og:image" content="assets/images/cta--bg-3.webp" />
     <!-- === PWA === -->
@@ -65,17 +65,16 @@
     <link
       rel="icon"
       sizes="512x512"
-      href="assets/icons/icon-512.webp"
+      href="assets/icons/icon-512.png"
       type="image/webp"
     />
     <link
       rel="apple-touch-icon"
       sizes="512x512"
-      href="assets/icons/icon-512.webp"
+      href="assets/icons/icon-512.png"
       type="image/webp"
     />
     <!-- === PRELOAD GOOGLE FONTS === -->
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
@@ -85,20 +84,22 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap"
-      rel="stylesheet"
       rel="preload"
       as="style"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-
     <!-- === SITE MANIFEST JSON === -->
     <link rel="manifest" href="manifest.json" />
     <!-- ================= -->
@@ -185,10 +186,9 @@
         <h3 class="large-hero__subtitle">Ready for adventure</h3>
         <h1 class="large-hero__title">Discover treasure of the underwater</h1>
         <p class="large-hero__description">
-          We have everything you want and need to make your diving experience
-          safe and comfortable diving. The equipment that we provide consitsts
-          of the highest-quality diving sets with weight integrated and
-          sophisticated dive computers.
+          We have everything you need to make your diving experience safe and
+          comfortable diving. The equipment that we provide consitsts the
+          highest-quality diving sets.
         </p>
         <!-- <button class="btn btn--orange btn--large">book a tour</button> -->
         <button class="btn-narrow btn-narrow--large modal__open">
@@ -215,7 +215,7 @@
           <use href="assets/sprite/sprite.svg#mail"></use>
         </svg>
         <h3 class="heading-4 heading-4--white">Send us a message</h3>
-        <p class="info__text">scubadiving@yahoo.com</p>
+        <p class="info__text">seahorses-malta@yahoo.com</p>
       </div>
 
       <div class="info__item">
@@ -499,7 +499,8 @@
             <button class="tours__btn btn btn--orange btn--large">
               Book now
             </button> -->
-            <button class="btn-cta tours__btn">
+
+            <button class="btn-cta tours__btn" aria-label="book caves tour">
               <span class="btn-cta btn-cta--visible">book now</span>
               <span class="btn-cta btn-cta--invisible">Only 1 spot left</span>
             </button>
@@ -523,7 +524,7 @@
             <div class="tours__location">
               <svg class="tours__icon">
                 <use href="assets/sprite/sprite.svg#location-pin"></use>
-                <p>Malta</p>
+                <p>North Malta</p>
               </svg>
             </div>
             <div class="tours__hours">
@@ -541,7 +542,7 @@
             <!-- <button class="tours__btn btn btn--orange btn--large">
               Book now
             </button> -->
-            <button class="btn-cta tours__btn">
+            <button class="btn-cta tours__btn" aria-lable="book shipwreck tour">
               <span class="btn-cta btn-cta--visible">book now</span>
               <span class="btn-cta btn-cta--invisible">Only 4 spot left</span>
             </button>
@@ -577,16 +578,13 @@
             <div class="tours__people">
               <svg class="tours__icon">
                 <use href="assets/sprite/sprite.svg#user"></use>
-                <p>
-                  50
-                  <sup>&euro;</sup>
-                </p>
+                <p>12 people</p>
               </svg>
             </div>
             <!-- <button class="tours__btn btn btn--orange btn--large">
               Book now
             </button> -->
-            <button class="btn-cta tours__btn">
+            <button class="btn-cta tours__btn" aria-lable="book kayak tour">
               <span class="btn-cta btn-cta--visible">book now</span>
               <span class="btn-cta btn-cta--invisible">Only 2 spot left</span>
             </button>
@@ -624,28 +622,28 @@
       <div class="show__counter">
         <div class="counter__item">
           <p class="counter__number">3124</p>
-          <h4 class="heading-4 heading-4--white">Happy Clients</h4>
+          <h3 class="heading-4 heading-4--white">Happy Clients</h3>
           <svg class="counter__icon">
             <use href="assets/sprite/sprite.svg#diving-goggles"></use>
           </svg>
         </div>
         <div class="counter__item">
           <p class="counter__number">56</p>
-          <h4 class="heading-4 heading-4--white">Tours and Activites</h4>
+          <h3 class="heading-4 heading-4--white">Tours and Activites</h3>
           <svg class="counter__icon">
             <use href="assets/sprite/sprite.svg#oxygen-tube"></use>
           </svg>
         </div>
         <div class="counter__item">
           <p class="counter__number">27</p>
-          <h4 class="heading-4 heading-4--white">Instructors</h4>
+          <h3 class="heading-4 heading-4--white">Instructors</h3>
           <svg class="counter__icon">
             <use href="assets/sprite/sprite.svg#settings"></use>
           </svg>
         </div>
         <div class="counter__item">
           <p class="counter__number">854</p>
-          <h4 class="heading-4 heading-4--white">Average Time Underwater</h4>
+          <h3 class="heading-4 heading-4--white">Average Time Underwater</h3>
           <svg class="counter__icon">
             <use href="assets/sprite/sprite.svg#anchor-4"></use>
           </svg>
@@ -1059,7 +1057,7 @@
             <a class="footer__link" href="!#">skin diving course</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="!#">open water scuba diving</a>
+            <a class="footer__link" href="!#">open water scuba</a>
           </li>
           <li class="footer__item">
             <a class="footer__link" href="!#">technical course</a>
@@ -1122,7 +1120,13 @@
           />
           <div class="logo__text">diving club seahorses</div>
         </div>
-        <span>2018-2021 &copy; All right reserved </span>
+        <span
+          >2019-
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          &copy; All right reserved
+        </span>
         <div class="social-icons">
           <svg class="social-icons__icon social-icons__icon--facebook">
             <use href="assets/sprite/sprite.svg#facebook"></use>

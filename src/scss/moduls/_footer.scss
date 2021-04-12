@@ -4,25 +4,26 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, min-content));
-    justify-content: center;
-    justify-items: center;
+
+    grid-template-columns: 1fr;
+    justify-content: start;
     grid-gap: 3rem;
 
     padding: 6rem 0;
 
-    @media screen and (max-width: $breakpoint-md) {
-      grid-template-columns: repeat(
-        auto-fill,
-        minmax(min-content, max-content)
-      );
+    @media screen and (min-width: $breakpoint-sm) {
+      grid-template-columns: repeat(2, 200px);
+      justify-content: center;
+      justify-items: center;
       grid-column-gap: 5rem;
     }
-  }
 
-  // check again
-  @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
-    justify-items: start;
+    @media screen and (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 150px);
+      justify-content: center;
+      justify-items: center;
+      grid-column-gap: 3rem;
+    }
   }
 
   &__heading-color {
