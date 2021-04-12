@@ -1,4 +1,4 @@
-let cacheName = "cache-v1";
+let cacheName = "seahorses-cache-v1";
 
 const cacheAssets = [
   "/index.html",
