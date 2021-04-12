@@ -1,4 +1,6 @@
 import numberRollup from "number-rollup";
+import waypoints from "waypoints/lib/noframework.waypoints";
+
 import Modal from "./moduls/modal";
 import MobileMenu from "./moduls/MobileMenu";
 import PageSectionObserver from "./moduls/PageSectionsObserver";

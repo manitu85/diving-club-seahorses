@@ -12136,16 +12136,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var number_rollup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! number-rollup */ "./node_modules/number-rollup/dist/index.js");
 /* harmony import */ var number_rollup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(number_rollup__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
-/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
-/* harmony import */ var _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/PageSectionsObserver */ "./src/js/moduls/PageSectionsObserver.js");
+/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! waypoints/lib/noframework.waypoints */ "./node_modules/waypoints/lib/noframework.waypoints.js");
+/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
+/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
+/* harmony import */ var _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./moduls/PageSectionsObserver */ "./src/js/moduls/PageSectionsObserver.js");
 
 
 
 
-var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
-var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
-var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__["default"](); // Add handle click logo as button to top of page
+
+var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_2__["default"]();
+var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_3__["default"]();
+var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_4__["default"](); // Add handle click logo as button to top of page
 
 var siteLogos = document.querySelectorAll(".logo");
 siteLogos.forEach(function (logo) {
