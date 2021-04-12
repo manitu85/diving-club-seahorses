@@ -434,7 +434,7 @@ input[type="checkbox"], input[type="radio"] {
 .main-heading__subtitle {
   font-size: 1.25rem;
   font-style: italic;
-  color: #ff7b00;
+  color: #bd5b00;
   margin: 0;
 }
 
@@ -1025,6 +1025,7 @@ input[type="checkbox"], input[type="radio"] {
   margin-bottom: 100px;
   font-size: var(--font-size--medium);
   padding: 0 1rem;
+  color: #757575;
 }
 
 @media (max-width: 50em) {
@@ -1374,7 +1375,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .tours__content-text {
-  color: #7d7d7d;
+  color: #757575;
   max-width: 700px;
   text-align: justify;
   word-wrap: break;
@@ -1571,7 +1572,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .testimonial__user-name {
   font-size: 2rem;
-  color: #ff9e42;
+  color: #d28237;
   font-weight: 600;
   margin-top: 1.5rem;
 }
@@ -1651,7 +1652,7 @@ input[type="checkbox"], input[type="radio"] {
 .pricing__price {
   font-size: 4rem;
   font-weight: 500;
-  color: #d9bf77;
+  color: #aa9250;
 }
 
 .pricing__number {
@@ -2138,12 +2139,12 @@ input[type="checkbox"], input[type="radio"] {
   font-weight: bold;
 }
 
-.footer__lists {
+.footer__list {
   text-align: center;
 }
 
 @media screen and (min-width: 50em) {
-  .footer__lists {
+  .footer__list {
     text-align: start;
   }
 }

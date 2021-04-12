@@ -33,6 +33,7 @@
     margin-bottom: 100px;
     font-size: var(--font-size--medium);
     padding: 0 1rem;
+    color: hsl(0, 0%, 46%);
 
     @media (max-width: $breakpoint-sm) {
       margin-bottom: 5rem;

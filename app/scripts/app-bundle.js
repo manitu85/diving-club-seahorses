@@ -12151,27 +12151,11 @@ if (navigator.serviceWorker) {
     .register("/service-worker.js") // Gives us registration object
     .then(function (reg) {
       return console.log("Service Worker Registered");
-    })["catch"](function (swErr) {
-      return console.log("Service Worker Installation Error: ".concat(swErr, "}"));
+    })["catch"](function (err) {
+      return console.log("Service Worker Installation Error: ".concat(err, "}"));
     });
   });
-} // if ("serviceWorker" in navigator) {
-//   window.addEventListener("load", function () {
-//     navigator.serviceWorker.register("/service-worker.js").then(
-//       function (registration) {
-//         // Registration was successful
-//         console.log(
-//           "ServiceWorker registration successful with scope: ",
-//           registration.scope
-//         );
-//       },
-//       function (err) {
-//         // registration failed :(
-//         console.log("ServiceWorker registration failed: ", err);
-//       }
-//     );
-//   });
-// }
+}
 
 /***/ }),
 

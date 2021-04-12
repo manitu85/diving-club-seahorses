@@ -1,6 +1,6 @@
-var cacheName = "geeks-cache-v1";
+let cacheName = "cache-v1";
 
-var cacheAssets = [
+const cacheAssets = [
   "/index.html",
   "/styles/app-*.css",
   "/scripts/app-bundle-*.js",
@@ -40,8 +40,6 @@ self.addEventListener("activate", (e) => {
     })
   );
 });
-
-var cacheName = "geeks-cache-v1";
 
 // Call Fetch Event
 self.addEventListener("fetch", (e) => {
