@@ -43,5 +43,8 @@
     "build": "gulp build",
     "preview": "gulp previewProd",
     "deploy": "netlify deploy --prod --open"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   }
 }

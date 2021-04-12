@@ -12205,7 +12205,7 @@ if (navigator.serviceWorker) {
       return console.log("Service Worker Installation Error: ".concat(err, "}"));
     });
   });
-}
+} // https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node
 
 /***/ }),
 
