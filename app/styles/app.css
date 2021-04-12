@@ -1579,7 +1579,8 @@ input[type="checkbox"], input[type="radio"] {
 
 .testimonial__user-work {
   margin-top: 0.25rem 0;
-  font-weight: 300;
+  font-weight: 600;
+  color: #3b3b3b;
 }
 
 .testimonial__user-rating {
