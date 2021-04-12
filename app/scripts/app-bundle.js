@@ -12140,18 +12140,38 @@ siteLogos.forEach(function (logo) {
       behavior: "smooth"
     });
   });
-}); // ServiceWorker is a progressive technology. Ignore unsupported browsers
+}); // Ensure that the browser supports the service worker API
+// ServiceWorker is a progressive technology. Ignore unsupported browsers
 
-if ("serviceWorker" in navigator) {
-  console.log("CLIENT: service worker registration in progress.");
-  navigator.serviceWorker.register("/service-worker.js").then(function () {
-    console.log("CLIENT: service worker registration complete.");
-  }, function () {
-    console.log("CLIENT: service worker registration failure.");
+if (navigator.serviceWorker) {
+  // Start registration process on every page load
+  window.addEventListener("load", function () {
+    navigator.serviceWorker // The register function takes as argument
+    // the file path to the worker's file
+    .register("/service-worker.js") // Gives us registration object
+    .then(function (reg) {
+      return console.log("Service Worker Registered");
+    })["catch"](function (swErr) {
+      return console.log("Service Worker Installation Error: ".concat(swErr, "}"));
+    });
   });
-} else {
-  console.log("CLIENT: service worker is not supported.");
-}
+} // if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", function () {
+//     navigator.serviceWorker.register("/service-worker.js").then(
+//       function (registration) {
+//         // Registration was successful
+//         console.log(
+//           "ServiceWorker registration successful with scope: ",
+//           registration.scope
+//         );
+//       },
+//       function (err) {
+//         // registration failed :(
+//         console.log("ServiceWorker registration failed: ", err);
+//       }
+//     );
+//   });
+// }
 
 /***/ }),
 
