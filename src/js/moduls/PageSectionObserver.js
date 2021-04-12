@@ -1,19 +1,15 @@
 import $ from "jquery";
-import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
+import waypoints from "waypoints/lib/noframework.waypoints";
 import smoothScroll from "jquery-smooth-scroll";
 
-class StickyHeader {
+class PageSectionObserver {
   constructor() {
     // lazy images
     this.lazyImages = $(".lazyload");
-    // Sticky
-    this.siteHeader = $(".header");
-    this.headerTriggerElement = $(".large-hero__title");
     // Highlight
     this.pageSections = $(".section");
     this.headerLinks = $(".menu .menu__link");
     // Watch onload
-    this.createHeaderWaypoint();
     this.createPageSectionWaypoint();
     this.addSmoothScroll();
     this.refreshWaypoints();
@@ -22,20 +18,6 @@ class StickyHeader {
   refreshWaypoints() {
     this.lazyImages.on("load", () => {
       Waypoint.refreshAll();
-    });
-  }
-
-  createHeaderWaypoint() {
-    let self = this;
-    new Waypoint({
-      element: this.headerTriggerElement[0],
-      handler: (direction) => {
-        if (direction == "down") {
-          self.siteHeader.addClass("header--dark");
-        } else {
-          self.siteHeader.removeClass("header--dark");
-        }
-      },
     });
   }
 
@@ -85,7 +67,7 @@ class StickyHeader {
   }
 }
 
-export default StickyHeader;
+export default PageSectionObserver;
 
 // class StickyHeader {
 //   constructor() {
@@ -110,15 +92,5 @@ export default StickyHeader;
 //       }
 //     })
 //   }
-
-//
-
-// Change header color on scroll
-// const siteHeader = document.querySelector(".header");
-// window.addEventListener("scroll", function () {
-//   window.scrollY > 100
-//     ? siteHeader.classList.add("header--dark")
-//     : siteHeader.classList.remove("header--dark");
-// });
 
 // export default StickyHeader

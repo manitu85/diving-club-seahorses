@@ -1,5 +1,5 @@
 // Selecting elements from DOM
-// Event Handling watch for
+// Event Handling observer
 // Defining functionality
 class MobileMenu {
   constructor() {
@@ -30,11 +30,6 @@ class MobileMenu {
   closeModal() {
     this.menu.classList.remove("menu--is-visible");
   }
-
-  // openModal(e) {
-  //   e.preventDefault();
-  //   this.menu.classList.add("menu--is-visible");
-  // }
 }
 
 export default MobileMenu;

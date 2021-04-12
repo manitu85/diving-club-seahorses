@@ -180,22 +180,23 @@
   text-align: center;
   line-height: unset;
   border-radius: 50px;
-  // background: linear-gradient(-45deg, #00a2ff, #c300ff, #ff3d77, #ffab3d);
-  background: linear-gradient(-45deg, #00a2ff, #c300ff, #ffab3d);
+  background: linear-gradient(-45deg, #00a2ff, #c300ff, #ff3d77);
+  // background: linear-gradient(-45deg, #00a2ff, #c300ff, #ffab3d);
   background-size: 600%;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease;
   animation: animeGradient 10s linear infinite;
+  transform: translateY(2px);
 
-  &:hover {
-    outline: none;
-    animation: pulsate 1s infinite;
-  }
+  // &:hover {
+  //   outline: none;
+  //   animation: pulsate 1s infinite;
+  // }
 
   &--gradient {
     position: absolute;
     margin-top: -70px;
     z-index: -1;
-    filter: blur(30px);
+    filter: blur(10px);
     opacity: 0.8;
   }
 

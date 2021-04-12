@@ -12122,15 +12122,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
-/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
-/* harmony import */ var _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/StickyHeader */ "./src/js/moduls/StickyHeader.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _moduls_Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/Modal */ "./src/js/moduls/Modal.js");
+/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
+/* harmony import */ var _moduls_PageSectionObserver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/PageSectionObserver */ "./src/js/moduls/PageSectionObserver.js");
 
 
 
-var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
-var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
-var stickyHeader = new _moduls_StickyHeader__WEBPACK_IMPORTED_MODULE_2__["default"](); // Add handle click logo as button to top of page
+
+var modal = new _moduls_Modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
+var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
+var pageSection = new _moduls_PageSectionObserver__WEBPACK_IMPORTED_MODULE_3__["default"](); // Add handle click logo as button to top of page
 
 var siteLogos = document.querySelectorAll(".logo");
 siteLogos.forEach(function (logo) {
@@ -12140,6 +12143,12 @@ siteLogos.forEach(function (logo) {
       behavior: "smooth"
     });
   });
+}); // Change color of header on scroll
+
+var siteHeader = document.querySelector(".header");
+window.addEventListener("scroll", function () {
+  // pageYOffset or scrollY
+  window.pageYOffset > 200 ? siteHeader.classList.add("header--dark") : siteHeader.classList.remove("header--dark");
 }); // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
 
@@ -12175,7 +12184,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 // Selecting elements from DOM
-// Event Handling watch for
+// Event Handling observer
 // Defining functionality
 var MobileMenu = /*#__PURE__*/function () {
   function MobileMenu() {
@@ -12214,11 +12223,7 @@ var MobileMenu = /*#__PURE__*/function () {
     key: "closeModal",
     value: function closeModal() {
       this.menu.classList.remove("menu--is-visible");
-    } // openModal(e) {
-    //   e.preventDefault();
-    //   this.menu.classList.add("menu--is-visible");
-    // }
-
+    }
   }]);
 
   return MobileMenu;
@@ -12228,155 +12233,9 @@ var MobileMenu = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/js/moduls/StickyHeader.js":
-/*!***************************************!*\
-  !*** ./src/js/moduls/StickyHeader.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/waypoints/lib/noframework.waypoints */ "./node_modules/waypoints/lib/noframework.waypoints.js");
-/* harmony import */ var _node_modules_waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery-smooth-scroll */ "./node_modules/jquery-smooth-scroll/jquery.smooth-scroll.js");
-/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__);
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-
-
-
-
-var StickyHeader = /*#__PURE__*/function () {
-  function StickyHeader() {
-    _classCallCheck(this, StickyHeader);
-
-    // lazy images
-    this.lazyImages = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lazyload"); // Sticky
-
-    this.siteHeader = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header");
-    this.headerTriggerElement = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".large-hero__title"); // Highlight
-
-    this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".section");
-    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu .menu__link"); // Watch onload
-
-    this.createHeaderWaypoint();
-    this.createPageSectionWaypoint();
-    this.addSmoothScroll();
-    this.refreshWaypoints();
-  }
-
-  _createClass(StickyHeader, [{
-    key: "refreshWaypoints",
-    value: function refreshWaypoints() {
-      this.lazyImages.on("load", function () {
-        Waypoint.refreshAll();
-      });
-    }
-  }, {
-    key: "createHeaderWaypoint",
-    value: function createHeaderWaypoint() {
-      var self = this;
-      new Waypoint({
-        element: this.headerTriggerElement[0],
-        handler: function handler(direction) {
-          if (direction == "down") {
-            self.siteHeader.addClass("header--dark");
-          } else {
-            self.siteHeader.removeClass("header--dark");
-          }
-        }
-      });
-    }
-  }, {
-    key: "addSmoothScroll",
-    value: function addSmoothScroll() {
-      this.headerLinks.smoothScroll({
-        offset: -60,
-        speed: 600,
-        preventDefault: true
-      });
-    }
-  }, {
-    key: "createPageSectionWaypoint",
-    value: function createPageSectionWaypoint() {
-      var self = this;
-      this.pageSections.each(function () {
-        var currentPageSection = this; // Highlight link if scroll down
-
-        new Waypoint({
-          element: currentPageSection,
-          handler: function handler(direction) {
-            if (direction == "down") {
-              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
-              self.headerLinks.removeClass("is-current-link");
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
-            }
-          },
-          offset: "25%"
-        }); // Highlight link if scroll up
-
-        new Waypoint({
-          element: currentPageSection,
-          handler: function handler(direction) {
-            if (direction == "up") {
-              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
-              self.headerLinks.removeClass("is-current-link");
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
-            }
-          },
-          offset: "-40%"
-        });
-      });
-    }
-  }]);
-
-  return StickyHeader;
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (StickyHeader); // class StickyHeader {
-//   constructor() {
-//     this.siteHeader = document.querySelector('.header')
-//     this.headerTriggerElement = document.querySelector('.info')
-//     this.headerLinks = document.querySelectorAll('.menu .menu__link')
-//     // Calls
-//     this.createHeaderWaypoint()
-//     this.addSmoothScroll()
-//   }
-//   createHeaderWaypoint() {
-//     // let self = this;
-//     new Waypoint({
-//       element: this.headerTriggerElement,
-//       handler: direction => {
-//         if (direction == 'down') {
-//           this.siteHeader.classList.add('header--dark')
-//         } else {
-//           this.siteHeader.classList.remove('header--dark')
-//         }
-//       }
-//     })
-//   }
-//
-// Change header color on scroll
-// const siteHeader = document.querySelector(".header");
-// window.addEventListener("scroll", function () {
-//   window.scrollY > 100
-//     ? siteHeader.classList.add("header--dark")
-//     : siteHeader.classList.remove("header--dark");
-// });
-// export default StickyHeader
-
-/***/ }),
-
-/***/ "./src/js/moduls/modal.js":
+/***/ "./src/js/moduls/Modal.js":
 /*!********************************!*\
-  !*** ./src/js/moduls/modal.js ***!
+  !*** ./src/js/moduls/Modal.js ***!
   \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -12434,6 +12293,125 @@ var Modal = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (Modal);
+
+/***/ }),
+
+/***/ "./src/js/moduls/PageSectionObserver.js":
+/*!**********************************************!*\
+  !*** ./src/js/moduls/PageSectionObserver.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! waypoints/lib/noframework.waypoints */ "./node_modules/waypoints/lib/noframework.waypoints.js");
+/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery-smooth-scroll */ "./node_modules/jquery-smooth-scroll/jquery.smooth-scroll.js");
+/* harmony import */ var jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery_smooth_scroll__WEBPACK_IMPORTED_MODULE_2__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+
+
+var PageSectionObserver = /*#__PURE__*/function () {
+  function PageSectionObserver() {
+    _classCallCheck(this, PageSectionObserver);
+
+    // lazy images
+    this.lazyImages = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lazyload"); // Highlight
+
+    this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".section");
+    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu .menu__link"); // Watch onload
+
+    this.createPageSectionWaypoint();
+    this.addSmoothScroll();
+    this.refreshWaypoints();
+  }
+
+  _createClass(PageSectionObserver, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.on("load", function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
+    key: "addSmoothScroll",
+    value: function addSmoothScroll() {
+      this.headerLinks.smoothScroll({
+        offset: -60,
+        speed: 600,
+        preventDefault: true
+      });
+    }
+  }, {
+    key: "createPageSectionWaypoint",
+    value: function createPageSectionWaypoint() {
+      var self = this;
+      this.pageSections.each(function () {
+        var currentPageSection = this; // Highlight link if scroll down
+
+        new Waypoint({
+          element: currentPageSection,
+          handler: function handler(direction) {
+            if (direction == "down") {
+              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+              self.headerLinks.removeClass("is-current-link");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
+            }
+          },
+          offset: "25%"
+        }); // Highlight link if scroll up
+
+        new Waypoint({
+          element: currentPageSection,
+          handler: function handler(direction) {
+            if (direction == "up") {
+              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+              self.headerLinks.removeClass("is-current-link");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(matchingHeaderLink).addClass("is-current-link");
+            }
+          },
+          offset: "-40%"
+        });
+      });
+    }
+  }]);
+
+  return PageSectionObserver;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (PageSectionObserver); // class StickyHeader {
+//   constructor() {
+//     this.siteHeader = document.querySelector('.header')
+//     this.headerTriggerElement = document.querySelector('.info')
+//     this.headerLinks = document.querySelectorAll('.menu .menu__link')
+//     // Calls
+//     this.createHeaderWaypoint()
+//     this.addSmoothScroll()
+//   }
+//   createHeaderWaypoint() {
+//     // let self = this;
+//     new Waypoint({
+//       element: this.headerTriggerElement,
+//       handler: direction => {
+//         if (direction == 'down') {
+//           this.siteHeader.classList.add('header--dark')
+//         } else {
+//           this.siteHeader.classList.remove('header--dark')
+//         }
+//       }
+//     })
+//   }
+// export default StickyHeader
 
 /***/ })
 

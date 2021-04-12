@@ -615,24 +615,19 @@ input[type="checkbox"], input[type="radio"] {
   text-align: center;
   line-height: unset;
   border-radius: 50px;
-  background: linear-gradient(-45deg, #00a2ff, #c300ff, #ffab3d);
+  background: linear-gradient(-45deg, #00a2ff, #c300ff, #ff3d77);
   background-size: 600%;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease;
   -webkit-animation: animeGradient 10s linear infinite;
           animation: animeGradient 10s linear infinite;
-}
-
-.btn-contact:hover {
-  outline: none;
-  -webkit-animation: pulsate 1s infinite;
-          animation: pulsate 1s infinite;
+  transform: translateY(2px);
 }
 
 .btn-contact--gradient {
   position: absolute;
   margin-top: -70px;
   z-index: -1;
-  filter: blur(30px);
+  filter: blur(10px);
   opacity: 0.8;
 }
 

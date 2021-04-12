@@ -1,10 +1,12 @@
-import Modal from "./moduls/modal";
+import $ from "jquery";
+
+import Modal from "./moduls/Modal";
 import MobileMenu from "./moduls/MobileMenu";
-import StickyHeader from "./moduls/StickyHeader";
+import PageSectionObserver from "./moduls/PageSectionObserver";
 
 const modal = new Modal();
 const mobileMenu = new MobileMenu();
-const stickyHeader = new StickyHeader();
+const pageSection = new PageSectionObserver();
 
 // Add handle click logo as button to top of page
 const siteLogos = document.querySelectorAll(".logo");
@@ -12,6 +14,15 @@ siteLogos.forEach((logo) => {
   logo.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+});
+
+// Change color of header on scroll
+const siteHeader = document.querySelector(".header");
+window.addEventListener("scroll", function () {
+  // pageYOffset or scrollY
+  window.pageYOffset > 200
+    ? siteHeader.classList.add("header--dark")
+    : siteHeader.classList.remove("header--dark");
 });
 
 // Ensure that the browser supports the service worker API
