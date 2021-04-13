@@ -65,7 +65,7 @@ function counterInView(offsetDown, offsetUp) {
     handler: function (direction) {
       if (direction == "down") {
         numberRollup();
-        // Destroy counter after once
+        // Destroy counter after once because slows down the site
         this.destroy();
       }
     },
@@ -77,7 +77,7 @@ function counterInView(offsetDown, offsetUp) {
     handler: function (direction) {
       if (direction == "up") {
         numberRollup();
-        // Destroy counter after once
+        // Destroy counter after once because slows down the site
         this.destroy();
       }
     },

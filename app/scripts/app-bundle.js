@@ -12203,7 +12203,7 @@ function counterInView(offsetDown, offsetUp) {
     element: show,
     handler: function handler(direction) {
       if (direction == "down") {
-        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once because slows down the site
 
         this.destroy();
       }
@@ -12214,7 +12214,7 @@ function counterInView(offsetDown, offsetUp) {
     element: show,
     handler: function handler(direction) {
       if (direction == "up") {
-        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once because slows down the site
 
         this.destroy();
       }
