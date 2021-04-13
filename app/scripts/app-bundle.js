@@ -12162,7 +12162,7 @@ if (navigator.serviceWorker) {
       return console.log("Service Worker Installation Error: ".concat(err, "}"));
     });
   });
-} // Preloader & audio mp3
+} // Preloader & audio effect mp3
 
 
 var preloader = document.querySelector(".preloader");
@@ -12203,8 +12203,7 @@ function counterInView(offsetDown, offsetUp) {
     element: show,
     handler: function handler(direction) {
       if (direction == "down") {
-        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once because slows down the site
-
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()();
         this.destroy();
       }
     },
@@ -12214,8 +12213,7 @@ function counterInView(offsetDown, offsetUp) {
     element: show,
     handler: function handler(direction) {
       if (direction == "up") {
-        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once because slows down the site
-
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()();
         this.destroy();
       }
     },
