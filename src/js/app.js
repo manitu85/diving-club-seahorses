@@ -32,20 +32,11 @@ if (navigator.serviceWorker) {
 }
 
 const preloader = document.querySelector(".preloader");
-window.onload = function fadeEffect() {
+window.onload = function fadeEffect(cb) {
   setInterval(() => {
-    // we check it in css, and if so, set opacity to 1
-    if (!preloader.style.opacity) return (preloader.style.opacity = 1);
-
-    if (preloader.style.opacity > 0) {
-      preloader.style.opacity = 0;
-      preloader.style.transition = "all .6s linear";
-      // preloader.style.pointerEvents = "none";
-    } else {
-      clearInterval(fadeEffect);
-      preloader.classList.add("loaded");
-    }
-  }, 500);
+    preloader.classList.add("loaded");
+    return cb.clearInterval(fadeEffect);
+  }, 1000);
 };
 // window.addEventListener("load", fadeEffect);
 
