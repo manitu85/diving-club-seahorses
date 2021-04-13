@@ -1,4 +1,6 @@
 import "lazysizes";
 import "picturefill";
 
-// console.log("vendors:", lazysizes);
+window.lazySizesConfig = window.lazySizesConfig || {};
+//page is optimized for fast onload event
+lazySizesConfig.loadMode = 1;

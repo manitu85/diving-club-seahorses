@@ -12143,11 +12143,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // Init
 
 var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__["default"]();
 var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
 var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
-counterInView("30%", "-40%"); // Add handle click logo as button to top of page
+counterInView("30%", "-40%"); // window.onload = function () {
+//   fadeEffect();
+// };
+// Ensure that the browser supports the service worker API
+// ServiceWorker is a progressive technology. Ignore unsupported browsers
+
+if (navigator.serviceWorker) {
+  // Start registration process on every page load
+  window.addEventListener("load", function () {
+    navigator.serviceWorker // The register function takes as argument
+    // the file path to the worker's file
+    .register("/service-worker.js") // Gives us registration object
+    .then(function (reg) {
+      return console.log("Service Worker Registered");
+    })["catch"](function (err) {
+      return console.log("Service Worker Installation Error: ".concat(err, "}"));
+    });
+  });
+}
+
+var preloader = document.querySelector(".preloader");
+
+window.onload = function fadeEffect() {
+  setInterval(function () {
+    // we check it in css, and if so, set opacity to 1
+    if (!preloader.style.opacity) return preloader.style.opacity = 1;
+
+    if (preloader.style.opacity > 0) {
+      preloader.style.opacity = 0;
+      preloader.style.transition = "all .6s linear"; // preloader.style.pointerEvents = "none";
+    } else {
+      clearInterval(fadeEffect);
+      preloader.classList.add("loaded");
+    }
+  }, 500);
+}; // window.addEventListener("load", fadeEffect);
+// Add handle click logo as button to top of page
+
 
 var siteLogos = document.querySelectorAll(".logo");
 siteLogos.forEach(function (logo) {
@@ -12163,23 +12201,7 @@ var siteHeader = document.querySelector(".header");
 window.addEventListener("scroll", function () {
   // pageYOffset or scrollY
   window.pageYOffset > 200 ? siteHeader.classList.add("header--dark") : siteHeader.classList.remove("header--dark");
-}); // Ensure that the browser supports the service worker API
-// ServiceWorker is a progressive technology. Ignore unsupported browsers
-
-if (navigator.serviceWorker) {
-  // Start registration process on every page load
-  window.addEventListener("load", function () {
-    navigator.serviceWorker // The register function takes as argument
-    // the file path to the worker's file
-    .register("/service-worker.js") // Gives us registration object
-    .then(function (reg) {
-      return console.log("Service Worker Registered");
-    })["catch"](function (err) {
-      return console.log("Service Worker Installation Error: ".concat(err, "}"));
-    });
-  });
-} // Counter section show
-
+}); // Counter section show
 
 function counterInView(offsetDown, offsetUp) {
   new Waypoint({
@@ -12367,7 +12389,7 @@ var PageSectionsObserver = /*#__PURE__*/function () {
 //     this.siteHeader = document.querySelector('.header')
 //     this.headerTriggerElement = document.querySelector('.info')
 //     this.headerLinks = document.querySelectorAll('.menu .menu__link')
-//     // Calls
+//     // Init
 //     this.createHeaderWaypoint()
 //     this.addSmoothScroll()
 //   }

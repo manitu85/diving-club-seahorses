@@ -74,7 +74,7 @@ export default PageSectionsObserver;
 //     this.siteHeader = document.querySelector('.header')
 //     this.headerTriggerElement = document.querySelector('.info')
 //     this.headerLinks = document.querySelectorAll('.menu .menu__link')
-//     // Calls
+//     // Init
 //     this.createHeaderWaypoint()
 //     this.addSmoothScroll()
 //   }

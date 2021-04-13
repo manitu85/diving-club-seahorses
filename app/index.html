@@ -116,6 +116,18 @@
     class="site-container section"
     data-matching-link="#home-link"
   >
+    <div class="preloader">
+      <div class="preloader__content">
+        <img
+          class="preloader__brand"
+          type="image/webp"
+          src="assets/icons/icon-144.webp"
+          alt="logo-brand"
+        />
+        <span class="preloader__text">Diving Club Seahorses</span>
+      </div>
+    </div>
+
     <header class="header">
       <!-- site brand  -->
       <div class="logo">
@@ -372,14 +384,14 @@
         <img
           data-src="assets/images/instructor--1.webp"
           alt="instructor 1"
-          class="team__instructor-img lazyload"
+          class="team__instructor-img lazyload blur-up"
         />
 
         <div class="team__instructor-list">
           <img
             data-src="assets/images/avatar-1.webp"
             alt="instuructor-avatar 1"
-            class="team__instructor-avatar lazyload"
+            class="team__instructor-avatar lazyload blur-up"
           />
           <div class="team__instructor-details">
             <h4 class="heading-4 heading-4--white">Alex Burke</h4>
@@ -396,7 +408,7 @@
           <img
             data-src="assets/images/avatar-3.webp"
             alt="Instructor"
-            class="team__instructor-avatar lazyload"
+            class="team__instructor-avatar lazyload blur-up"
           />
           <div class="team__instructor-details team__instructor-details--order">
             <h4 class="heading-4 heading-4--white">Calavera Fancy</h4>
@@ -407,7 +419,7 @@
         <img
           data-src="assets/images/instructor--2.webp"
           alt="instructor"
-          class="team__instructor-img team__instructor-img--order-sm lazyload"
+          class="team__instructor-img team__instructor-img--order-sm lazyload blur-up"
         />
       </div>
 
@@ -415,14 +427,14 @@
         <img
           data-src="assets/images/instructor--3.webp"
           alt="instructor"
-          class="team__instructor-img lazyload"
+          class="team__instructor-img lazyload blur-up"
         />
 
         <div class="team__instructor-list team__instructor-list--black-bg">
           <img
             data-src="assets/images/avatar-2.webp"
             alt="Instructor 3"
-            class="team__instructor-avatar lazyload"
+            class="team__instructor-avatar lazyload blur-up"
           />
           <div class="team__instructor-details">
             <h4 class="heading-4 heading-4--white">Maria Manita</h4>
@@ -466,7 +478,7 @@
             <img
               data-src="assets/images/tours-caves--medium.webp"
               alt="tour 1"
-              class="tours__img lazyload"
+              class="tours__img lazyload blur-up"
             />
             <svg class="tours__like">
               <use href="assets/sprite/sprite.svg#star"></use>
@@ -500,7 +512,7 @@
               Book now
             </button> -->
 
-            <button class="btn-cta tours__btn" aria-label="book caves tour">
+            <button class="btn-cta tours__btn">
               <span class="btn-cta btn-cta--visible">book now</span>
               <span class="btn-cta btn-cta--invisible">Only 1 spot left</span>
             </button>
@@ -510,7 +522,7 @@
             <img
               data-src="assets/images/tours-shipwreck--medium.webp"
               alt="tour 1"
-              class="tours__img lazyload"
+              class="tours__img lazyload blur-up"
             />
             <svg class="tours__like">
               <use href="assets/sprite/sprite.svg#star"></use>
@@ -542,7 +554,7 @@
             <!-- <button class="tours__btn btn btn--orange btn--large">
               Book now
             </button> -->
-            <button class="btn-cta tours__btn" aria-lable="book shipwreck tour">
+            <button class="btn-cta tours__btn">
               <span class="btn-cta btn-cta--visible">book now</span>
               <span class="btn-cta btn-cta--invisible">Only 4 spot left</span>
             </button>
@@ -552,7 +564,7 @@
             <img
               data-src="assets/images/tours-kayak--medium.webp"
               alt="tour 1"
-              class="tours__img lazyload"
+              class="tours__img lazyload blur-up"
             />
             <svg class="tours__like">
               <use href="assets/sprite/sprite.svg#heart"></use>
@@ -584,7 +596,7 @@
             <!-- <button class="tours__btn btn btn--orange btn--large">
               Book now
             </button> -->
-            <button class="btn-cta tours__btn" aria-lable="book kayak tour">
+            <button class="btn-cta tours__btn">
               <span class="btn-cta btn-cta--visible">book now</span>
               <span class="btn-cta btn-cta--invisible">Only 2 spot left</span>
             </button>
@@ -624,8 +636,8 @@
           <span
             class="counter__number number-rollup"
             data-number-rollup-start="123"
-            data-number-rollup-end="3124"
-            data-number-rollup-duration="1500"
+            data-number-rollup-end="1124"
+            data-number-rollup-duration="2000"
             data-number-rollup-easing="easeOutQuintic"
             >3124</span
           >
@@ -638,10 +650,10 @@
           <span
             class="counter__number number-rollup"
             data-number-rollup-start="2"
-            data-number-rollup-end="56"
-            data-number-rollup-duration="1500"
+            data-number-rollup-end="37"
+            data-number-rollup-duration="2000"
             data-number-rollup-easing="easeOutQuintic"
-            >56</span
+            >37</span
           >
           <h3 class="heading-4 heading-4--white">Tours and Activites</h3>
           <svg class="counter__icon">
@@ -652,10 +664,10 @@
           <span
             class="counter__number number-rollup"
             data-number-rollup-start="1"
-            data-number-rollup-end="27"
-            data-number-rollup-duration="1500"
+            data-number-rollup-end="23"
+            data-number-rollup-duration="2000"
             data-number-rollup-easing="easeOutQuintic"
-            >27</span
+            >23</span
           >
           <h3 class="heading-4 heading-4--white">Instructors</h3>
           <svg class="counter__icon">
@@ -667,7 +679,7 @@
             class="counter__number number-rollup"
             data-number-rollup-start="46"
             data-number-rollup-end="854"
-            data-number-rollup-duration="1500"
+            data-number-rollup-duration="2000"
             data-number-rollup-easing="easeOutQuintic"
             >854</span
           >
@@ -837,7 +849,7 @@
         <img
           data-src="assets/images/gal--1.webp"
           alt="Gallery image 1"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -845,7 +857,7 @@
         <img
           data-src="assets/images/gal--2.webp"
           alt="Gallery image 2"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -853,7 +865,7 @@
         <img
           data-src="assets/images/gal--3.webp"
           alt="Gallery image 3"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -861,7 +873,7 @@
         <img
           data-src="assets/images/gal--4.webp"
           alt="Gallery image 4"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -870,7 +882,7 @@
           s
           data-src="assets/images/gal--5.webp"
           alt="Gallery image 5"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -878,7 +890,7 @@
         <img
           data-src="assets/images/gal--6.webp"
           alt="Gallery image 6"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -886,7 +898,7 @@
         <img
           data-src="assets/images/gal--7.webp"
           alt="Gallery image 7"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -894,7 +906,7 @@
         <img
           data-src="assets/images/gal--8.webp"
           alt="Gallery image 8"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -902,7 +914,7 @@
         <img
           data-src="assets/images/gal--9.webp"
           alt="Gallery image 9"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -910,7 +922,7 @@
         <img
           data-src="assets/images/gal--10.webp"
           alt="Gallery image 10"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -918,7 +930,7 @@
         <img
           data-src="assets/images/gal--11.webp"
           alt="Gallery image 11"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -926,7 +938,7 @@
         <img
           data-src="assets/images/gal--12.webp"
           alt="Gallery image 12"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
         />
       </figure>
 
@@ -934,7 +946,7 @@
         <img
           data-src="assets/images/gal--13.webp"
           alt="Gallery image 13"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
           type="image/webp"
         />
       </figure>
@@ -943,7 +955,7 @@
         <img
           data-src="assets/images/gal--14.webp"
           alt="Gallery image 14"
-          class="gallery__img lazyload"
+          class="gallery__img lazyload blur-up"
           type="image/webp"
         />
       </figure>
@@ -952,9 +964,9 @@
     <section class="map section" data-matching-link="#contact-link">
       <div class="map__overlay"></div>
       <iframe
-        class="map__location"
+        class="map__location lazyload blur-up"
         title="Malta, Buggiba map location"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3229.8162388190717!2d14.4102579!3d35.951465!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e4e58edfc3b15%3A0x9457f67fa009689!2zQnVnaWJiYSwgU3QgUGF1bCdzIEJheSwg0JzQsNC70YLQsA!5e0!3m2!1ssr!2srs!4v1585851692006!5m2!1ssr!2srs"
+        data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3229.8162388190717!2d14.4102579!3d35.951465!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e4e58edfc3b15%3A0x9457f67fa009689!2zQnVnaWJiYSwgU3QgUGF1bCdzIEJheSwg0JzQsNC70YLQsA!5e0!3m2!1ssr!2srs!4v1585851692006!5m2!1ssr!2srs"
         allowfullscreen=""
         frameborder="0"
         aria-hidden="false"

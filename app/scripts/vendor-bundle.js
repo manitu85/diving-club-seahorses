@@ -2481,7 +2481,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! picturefill */ "./node_modules/picturefill/dist/picturefill.js");
 /* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(picturefill__WEBPACK_IMPORTED_MODULE_1__);
 
- // console.log("vendors:", lazysizes);
+
+window.lazySizesConfig = window.lazySizesConfig || {}; //page is optimized for fast onload event
+
+lazySizesConfig.loadMode = 1;
 
 /***/ })
 

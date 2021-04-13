@@ -461,6 +461,27 @@ input[type="checkbox"], input[type="radio"] {
   fill: #081e3a;
 }
 
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+/* blur image in after load */
+.blur-up {
+  filter: blur(3px);
+  transition: filter 0.4s;
+}
+
+.blur-up.lazyloaded {
+  filter: blur(0);
+}
+
 .page-section {
   padding: 5rem 0;
 }
@@ -1824,6 +1845,87 @@ input[type="checkbox"], input[type="radio"] {
   font-size: 5vmin;
   line-height: 1;
   color: currentColor;
+}
+
+.preloader {
+  align-items: center;
+  background: #1c216b;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  transform: opacity 0.3s linear;
+}
+
+.preloader.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preloader__brand {
+  height: 100px;
+  width: auto;
+  margin-bottom: 5px;
+  transform: translateX(-5px);
+  -webkit-animation: blink 1s ease infinite;
+          animation: blink 1s ease infinite;
+  transition: -webkit-animation 0.3s ease;
+  transition: animation 0.3s ease;
+  transition: animation 0.3s ease, -webkit-animation 0.3s ease;
+}
+
+.preloader__text {
+  color: #f5faff;
+  font-size: 2.25rem;
+  font-weight: bold;
+  font-family: var(--font-primary);
+  -webkit-animation: blink 1s ease infinite;
+          animation: blink 1s ease infinite;
+  transition: -webkit-animation 0.3s ease;
+  transition: animation 0.3s ease;
+  transition: animation 0.3s ease, -webkit-animation 0.3s ease;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px white);
+  }
+  100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px white);
+  }
+  100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
 }
 
 .modal-menu {
