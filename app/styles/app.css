@@ -307,6 +307,66 @@ input[type="checkbox"], input[type="radio"] {
   }
 }
 
+@-webkit-keyframes blinkLogo {
+  0% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px white);
+  }
+  100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
+}
+
+@keyframes blinkLogo {
+  0% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px white);
+  }
+  100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 3px white);
+  }
+}
+
+@-webkit-keyframes blinkText {
+  0% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 1px white);
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px white);
+  }
+  100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 1px white);
+  }
+}
+
+@keyframes blinkText {
+  0% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 1px white);
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px white);
+  }
+  100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 1px white);
+  }
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -1888,7 +1948,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .preloader__text {
-  color: #f5faff;
+  color: var(--white);
   font-size: 2.25rem;
   font-weight: bold;
   font-family: var(--font-primary);
@@ -1897,66 +1957,6 @@ input[type="checkbox"], input[type="radio"] {
   transition: -webkit-animation 0.3s ease;
   transition: animation 0.3s ease;
   transition: animation 0.3s ease, -webkit-animation 0.3s ease;
-}
-
-@-webkit-keyframes blinkLogo {
-  0% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 3px white);
-  }
-  30% {
-    opacity: 1;
-    filter: drop-shadow(0 0 5px white);
-  }
-  100% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 3px white);
-  }
-}
-
-@keyframes blinkLogo {
-  0% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 3px white);
-  }
-  30% {
-    opacity: 1;
-    filter: drop-shadow(0 0 5px white);
-  }
-  100% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 3px white);
-  }
-}
-
-@-webkit-keyframes blinkText {
-  0% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
-  }
-  30% {
-    opacity: 1;
-    filter: drop-shadow(0 0 3px white);
-  }
-  100% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
-  }
-}
-
-@keyframes blinkText {
-  0% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
-  }
-  30% {
-    opacity: 1;
-    filter: drop-shadow(0 0 3px white);
-  }
-  100% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
-  }
 }
 
 .modal-menu {

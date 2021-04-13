@@ -37,41 +37,11 @@
   }
 
   &__text {
-    color: hsl(210, 100%, 98%);
+    color: var(--white);
     font-size: 2.25rem;
     font-weight: bold;
     font-family: var(--font-primary);
     animation: blinkText 0.9s ease infinite;
     transition: animation 0.3s ease;
-  }
-}
-
-@keyframes blinkLogo {
-  0% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 3px white);
-  }
-  30% {
-    opacity: 1;
-    filter: drop-shadow(0 0 5px white);
-  }
-  100% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 3px white);
-  }
-}
-
-@keyframes blinkText {
-  0% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
-  }
-  30% {
-    opacity: 1;
-    filter: drop-shadow(0 0 3px white);
-  }
-  100% {
-    opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
   }
 }
