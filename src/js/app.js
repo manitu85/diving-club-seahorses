@@ -1,5 +1,4 @@
 import numberRollup from "number-rollup";
-// import waypoints from "waypoints/lib/noframework.waypoints";
 
 import Modal from "./moduls/modal";
 import MobileMenu from "./moduls/MobileMenu";
@@ -10,9 +9,6 @@ const pageSection = new PageSectionObserver();
 const mobileMenu = new MobileMenu();
 const modal = new Modal();
 counterInView("30%", "-40%");
-// window.onload = function () {
-//   fadeEffect();
-// };
 
 // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
@@ -31,10 +27,15 @@ if (navigator.serviceWorker) {
   });
 }
 
+// Preloader & audio mp3
 const preloader = document.querySelector(".preloader");
+const audio = document.getElementById("sound");
+
 window.onload = function fadeEffect(cb) {
   setInterval(() => {
     preloader.classList.add("loaded");
+    audio.play();
+    audio.volume = 0.2;
     return (cb) => clearInterval(fadeEffect);
   }, 800);
 };

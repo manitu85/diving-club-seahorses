@@ -12139,7 +12139,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
 /* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
 /* harmony import */ var _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/PageSectionsObserver */ "./src/js/moduls/PageSectionsObserver.js");
- // import waypoints from "waypoints/lib/noframework.waypoints";
 
 
 
@@ -12148,10 +12147,7 @@ __webpack_require__.r(__webpack_exports__);
 var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__["default"]();
 var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
 var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
-counterInView("30%", "-40%"); // window.onload = function () {
-//   fadeEffect();
-// };
-// Ensure that the browser supports the service worker API
+counterInView("30%", "-40%"); // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
 
 if (navigator.serviceWorker) {
@@ -12166,13 +12162,17 @@ if (navigator.serviceWorker) {
       return console.log("Service Worker Installation Error: ".concat(err, "}"));
     });
   });
-}
+} // Preloader & audio mp3
+
 
 var preloader = document.querySelector(".preloader");
+var audio = document.getElementById("sound");
 
 window.onload = function fadeEffect(cb) {
   setInterval(function () {
     preloader.classList.add("loaded");
+    audio.play();
+    audio.volume = 0.2;
     return function (cb) {
       return clearInterval(fadeEffect);
     };
