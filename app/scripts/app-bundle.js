@@ -12173,8 +12173,10 @@ var preloader = document.querySelector(".preloader");
 window.onload = function fadeEffect(cb) {
   setInterval(function () {
     preloader.classList.add("loaded");
-    return cb.clearInterval(fadeEffect);
-  }, 1000);
+    return function (cb) {
+      return clearInterval(fadeEffect);
+    };
+  }, 800);
 }; // window.addEventListener("load", fadeEffect);
 // Add handle click logo as button to top of page
 

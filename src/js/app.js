@@ -35,8 +35,8 @@ const preloader = document.querySelector(".preloader");
 window.onload = function fadeEffect(cb) {
   setInterval(() => {
     preloader.classList.add("loaded");
-    return cb.clearInterval(fadeEffect);
-  }, 1000);
+    return (cb) => clearInterval(fadeEffect);
+  }, 800);
 };
 // window.addEventListener("load", fadeEffect);
 
