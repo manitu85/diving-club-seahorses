@@ -59,21 +59,26 @@ window.addEventListener("scroll", function () {
 
 // Counter section show
 function counterInView(offsetDown, offsetUp) {
+  const show = document.getElementById("show");
   new Waypoint({
-    element: document.getElementById("show"),
+    element: show,
     handler: function (direction) {
       if (direction == "down") {
         numberRollup();
+        // Destroy counter after once
+        this.destroy();
       }
     },
     offset: offsetDown,
   });
 
   new Waypoint({
-    element: document.getElementById("show"),
+    element: show,
     handler: function (direction) {
       if (direction == "up") {
         numberRollup();
+        // Destroy counter after once
+        this.destroy();
       }
     },
     offset: offsetUp,

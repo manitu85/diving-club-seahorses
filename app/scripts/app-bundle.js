@@ -12198,20 +12198,25 @@ window.addEventListener("scroll", function () {
 }); // Counter section show
 
 function counterInView(offsetDown, offsetUp) {
+  var show = document.getElementById("show");
   new Waypoint({
-    element: document.getElementById("show"),
+    element: show,
     handler: function handler(direction) {
       if (direction == "down") {
-        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()();
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once
+
+        this.destroy();
       }
     },
     offset: offsetDown
   });
   new Waypoint({
-    element: document.getElementById("show"),
+    element: show,
     handler: function handler(direction) {
       if (direction == "up") {
-        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()();
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()(); // Destroy counter after once
+
+        this.destroy();
       }
     },
     offset: offsetUp
