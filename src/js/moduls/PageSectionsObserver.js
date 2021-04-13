@@ -9,7 +9,7 @@ class PageSectionsObserver {
     // Highlight
     this.pageSections = $(".section");
     this.headerLinks = $(".menu .menu__link");
-    // Watch onload
+    // Init onload
     this.createPageSectionWaypoint();
     this.addSmoothScroll();
     this.refreshWaypoints();

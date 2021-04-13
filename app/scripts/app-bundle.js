@@ -12136,19 +12136,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var number_rollup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! number-rollup */ "./node_modules/number-rollup/dist/index.js");
 /* harmony import */ var number_rollup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(number_rollup__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! waypoints/lib/noframework.waypoints */ "./node_modules/waypoints/lib/noframework.waypoints.js");
-/* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
-/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
-/* harmony import */ var _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./moduls/PageSectionsObserver */ "./src/js/moduls/PageSectionsObserver.js");
+/* harmony import */ var _moduls_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/modal */ "./src/js/moduls/modal.js");
+/* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
+/* harmony import */ var _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/PageSectionsObserver */ "./src/js/moduls/PageSectionsObserver.js");
+ // import waypoints from "waypoints/lib/noframework.waypoints";
 
 
 
 
-
-var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_2__["default"]();
-var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_3__["default"]();
-var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_4__["default"](); // Add handle click logo as button to top of page
+var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_3__["default"]();
+var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
+var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
+counterInView("30%", "-40%"); // Add handle click logo as button to top of page
 
 var siteLogos = document.querySelectorAll(".logo");
 siteLogos.forEach(function (logo) {
@@ -12164,33 +12163,7 @@ var siteHeader = document.querySelector(".header");
 window.addEventListener("scroll", function () {
   // pageYOffset or scrollY
   window.pageYOffset > 200 ? siteHeader.classList.add("header--dark") : siteHeader.classList.remove("header--dark");
-}); // Counter from up
-
-var counterInViewDown = new Waypoint({
-  element: document.getElementById("show"),
-  handler: function handler(direction) {
-    if (direction == "down") {
-      number_rollup__WEBPACK_IMPORTED_MODULE_0___default()({
-        easing: "easeIn"
-      });
-    }
-  },
-  offset: "30%"
-}); // Counter from down
-
-var counterInViewUp = new Waypoint({
-  element: document.getElementById("show"),
-  handler: function handler(direction) {
-    if (direction == "up") {
-      number_rollup__WEBPACK_IMPORTED_MODULE_0___default()({
-        easing: "easeIn"
-      });
-    }
-  },
-  offset: "-40%"
-});
-counterInViewDown();
-counterInViewUp(); // Ensure that the browser supports the service worker API
+}); // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
 
 if (navigator.serviceWorker) {
@@ -12204,6 +12177,28 @@ if (navigator.serviceWorker) {
     })["catch"](function (err) {
       return console.log("Service Worker Installation Error: ".concat(err, "}"));
     });
+  });
+} // Counter section show
+
+
+function counterInView(offsetDown, offsetUp) {
+  new Waypoint({
+    element: document.getElementById("show"),
+    handler: function handler(direction) {
+      if (direction == "down") {
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()();
+      }
+    },
+    offset: offsetDown
+  });
+  new Waypoint({
+    element: document.getElementById("show"),
+    handler: function handler(direction) {
+      if (direction == "up") {
+        number_rollup__WEBPACK_IMPORTED_MODULE_0___default()();
+      }
+    },
+    offset: offsetUp
   });
 } // https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node
 
@@ -12307,7 +12302,7 @@ var PageSectionsObserver = /*#__PURE__*/function () {
     this.lazyImages = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lazyload"); // Highlight
 
     this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".section");
-    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu .menu__link"); // Watch onload
+    this.headerLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu .menu__link"); // Init onload
 
     this.createPageSectionWaypoint();
     this.addSmoothScroll();

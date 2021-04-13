@@ -1,13 +1,14 @@
 import numberRollup from "number-rollup";
-import waypoints from "waypoints/lib/noframework.waypoints";
+// import waypoints from "waypoints/lib/noframework.waypoints";
 
 import Modal from "./moduls/modal";
 import MobileMenu from "./moduls/MobileMenu";
 import PageSectionObserver from "./moduls/PageSectionsObserver";
 
-const modal = new Modal();
-const mobileMenu = new MobileMenu();
 const pageSection = new PageSectionObserver();
+const mobileMenu = new MobileMenu();
+const modal = new Modal();
+counterInView("30%", "-40%");
 
 // Add handle click logo as button to top of page
 const siteLogos = document.querySelectorAll(".logo");
@@ -26,40 +27,11 @@ window.addEventListener("scroll", function () {
     : siteHeader.classList.remove("header--dark");
 });
 
-// Counter from up
-const counterInViewDown = new Waypoint({
-  element: document.getElementById("show"),
-  handler: function (direction) {
-    if (direction == "down") {
-      numberRollup({
-        easing: "easeIn",
-      });
-    }
-  },
-  offset: "30%",
-});
-
-// Counter from down
-const counterInViewUp = new Waypoint({
-  element: document.getElementById("show"),
-  handler: function (direction) {
-    if (direction == "up") {
-      numberRollup({
-        easing: "easeIn",
-      });
-    }
-  },
-  offset: "-40%",
-});
-
-counterInViewDown();
-counterInViewUp();
-
 // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
 if (navigator.serviceWorker) {
   // Start registration process on every page load
-  window.addEventListener("load", () => {
+  window.addEventListener("load", function () {
     navigator.serviceWorker
       // The register function takes as argument
       // the file path to the worker's file
@@ -69,6 +41,29 @@ if (navigator.serviceWorker) {
       .catch((err) =>
         console.log(`Service Worker Installation Error: ${err}}`)
       );
+  });
+}
+
+// Counter section show
+function counterInView(offsetDown, offsetUp) {
+  new Waypoint({
+    element: document.getElementById("show"),
+    handler: function (direction) {
+      if (direction == "down") {
+        numberRollup();
+      }
+    },
+    offset: offsetDown,
+  });
+
+  new Waypoint({
+    element: document.getElementById("show"),
+    handler: function (direction) {
+      if (direction == "up") {
+        numberRollup();
+      }
+    },
+    offset: offsetUp,
   });
 }
 
