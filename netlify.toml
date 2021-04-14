@@ -1,3 +1,4 @@
 [build]
 command = "gulp build"
+environment = {NODE_VERSION = "10.16.0", NPM_VERSION = "6.9.0"}
 publish = "build"

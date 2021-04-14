@@ -12682,7 +12682,7 @@ var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_2__["default"]();
 handleSiteLogoToTop();
 handleChangeHeaderColor();
 handleCounterInView("30%", "-40%");
-handleTilt();
+handleTilt(); // window.addEventListener("load", initEffects);
 
 window.onload = function initEffects(cb) {
   // New Promise
@@ -12693,8 +12693,7 @@ window.onload = function initEffects(cb) {
       return clearInterval(initEffects);
     };
   }, 1000);
-}; // window.addEventListener("load", initEffects);
-// ############ SITE services worker #####################
+}; // ############ SITE services worker #####################
 // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
 
@@ -12788,6 +12787,8 @@ function handleTilt() {
     // the starting tilt on the X axis, in degrees.
     startY: 0,
     // the starting tilt on the Y axis, in degrees.
+    axis: null,
+    // What axis should be disabled. Can be X or Y.
     perspective: 1000,
     // Transform perspective, the lower the more extreme the tilt gets.
     scale: 0.95,
@@ -12801,7 +12802,8 @@ function handleTilt() {
     easing: "cubic-bezier(.03,.98,.52,.99)" // Easing on enter/exit.
 
   });
-} // https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node
+} // https://micku7zu.github.io/vanilla-tilt.js/index.html
+// https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node
 
 /***/ }),
 

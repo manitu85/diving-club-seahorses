@@ -16,6 +16,7 @@ handleChangeHeaderColor();
 handleCounterInView("30%", "-40%");
 handleTilt();
 
+// window.addEventListener("load", initEffects);
 window.onload = function initEffects(cb) {
   // New Promise
   setInterval(() => {
@@ -24,7 +25,6 @@ window.onload = function initEffects(cb) {
     return (cb) => clearInterval(initEffects);
   }, 1000);
 };
-// window.addEventListener("load", initEffects);
 
 // ############ SITE services worker #####################
 // Ensure that the browser supports the service worker API
@@ -115,6 +115,7 @@ function handleTilt() {
     max: 12, // max tilt rotation (degrees)
     startX: 0, // the starting tilt on the X axis, in degrees.
     startY: 0, // the starting tilt on the Y axis, in degrees.
+    axis: null, // What axis should be disabled. Can be X or Y.
     perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
     scale: 0.95, // 2 = 200%, 1.5 = 150%, etc..
     speed: 1000, // Speed of the enter/exit transition
@@ -123,5 +124,7 @@ function handleTilt() {
     easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
   });
 }
+
+// https://micku7zu.github.io/vanilla-tilt.js/index.html
 
 // https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node
