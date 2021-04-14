@@ -75,9 +75,11 @@ function handleChangeHeaderColor() {
   const siteHeader = document.querySelector(".header");
   return window.addEventListener("scroll", function () {
     // pageYOffset or scrollY
-    window.pageYOffset > 200
-      ? siteHeader.classList.add("header--dark")
-      : siteHeader.classList.remove("header--dark");
+    if (window.pageYOffset > 200) {
+      siteHeader.classList.add("header--dark");
+    } else {
+      siteHeader.classList.remove("header--dark");
+    }
   });
 }
 
