@@ -12711,7 +12711,7 @@ if (navigator.serviceWorker) {
     });
   });
 } // ############ SITE FUNCTIONS #####################
-// Audio effect mp3
+// Plat audio effect mp3 on load
 
 
 function handleAudioOnLoad() {

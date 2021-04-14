@@ -46,7 +46,7 @@ if (navigator.serviceWorker) {
 
 // ############ SITE FUNCTIONS #####################
 
-// Audio effect mp3
+// Plat audio effect mp3 on load
 function handleAudioOnLoad() {
   // add for mobile version to turn-off audio eventually
   const audio = document.querySelector(".audio__effect");
@@ -86,6 +86,7 @@ function handleChangeHeaderColor() {
 // Counter section show
 function handleCounterInView(offsetDown, offsetUp) {
   const counter = document.getElementById("show");
+
   new Waypoint({
     element: counter,
     handler: function (direction) {

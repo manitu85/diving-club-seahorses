@@ -542,6 +542,11 @@ input[type="checkbox"], input[type="radio"] {
   filter: blur(0);
 }
 
+.audio__wrapper {
+  display: none;
+  visibility: hidden;
+}
+
 .page-section {
   padding: 5rem 0;
 }
