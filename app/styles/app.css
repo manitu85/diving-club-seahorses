@@ -340,30 +340,30 @@ input[type="checkbox"], input[type="radio"] {
 @-webkit-keyframes blinkText {
   0% {
     opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
+    filter: drop-shadow(0 0 2px #24dbdb);
   }
   30% {
     opacity: 1;
-    filter: drop-shadow(0 0 3px white);
+    filter: drop-shadow(0 0 5px #24dbdb);
   }
   100% {
     opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
+    filter: drop-shadow(0 0 2px #24dbdb);
   }
 }
 
 @keyframes blinkText {
   0% {
     opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
+    filter: drop-shadow(0 0 2px #24dbdb);
   }
   30% {
     opacity: 1;
-    filter: drop-shadow(0 0 3px white);
+    filter: drop-shadow(0 0 5px #24dbdb);
   }
   100% {
     opacity: 0.3;
-    filter: drop-shadow(0 0 1px white);
+    filter: drop-shadow(0 0 2px #24dbdb);
   }
 }
 
@@ -1909,7 +1909,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .preloader {
   align-items: center;
-  background: #1c216b;
+  background: #061426;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -1919,8 +1919,7 @@ input[type="checkbox"], input[type="radio"] {
   width: 100%;
   z-index: 9999;
   opacity: 1;
-  transition: opacity 0.3s linear;
-  transform: opacity 0.3s linear;
+  transition: opacity 0.6s linear;
 }
 
 .preloader.loaded {

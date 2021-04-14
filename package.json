@@ -36,6 +36,7 @@
     "lazysizes": "^5.1.1",
     "number-rollup": "^1.2.0",
     "picturefill": "^3.0.3",
+    "vanilla-tilt": "^1.7.0",
     "waypoints": "^4.0.1"
   },
   "scripts": {
