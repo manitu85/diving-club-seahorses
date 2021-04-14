@@ -1,17 +1,32 @@
 import numberRollup from "number-rollup";
 import tilt from "vanilla-tilt";
 
+// Custom Moduls
 import Modal from "./moduls/modal";
 import MobileMenu from "./moduls/MobileMenu";
 import PageSectionObserver from "./moduls/PageSectionsObserver";
 
-// Init
+// ############ INIT instances and functions #####################
 const pageSection = new PageSectionObserver();
 const mobileMenu = new MobileMenu();
 const modal = new Modal();
-counterInView("30%", "-40%");
+
+handleSiteLogoToTop();
+handleChangeHeaderColor();
+handleCounterInView("30%", "-40%");
+handleTilt();
+
+window.onload = function initEffects(cb) {
+  // New Promise
+  setInterval(() => {
+    handleLoadedOverlay();
+    handleAudioOnLoad();
+    return (cb) => clearInterval(initEffects);
+  }, 1000);
+};
 // window.addEventListener("load", initEffects);
 
+// ############ SITE services worker #####################
 // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
 if (navigator.serviceWorker) {
@@ -29,41 +44,45 @@ if (navigator.serviceWorker) {
   });
 }
 
-// Preloader & audio effect mp3
-const preloader = document.querySelector(".preloader");
-const audio = document.getElementById("sound");
+// ############ SITE FUNCTIONS #####################
 
-window.onload = function initEffects(cb) {
-  // New Promise
-  setInterval(() => {
-    preloader.classList.add("loaded");
-    audio.play();
-    audio.volume = 0.2;
-    return (cb) => clearInterval(initEffects);
-  }, 1000);
-};
+// Audio effect mp3
+function handleAudioOnLoad() {
+  // add for mobile version to turn-off audio eventually
+  const audio = document.querySelector(".audio__effect");
+  audio.volume = 0.2;
+  audio.play();
+}
 
-// add for mobile version to turn-off audio
+// Preloader
+function handleLoadedOverlay() {
+  const preloader = document.querySelector(".preloader");
+  return preloader.classList.add("loaded");
+}
 
 // Add handle click logo as button to top of page
-const siteLogos = document.querySelectorAll(".logo");
-siteLogos.forEach((logo) => {
-  logo.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+function handleSiteLogoToTop() {
+  const siteLogos = document.querySelectorAll(".logo");
+  return siteLogos.forEach((logo) => {
+    logo.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   });
-});
+}
 
 // Change color of header on scroll
-const siteHeader = document.querySelector(".header");
-window.addEventListener("scroll", function () {
-  // pageYOffset or scrollY
-  window.pageYOffset > 200
-    ? siteHeader.classList.add("header--dark")
-    : siteHeader.classList.remove("header--dark");
-});
+function handleChangeHeaderColor() {
+  const siteHeader = document.querySelector(".header");
+  return window.addEventListener("scroll", function () {
+    // pageYOffset or scrollY
+    window.pageYOffset > 200
+      ? siteHeader.classList.add("header--dark")
+      : siteHeader.classList.remove("header--dark");
+  });
+}
 
 // Counter section show
-function counterInView(offsetDown, offsetUp) {
+function handleCounterInView(offsetDown, offsetUp) {
   const counter = document.getElementById("show");
   new Waypoint({
     element: counter,
@@ -88,18 +107,19 @@ function counterInView(offsetDown, offsetUp) {
   });
 }
 
-// Vanila Tilt effects
-tilt.init(document.querySelectorAll(".tours__tilt"), {
+// Vanilla Tilt effects
+function handleTilt() {
+  return tilt.init(document.querySelectorAll(".tours__tilt"), {
     max: 12, // max tilt rotation (degrees)
     startX: 0, // the starting tilt on the X axis, in degrees.
     startY: 0, // the starting tilt on the Y axis, in degrees.
     perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-    scale: .95,  // 2 = 200%, 1.5 = 150%, etc..
-    speed: 1000,  // Speed of the enter/exit transition
+    scale: 0.95, // 2 = 200%, 1.5 = 150%, etc..
+    speed: 1000, // Speed of the enter/exit transition
     transition: true, // Set a transition on enter/exit.
     reset: true, // If the tilt effect has to be reset on exit.
     easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
-
-	});
+  });
+}
 
 // https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node

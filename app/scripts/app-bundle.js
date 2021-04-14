@@ -12670,17 +12670,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/MobileMenu */ "./src/js/moduls/MobileMenu.js");
 /* harmony import */ var _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./moduls/PageSectionsObserver */ "./src/js/moduls/PageSectionsObserver.js");
 
+ // Custom Moduls
 
 
 
- // Init
+ // ############ INIT instances and functions #####################
 
 var pageSection = new _moduls_PageSectionsObserver__WEBPACK_IMPORTED_MODULE_4__["default"]();
 var mobileMenu = new _moduls_MobileMenu__WEBPACK_IMPORTED_MODULE_3__["default"]();
 var modal = new _moduls_modal__WEBPACK_IMPORTED_MODULE_2__["default"]();
-counterInView("30%", "-40%"); // window.addEventListener("load", initEffects);
+handleSiteLogoToTop();
+handleChangeHeaderColor();
+handleCounterInView("30%", "-40%");
+handleTilt();
+
+window.onload = function initEffects(cb) {
+  // New Promise
+  setInterval(function () {
+    handleLoadedOverlay();
+    handleAudioOnLoad();
+    return function (cb) {
+      return clearInterval(initEffects);
+    };
+  }, 1000);
+}; // window.addEventListener("load", initEffects);
+// ############ SITE services worker #####################
 // Ensure that the browser supports the service worker API
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
+
 
 if (navigator.serviceWorker) {
   // Start registration process on every page load
@@ -12694,43 +12711,47 @@ if (navigator.serviceWorker) {
       return console.log("Service Worker Installation Error: ".concat(err, "}"));
     });
   });
-} // Preloader & audio effect mp3
+} // ############ SITE FUNCTIONS #####################
+// Audio effect mp3
 
 
-var preloader = document.querySelector(".preloader");
-var audio = document.getElementById("sound");
-
-window.onload = function initEffects(cb) {
-  // New Promise
-  setInterval(function () {
-    preloader.classList.add("loaded");
-    audio.play();
-    audio.volume = 0.2;
-    return function (cb) {
-      return clearInterval(initEffects);
-    };
-  }, 1000);
-}; // add for mobile version to turn-off audio
-// Add handle click logo as button to top of page
+function handleAudioOnLoad() {
+  // add for mobile version to turn-off audio eventually
+  var audio = document.querySelector(".audio__effect");
+  audio.volume = 0.2;
+  audio.play();
+} // Preloader
 
 
-var siteLogos = document.querySelectorAll(".logo");
-siteLogos.forEach(function (logo) {
-  logo.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+function handleLoadedOverlay() {
+  var preloader = document.querySelector(".preloader");
+  return preloader.classList.add("loaded");
+} // Add handle click logo as button to top of page
+
+
+function handleSiteLogoToTop() {
+  var siteLogos = document.querySelectorAll(".logo");
+  return siteLogos.forEach(function (logo) {
+    logo.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   });
-}); // Change color of header on scroll
+} // Change color of header on scroll
 
-var siteHeader = document.querySelector(".header");
-window.addEventListener("scroll", function () {
-  // pageYOffset or scrollY
-  window.pageYOffset > 200 ? siteHeader.classList.add("header--dark") : siteHeader.classList.remove("header--dark");
-}); // Counter section show
 
-function counterInView(offsetDown, offsetUp) {
+function handleChangeHeaderColor() {
+  var siteHeader = document.querySelector(".header");
+  return window.addEventListener("scroll", function () {
+    // pageYOffset or scrollY
+    window.pageYOffset > 200 ? siteHeader.classList.add("header--dark") : siteHeader.classList.remove("header--dark");
+  });
+} // Counter section show
+
+
+function handleCounterInView(offsetDown, offsetUp) {
   var counter = document.getElementById("show");
   new Waypoint({
     element: counter,
@@ -12752,29 +12773,31 @@ function counterInView(offsetDown, offsetUp) {
     },
     offset: offsetUp
   });
-} // Vanila Tilt effects
+} // Vanilla Tilt effects
 
 
-vanilla_tilt__WEBPACK_IMPORTED_MODULE_1___default.a.init(document.querySelectorAll(".tours__tilt"), {
-  max: 12,
-  // max tilt rotation (degrees)
-  startX: 0,
-  // the starting tilt on the X axis, in degrees.
-  startY: 0,
-  // the starting tilt on the Y axis, in degrees.
-  perspective: 1000,
-  // Transform perspective, the lower the more extreme the tilt gets.
-  scale: .95,
-  // 2 = 200%, 1.5 = 150%, etc..
-  speed: 1000,
-  // Speed of the enter/exit transition
-  transition: true,
-  // Set a transition on enter/exit.
-  reset: true,
-  // If the tilt effect has to be reset on exit.
-  easing: "cubic-bezier(.03,.98,.52,.99)" // Easing on enter/exit.
+function handleTilt() {
+  return vanilla_tilt__WEBPACK_IMPORTED_MODULE_1___default.a.init(document.querySelectorAll(".tours__tilt"), {
+    max: 12,
+    // max tilt rotation (degrees)
+    startX: 0,
+    // the starting tilt on the X axis, in degrees.
+    startY: 0,
+    // the starting tilt on the Y axis, in degrees.
+    perspective: 1000,
+    // Transform perspective, the lower the more extreme the tilt gets.
+    scale: 0.95,
+    // 2 = 200%, 1.5 = 150%, etc..
+    speed: 1000,
+    // Speed of the enter/exit transition
+    transition: true,
+    // Set a transition on enter/exit.
+    reset: true,
+    // If the tilt effect has to be reset on exit.
+    easing: "cubic-bezier(.03,.98,.52,.99)" // Easing on enter/exit.
 
-}); // https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node
+  });
+} // https://stackoverflow.com/questions/55921442/how-to-fix-referenceerror-primordials-is-not-defined-in-node
 
 /***/ }),
 
